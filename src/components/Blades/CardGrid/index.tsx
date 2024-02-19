@@ -1,8 +1,8 @@
 import { FC } from "react"
-import { IBASE_COMPONENTProps } from "./BASE_COMPONENT.types"
+import { ICardGridProps } from "./CardGrid.types"
 
-const BASE_COMPONENT: FC<IBASE_COMPONENTProps> = ({}) => {
-  return <div>COMP</div>
+const CardGrid: FC<ICardGridProps> = ({ data }) => {
+  return <section className="p-24 w-full bg-blue-300"></section>
 }
 
-export default BASE_COMPONENT
+export default CardGrid
