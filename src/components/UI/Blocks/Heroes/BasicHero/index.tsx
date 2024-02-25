@@ -2,14 +2,14 @@ import { FC } from "react"
 import { IBasicHeroProps } from "./BasicHero"
 import clsx from "clsx"
 import Image from "next/image"
-import Heading from "@/components/UI/Heading"
-import Button from "@/components/UI/Button"
+import Heading from "@/components/UI/Atoms/Heading"
+import Button from "@/components/UI/Atoms/Button"
 
 const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
     <section
       className={clsx(
-        "w-full bg-gray-500 flex flex-col items-center justify-center min-h-[70vh] p-24",
+        "w-full bg-gray-500 flex flex-col items-center justify-center min-h-[70vh] p-24 relative",
         className
       )}
     >

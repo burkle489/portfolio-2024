@@ -21,7 +21,7 @@ const TextAsset: FC<ITextAssetProps> = ({ className, order }) => {
             order === "image-bottom",
         })}
       >
-        <div className=" bg-gray-700 relative flex grow w-full aspect-video max-w-md flex-1">
+        <div className="bg-gray-700 relative flex grow w-full h-72 max-w-md flex-1">
           <Image
             fill
             alt="content image"
