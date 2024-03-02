@@ -15,10 +15,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
     case "h1":
       return (
         <h1
-          className={clsx(
-            `text-5xl sm:text-6xl md:text-7xl mb-4 uppercase `,
-            className
-          )}
+          className={clsx(`text-5xl sm:text-6xl md:text-7xl mb-4  `, className)}
           ref={textRef}
         >
           {children}
