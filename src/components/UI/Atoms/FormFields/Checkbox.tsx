@@ -1,5 +1,5 @@
+import clsx from "clsx"
 import React, { BaseSyntheticEvent } from "react"
-import cx from "classnames"
 
 interface ICheckboxProps {
   name: string
@@ -36,7 +36,7 @@ const Checkbox: React.FC<ICheckboxProps> = ({
       <label
         htmlFor={name}
         onClick={(e) => handleChange(e)}
-        className={cx(
+        className={clsx(
           `flex items-center ${
             separateItems ? `justify-between` : `justify-start`
           } gap-4 ${checkboxRight ? `flex-row-reverse` : `flex-row`} ${
@@ -74,7 +74,7 @@ const Checkbox: React.FC<ICheckboxProps> = ({
           </div>
         ) : (
           <div
-            className={cx(
+            className={clsx(
               "border-[1px] p-0.5 shrink-0 border-grey-1 w-4 h-4 cursor-pointer",
               { "border-primary-red": isInvalid }
             )}
