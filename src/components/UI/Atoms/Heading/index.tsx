@@ -24,10 +24,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
     case "h2":
       return (
         <h2
-          className={clsx(
-            `text-4xl sm:text-5xl md:text-6xl mb-3 uppercase `,
-            className
-          )}
+          className={clsx(`text-4xl sm:text-5xl md:text-6xl mb-3  `, className)}
           ref={textRef}
         >
           {children}
@@ -36,10 +33,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
     case "h3":
       return (
         <h3
-          className={clsx(
-            `text-2xl sm:text-3xl md:text-4xl mb-2 uppercase `,
-            className
-          )}
+          className={clsx(`text-2xl sm:text-3xl md:text-4xl mb-2  `, className)}
           ref={textRef}
         >
           {children}
@@ -48,10 +42,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
     case "h4":
       return (
         <h4
-          className={clsx(
-            `text-xl sm:text-2xl md:text-3xl mb-2 uppercase `,
-            className
-          )}
+          className={clsx(`text-xl sm:text-2xl md:text-3xl mb-2  `, className)}
           ref={textRef}
         >
           {children}
@@ -60,10 +51,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
     case "h5":
       return (
         <h5
-          className={clsx(
-            `text-lg sm:text-xl md:text-2xl mb-2 uppercase  `,
-            className
-          )}
+          className={clsx(`text-lg sm:text-xl md:text-2xl mb-2   `, className)}
           ref={textRef}
         >
           {children}
@@ -72,7 +60,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
     case "h6":
       return (
         <h6
-          className={clsx(`text-xl md:text-2xl mb-1 uppercase  `, className)}
+          className={clsx(`text-xl md:text-2xl mb-1   `, className)}
           ref={textRef}
         >
           {children}
@@ -80,7 +68,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
       )
     default:
       return (
-        <p className={clsx(`uppercase  `, className)} ref={textRef}>
+        <p className={clsx(`  `, className)} ref={textRef}>
           {children}
         </p>
       )

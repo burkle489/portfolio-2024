@@ -7,11 +7,13 @@ import Image from "next/image"
 import CardGrid from "@/components/UI/Organisms/CardGrid"
 import GridBlock from "@/components/UI/Blocks/Grids/GridBlock"
 import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
+import StickyTextWithCards from "@/components/UI/Blocks/Grids/StickyTextWithCards"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center  gap-4">
+    <main className="flex min-h-screen flex-col items-center">
       <ContentHero />
+      <StickyTextWithCards />
     </main>
   )
 }

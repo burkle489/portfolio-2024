@@ -5,6 +5,7 @@ import Image from "next/image"
 import Heading from "@/components/UI/Atoms/Heading"
 import Button from "@/components/UI/Atoms/Button"
 import PLogoMask from "@/components/svgs/components/p-logo-mask"
+import HeroBubbles from "@/components/UI/Atoms/HeroBubbles"
 
 const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
@@ -17,7 +18,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
       <div
         className={clsx("flex items-center justify-center gap-4 inner-section")}
       >
-        <div className="w-full flex items-center justify-around">
+        <div className="w-full flex items-center justify-between">
           <Heading
             variant="h1"
             className="font-jost font-semibold text-light text-left max-w-md text-8xl"
@@ -44,9 +45,6 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
         </div>
       </div>
       <HeroBubbles />
-      <div className="w-[30rem] h-[30rem] rounded-full dark-complex-radial-gradient opacity-10 absolute top-[calc(100%-15rem)] -left-16"></div>
-      <div className="w-96 h-96 rounded-full dark-complex-radial-gradient opacity-30 absolute top-[calc(100%-10rem)] left-40"></div>
-      <div className="w-80 h-80 rounded-full dark-complex-radial-gradient opacity-60 absolute top-[calc(100%-5rem)] left-96"></div>
     </section>
   )
 }
