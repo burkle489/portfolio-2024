@@ -30,50 +30,62 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
           </div>
         </div>
         <div className="col-span-1 grid grid-cols-1 gap-6">
-          <div className="col-span-1 p-6 pb-8 bg-dark overflow-hidden rounded-xl shadow-2xl relative">
-            <Heading
-              variant="h3"
-              className="text-sapphire !text-2xl font-semibold tracking-wide"
-            >
-              Affordable
-            </Heading>
-            <p className="text-white text-lg">
-              We believe in small businesses {"("}especially as we are one
-              ourselves!{")"} Irure commodo veniam nulla dolore Lorem
-              reprehenderit voluptate. Commodo velit veniam laborum deserunt
-              sint.
-            </p>
-            <div className="h-2 absolute bottom-0 left-0 w-full dark-complex-radial-gradient" />
+          <div className="col-span-1 p-1 pb-6 bg-light overflow-hidden  relative group hover:scale-105 transition-all duration-300">
+            <div className="w-full h-full z-20 relative">
+              <Heading
+                variant="h3"
+                className="text-sapphire !text-2xl font-semibold tracking-wide"
+              >
+                Affordable
+              </Heading>
+              <p className="text-dark text-lg">
+                We believe in small businesses {"("}especially as we are one
+                ourselves!{")"} Irure commodo veniam nulla dolore Lorem
+                reprehenderit voluptate. Commodo velit veniam laborum deserunt
+                sint.
+              </p>
+            </div>
+            <div className="h-4 absolute bottom-0 left-0 w-full dark-complex-radial-gradient">
+              <div className="w-full absolute bottom-2 bg-light h-60 group-hover:bottom-10 transition-all duration-500"></div>{" "}
+            </div>
           </div>
-          <div className="col-span-1 p-6 pb-8 bg-dark overflow-hidden rounded-xl shadow-2xl relative">
-            <Heading
-              variant="h3"
-              className="text-orange !text-2xl font-semibold tracking-wide"
-            >
-              Bespoke
-            </Heading>
-            <p className="text-white text-lg">
-              There is no compromise on quality here. We use the most up-to-date
-              and SEO-friendly modern web technologies. Irure commodo veniam
-              nulla dolore Lorem reprehenderit voluptate. Commodo velit veniam
-              laborum deserunt sint.
-            </p>
-            <div className="h-2 absolute bottom-0 left-0 w-full pink-orange-radial-gradient" />
+          <div className="col-span-1 p-1 pb-6 bg-light overflow-hidden  relative group hover:scale-105 transition-all duration-300">
+            <div className="w-full h-full relative z-20">
+              <Heading
+                variant="h3"
+                className="text-orange !text-2xl font-semibold tracking-wide"
+              >
+                Bespoke
+              </Heading>
+              <p className="text-dark text-lg">
+                There is no compromise on quality here. We use the most
+                up-to-date and SEO-friendly modern web technologies. Irure
+                commodo veniam nulla dolore Lorem reprehenderit voluptate.
+                Commodo velit veniam laborum deserunt sint.
+              </p>
+            </div>
+            <div className="h-4 absolute bottom-0 left-0 w-full pink-orange-radial-gradient">
+              <div className="w-full absolute bottom-2 bg-light h-60 group-hover:bottom-10 transition-all duration-500"></div>{" "}
+            </div>
           </div>
-          <div className="col-span-1 p-6 pb-8 bg-dark overflow-hidden rounded-xl shadow-2xl relative">
-            <Heading
-              variant="h3"
-              className="text-avocado !text-2xl font-semibold tracking-wide"
-            >
-              Tailored
-            </Heading>
-            <p className="text-white text-lg">
-              We work with top-quality designers to deliver a brand that you,
-              and your customers, will love. Irure commodo veniam nulla dolore
-              Lorem reprehenderit voluptate. Commodo velit veniam laborum
-              deserunt sint.
-            </p>
-            <div className="h-2 absolute bottom-0 left-0 w-full purple-green-radial-gradient" />
+          <div className="col-span-1 p-1 pb-6 bg-light overflow-hidden  relative group hover:scale-105 transition-all duration-300">
+            <div className="w-full h-full z-20 relative">
+              <Heading
+                variant="h3"
+                className="text-avocado !text-2xl font-semibold tracking-wide"
+              >
+                Tailored
+              </Heading>
+              <p className="text-dark text-lg">
+                We work with top-quality designers to deliver a brand that you,
+                and your customers, will love. Irure commodo veniam nulla dolore
+                Lorem reprehenderit voluptate. Commodo velit veniam laborum
+                deserunt sint.
+              </p>
+            </div>
+            <div className="h-4 absolute bottom-0 left-0 w-full purple-green-radial-gradient">
+              <div className="w-full absolute bottom-2 bg-light h-60  group-hover:bottom-10 transition-all duration-500"></div>{" "}
+            </div>
           </div>
         </div>
       </div>
