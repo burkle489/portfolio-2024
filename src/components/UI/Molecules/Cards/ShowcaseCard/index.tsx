@@ -14,7 +14,7 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
   tags,
 }) => {
   return (
-    <div className="p-4 mr-20 h-full w-[35vw] flex flex-col gap-4 group transition-all duration-300">
+    <div className="p-4 mr-20 h-full w-[35vw] flex flex-col gap-4 group transition-all duration-300 cursor-pointer">
       <div className="relative w-full overflow-hidden rounded-2xl h-72 shadow">
         <Image
           src={image}
@@ -37,7 +37,7 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
                   "rounded-full p-1 px-3 w-fit text-sm border-dark border-[1px] shadow",
                   {
                     "bg-avocado": t === "MVP Test",
-                    "bg-coral": t === "Stencil Bespoke",
+                    "bg-purple": t === "Stencil Bespoke",
                     "bg-sapphire": t === "Full Bespoke",
                   }
                 )}

@@ -123,18 +123,18 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
               />
               <ShowcaseCard
                 {...{
-                  heading: "Stencilled Site",
+                  heading: "ABPSS",
                   body: "Cupidatat sit voluptate labore fugiat ullamco id officia occaecat tempor ut. Minim esse mollit aliqua nisi tempor ex culpa tempor aliqua proident irure nulla aliquip. Elit nisi eiusmod anim ullamco nisi nisi voluptate consectetur dolor. Ex reprehenderit ex nulla occaecat labore ut. Cillum pariatur laborum sit cillum adipisicing voluptate sunt labore eu fugiat laboris anim.",
-                  image: "/images/mvp-test-example.png",
+                  image: "/images/stencilled-site-example.png",
                   hasButton: false,
                   tags: ["Stencil Bespoke"],
                 }}
               />
               <ShowcaseCard
                 {...{
-                  heading: "Custom Bespoke Site",
+                  heading: "ALT. Cases",
                   body: "Aute cupidatat consectetur est reprehenderit labore consectetur velit ullamco est. Ea ut commodo cupidatat aliqua voluptate fugiat amet nostrud sit ex Lorem. Enim mollit tempor sit aliqua cupidatat officia pariatur cupidatat labore. Irure veniam aute enim cupidatat elit duis enim ex aliquip duis nisi voluptate cillum pariatur. Exercitation culpa laborum consequat ex fugiat minim occaecat aliqua.",
-                  image: "/images/mvp-test-example.png",
+                  image: "/images/full-bespoke-example.png",
                   hasButton: false,
                   tags: ["Full Bespoke"],
                 }}

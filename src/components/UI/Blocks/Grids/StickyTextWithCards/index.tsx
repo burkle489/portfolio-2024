@@ -53,7 +53,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             <div className="w-full h-full relative z-20">
               <Heading
                 variant="h3"
-                className="text-orange !text-2xl font-semibold tracking-wide"
+                className="text-sapphire !text-2xl font-semibold tracking-wide"
               >
                 Bespoke
               </Heading>
@@ -64,7 +64,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                 Commodo velit veniam laborum deserunt sint.
               </p>
             </div>
-            <div className="h-4 absolute bottom-0 left-0 w-full pink-orange-radial-gradient">
+            <div className="h-4 absolute bottom-0 left-0 w-full dark-complex-radial-gradient">
               <div className="w-full absolute bottom-2 bg-light h-60 group-hover:bottom-10 transition-all duration-500"></div>{" "}
             </div>
           </div>
@@ -72,7 +72,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             <div className="w-full h-full z-20 relative">
               <Heading
                 variant="h3"
-                className="text-avocado !text-2xl font-semibold tracking-wide"
+                className="text-sapphire !text-2xl font-semibold tracking-wide"
               >
                 Tailored
               </Heading>
@@ -83,7 +83,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                 deserunt sint.
               </p>
             </div>
-            <div className="h-4 absolute bottom-0 left-0 w-full purple-green-radial-gradient">
+            <div className="h-4 absolute bottom-0 left-0 w-full dark-complex-radial-gradient">
               <div className="w-full absolute bottom-2 bg-light h-60  group-hover:bottom-10 transition-all duration-500"></div>{" "}
             </div>
           </div>
