@@ -1,8 +1,8 @@
-import { FC } from "react"
-import { IShowcaseCardProps } from "./ShowcaseCard.types"
-import Image from "next/image"
-import Heading from "@/components/UI/Atoms/Heading"
-import clsx from "clsx"
+import { FC } from "react";
+import { IShowcaseCardProps } from "./ShowcaseCard.types";
+import Image from "next/image";
+import Heading from "@/components/UI/Atoms/Heading";
+import clsx from "clsx";
 
 const ShowcaseCard: FC<IShowcaseCardProps> = ({
   heading,
@@ -14,7 +14,7 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
   tags,
 }) => {
   return (
-    <div className="p-4 mr-20 h-full w-[35vw] flex flex-col gap-4 group transition-all duration-300 cursor-pointer">
+    <div className="p-4 mr-20 h-full w-[35vw] max-w-[500px] flex flex-col gap-4 group transition-all duration-300 cursor-pointer">
       <div className="relative w-full overflow-hidden rounded-2xl h-72 shadow">
         <Image
           src={image}
@@ -50,7 +50,7 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
         <p className="line-clamp-3">{body}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ShowcaseCard
+export default ShowcaseCard;
