@@ -2,8 +2,8 @@
 
 import { FC, useState } from "react"
 import { ICardGridProps } from "./CardGrid.types"
-import Card from "../../Molecules/Card"
-import { ICardProps } from "../../Molecules/Card/Card.types"
+import Card from "../../Molecules/Cards/Card"
+import { ICardProps } from "../../Molecules/Cards/Card/Card.types"
 import Button from "../../Atoms/Button"
 
 const CardGrid: FC<ICardGridProps> = ({

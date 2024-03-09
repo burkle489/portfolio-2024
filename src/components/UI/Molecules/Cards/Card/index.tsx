@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { ICardProps } from "./Card.types"
 import clsx from "clsx"
-import Heading from "../../Atoms/Heading"
+import Heading from "../../../Atoms/Heading"
 import Head from "next/head"
 
 const Card: FC<ICardProps> = ({ className }) => {
