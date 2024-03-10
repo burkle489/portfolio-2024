@@ -1,3 +1,4 @@
+import ContentBanner from "@/components/UI/Blocks/Grids/ContentBanner"
 import StickyTextWithCards from "@/components/UI/Blocks/Grids/StickyTextWithCards"
 import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
 import HorizontalStickyScroll from "@/components/UI/Blocks/HorizontalStickyScroll"
@@ -10,6 +11,7 @@ export default function Home() {
       <ContentHero />
       <StickyTextWithCards />
       <HorizontalStickyScroll />
+      <ContentBanner />
       {/* <MarqueeSection /> */}
     </main>
   )

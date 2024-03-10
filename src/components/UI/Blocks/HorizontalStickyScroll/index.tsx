@@ -1,19 +1,18 @@
-"use client";
+"use client"
 
-import { FC, ReactNode, useEffect, useRef } from "react";
-import { IThreeShowcaseProps } from "./HorizontalStickyScroll.types";
-import Heading from "../../Atoms/Heading";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import clsx from "clsx";
-import MarqueeSection from "../MarqueeSection";
-import Marquee from "react-fast-marquee";
-import ShowcaseCard from "../../Molecules/Cards/ShowcaseCard";
+import { useGSAP } from "@gsap/react"
+import clsx from "clsx"
+import gsap from "gsap"
+import { FC, ReactNode, useRef } from "react"
+import Marquee from "react-fast-marquee"
+import Heading from "../../Atoms/Heading"
+import ShowcaseCard from "../../Molecules/Cards/ShowcaseCard"
+import { IThreeShowcaseProps } from "./HorizontalStickyScroll.types"
 
 const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
-  const containerRef = useRef(null);
-  const slidesWrapperRef = useRef(null);
-  const slidesRef = useRef(null);
+  const containerRef = useRef(null)
+  const slidesWrapperRef = useRef(null)
+  const slidesRef = useRef(null)
 
   useGSAP(() => {
     gsap.to(slidesRef.current, {
@@ -26,8 +25,8 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
         end: "bottom -100%",
         // pinSpacing: "none",
       },
-    });
-  });
+    })
+  })
 
   return (
     <section className=" bg-dark h-[40rem]" ref={containerRef}>
@@ -101,7 +100,7 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
                 </div>
               </div>
             </div>
-            <div className="absolute left-[calc(100%-10rem)] top-0 h-full w-[20rem] bg-dark rounded-[200%] z-10 shadow-2xl"></div>
+            <div className="absolute left-[calc(100%-10rem)] top-0 h-full w-[20rem] bg-dark rounded-[200%] z-10"></div>
           </Slide>
 
           <Slide className="bg-orange !pr-0">
@@ -144,10 +143,10 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HorizontalStickyScroll;
+export default HorizontalStickyScroll
 
 const Slide: FC<{ className?: string; children: ReactNode }> = ({
   className,
@@ -162,5 +161,5 @@ const Slide: FC<{ className?: string; children: ReactNode }> = ({
     >
       {children}
     </div>
-  );
-};
+  )
+}
