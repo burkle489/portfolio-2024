@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from "react"
 
 export interface IOneXTwoGridProps {
-  className?: string;
-  componentOne: ReactNode;
-  componentTwo: ReactNode;
+  className?: string
+  componentOne: ReactNode
+  componentTwo: ReactNode
+  hideSecondOnMobile?: boolean
 }

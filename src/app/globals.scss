@@ -24,12 +24,25 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  @apply font-jost;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.text-border {
+  text-shadow: -2px 2px 2px #1c1c1c;
+}
+.text-border-light {
+  text-shadow: -2px 2px 2px rgb(248 247 255);
+}
+.text-border-thin {
+  text-shadow: -1px 1px 1px #1c1c1c;
+}
+.text-border-light-thin {
+  text-shadow: -1px 1px 1px rgb(248 247 255);
 }
 
 .section {

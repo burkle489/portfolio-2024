@@ -5,6 +5,7 @@ import { IOneXTwoGridProps } from "./OneXTwoGrid.types"
 const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
   componentOne,
   componentTwo,
+  hideSecondOnMobile = false,
   className,
 }) => {
   return (
@@ -15,7 +16,9 @@ const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
       )}
     >
       <div className="col-span-1 w-full h-full">{componentOne}</div>
-      <div className="col-span-1 w-full h-full">{componentTwo}</div>
+      {!hideSecondOnMobile && (
+        <div className="col-span-1 w-full h-full">{componentTwo}</div>
+      )}
     </div>
   )
 }

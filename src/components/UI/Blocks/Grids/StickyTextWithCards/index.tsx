@@ -5,18 +5,24 @@ import Image from "next/image"
 import placeholder from "@/images/1920x1080-placeholder.png"
 import CardGrid from "../../../Organisms/CardGrid"
 import Heading from "../../../Atoms/Heading"
+import HighlightedText from "@/components/UI/Atoms/HighlightedText"
 
 const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
   return (
     <section className={clsx("section bg-light", className)}>
-      <div className="inner-section w-full   grid grid-cols-2 relative gap-12">
+      <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-12">
         <div className="col-span-1 font-jost h-full relative">
-          <div className=" sticky top-32">
-            <Heading variant="h2" className="font-bold !text-5xl">
+          <div className=" md:sticky top-32">
+            <Heading variant="h2" className="font-bold relative">
               No matter the size of your business, compromise on quality is{" "}
-              <span className="font-extrabold text-5xl dark-complex-radial-gradient bg-clip-text text-transparent">
-                never
-              </span>{" "}
+              <HighlightedText
+                {...{
+                  text: "never",
+                  textColor: "dark",
+                  textBorder: "thin",
+                  bgClass: "dark-complex-radial-gradient !bottom-3 !w-[115%]",
+                }}
+              />{" "}
               the answer.
             </Heading>
             <p className="text-xl">
