@@ -25,6 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
   @apply font-jost;
+  @apply overflow-x-hidden;
 }
 
 @layer utilities {
