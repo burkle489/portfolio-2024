@@ -21,7 +21,7 @@ const ContentBanner: FC<IContentBannerProps> = ({}) => {
                   textColor: "light",
                   textBorder: "thin",
                   bgClass:
-                    "purple-green-radial-gradient !bottom-1 h-2/5 !w-[113%]",
+                    "purple-green-radial-gradient !bottom-1 sm:!bottom-2 h-[40%] !w-[113%]",
                 }}
               />{" "}
               to work with{" "}
@@ -31,7 +31,7 @@ const ContentBanner: FC<IContentBannerProps> = ({}) => {
                   textColor: "light",
                   textBorder: "thin",
                   bgClass:
-                    "purple-green-radial-gradient !bottom-1 h-2/5 !w-[115%]",
+                    "purple-green-radial-gradient !bottom-1 sm:!bottom-2 h-[40%] !w-[115%]",
                 }}
               />{" "}
               too.

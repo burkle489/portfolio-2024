@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { IBasicFooterProps } from "./BasicFooter.types"
 import PLogoMask from "@/components/svgs/components/p-logo-mask"
+import HighlightedText from "@/components/UI/Atoms/HighlightedText"
 
 const BasicFooter: FC<IBasicFooterProps> = ({}) => {
   return (
@@ -9,10 +10,13 @@ const BasicFooter: FC<IBasicFooterProps> = ({}) => {
       <div className="inner-section">
         <div className="grid grid-cols-12">
           <div className="col-span-1">
-            <div className="">
-              <span className="font-extrabold text-6xl dark-complex-radial-gradient bg-clip-text text-transparent">
-                Presence
-              </span>
+            <div className="font-jost !font-semibold text-light text-left max-w-md !text-7xl">
+              <HighlightedText
+                {...{
+                  text: "Presence",
+                  bgClass: "dark-complex-radial-gradient",
+                }}
+              />
             </div>
           </div>
           <div className="col-span-9"></div>
