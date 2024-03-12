@@ -16,6 +16,11 @@
   }
 }
 
+html,
+body {
+  @apply overflow-x-hidden;
+}
+
 body {
   background: linear-gradient(
       to bottom,
@@ -25,7 +30,6 @@ body {
     rgb(var(--background-start-rgb));
   @apply font-jost;
   @apply text-dark;
-  @apply overflow-x-hidden;
 }
 
 @layer utilities {
