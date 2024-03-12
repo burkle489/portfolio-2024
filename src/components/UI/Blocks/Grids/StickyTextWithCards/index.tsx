@@ -48,7 +48,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                     textColor: "dark",
                     textBorder: "thin",
                     bgClass:
-                      "dark-complex-radial-gradient !bottom-0 h-2/4 !w-[115%]",
+                      "dark-complex-radial-gradient !bottom-0 !h-2/4 !w-[115%]",
                   }}
                 />{" "}
               </Heading>
@@ -71,7 +71,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                     textColor: "dark",
                     textBorder: "thin",
                     bgClass:
-                      "dark-complex-radial-gradient !bottom-0 h-2/4 !w-[115%]",
+                      "dark-complex-radial-gradient !bottom-0 !h-2/4 !w-[115%]",
                   }}
                 />{" "}
               </Heading>
@@ -94,7 +94,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                     textColor: "dark",
                     textBorder: "thin",
                     bgClass:
-                      "dark-complex-radial-gradient !bottom-0 h-2/4 !w-[115%]",
+                      "dark-complex-radial-gradient !bottom-0 !h-2/4 !w-[115%]",
                   }}
                 />{" "}
               </Heading>

@@ -61,8 +61,7 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
                       {...{
                         text: "offer",
                         textColor: "light",
-                        bgClass:
-                          "pink-orange-radial-gradient !bottom-1 w-[115%] h-1/2",
+                        bgClass: "pink-orange-radial-gradient !bottom-1 !h-1/2",
                       }}
                     />{" "}
                   </Heading>
