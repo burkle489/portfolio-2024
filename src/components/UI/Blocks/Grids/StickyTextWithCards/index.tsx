@@ -13,7 +13,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
       <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-12">
         <div className="col-span-1 font-jost h-full relative">
           <div className=" md:sticky top-32">
-            <Heading variant="h2" className="font-bold relative">
+            <Heading variant="h2" className="font-bold relative !text-5xl">
               No matter the size of your business, compromise on quality is{" "}
               <HighlightedText
                 {...{

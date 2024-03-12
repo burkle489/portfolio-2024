@@ -33,7 +33,7 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
           trigger: containerRef.current,
           scrub: 1,
           pin: ".main-container",
-          start: "40% center",
+          start: "50% center",
           end: "bottom -100%",
         },
       })
@@ -48,8 +48,8 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
       >
         <div className="slide shrink-0 flex py-20 relative">
           <div>
-            <div className="container min-w-[240vw] xs:min-w-[200vw] sm:min-w-[160vw] md:min-w-[120vw] xl:min-w-[90vw] w-auto flex flex-col">
-              <div className="flex w-auto">
+            <div className="container h-full min-w-[240vw] xs:min-w-[200vw] sm:min-w-[160vw] md:min-w-[120vw] xl:min-w-[90vw] w-auto flex flex-col">
+              <div className="flex w-auto h-full">
                 <div className="block lg:pl-20 min-w-[80vw] w-[80vw] md:min-w-[60vw] md:w-[60vw] xl:w-[45vw] xl:min-w-[45vw] px-4 max-h-full h-full">
                   <Heading
                     variant="h1"
@@ -66,9 +66,9 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
                     />{" "}
                   </Heading>
                 </div>
-                <div className="min-w-[160vw] w-[160vw] xs:min-w-[120vw] xs:w-[120vw] sm:min-w-[80vw] sm:w-[80vw] md:min-w-[60vw] md:w-[60vw] xl:w-[45vw] xl:min-w-[45vw] px-4 max-h-full h-full">
+                <div className="min-w-[160vw] w-[160vw] xs:min-w-[120vw] xs:w-[120vw] sm:min-w-[80vw] sm:w-[80vw] md:min-w-[60vw] md:w-[60vw] xl:w-[45vw] xl:min-w-[45vw] px-4 max-h-full h-full flex flex-col justify-end">
                   <div className="flex flex-col items-end">
-                    <div className="grid grid-cols-1 relative z-20 gap-8">
+                    <div className="grid grid-cols-1 relative z-20 gap-8 justify-end">
                       <div className="flex flex-row relative z-20">
                         <Card
                           {...{
