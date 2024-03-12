@@ -15,9 +15,9 @@ import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const slidesWrapperRef = useRef(null)
-  const slidesRef = useRef(null)
+  const slidesRef = useRef<HTMLDivElement>(null)
 
   const windowSize = useWindowSize()
 
@@ -25,9 +25,10 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
   useGSAP(() => {
     if (slidesRef && slidesRef.current) {
       gsap.to(slidesRef.current, {
-        transform: () => {
-          return `translate3d(calc(-${slidesRef.current.clientWidth}px + 100vw),0,0)`
-        },
+        transform: () =>
+          slidesRef && slidesRef.current
+            ? `translate3d(calc(-${slidesRef.current.clientWidth}px + 100vw),0,0)`
+            : "",
         scrollTrigger: {
           invalidateOnRefresh: true,
           trigger: containerRef.current,
