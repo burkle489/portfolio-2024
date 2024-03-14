@@ -7,9 +7,10 @@ const HighlightedText: FC<IHighlightedTextProps> = ({
   bgClass,
   textColor = "light",
   textBorder,
+  className = "",
 }) => {
   return (
-    <span className="relative">
+    <span className={clsx("relative", className)}>
       <span
         className={clsx("relative z-10 text-border", {
           "text-border": textColor === "light",
@@ -23,7 +24,7 @@ const HighlightedText: FC<IHighlightedTextProps> = ({
       </span>
       <span
         className={clsx(
-          "w-[123%] absolute bottom-5 -left-[5%] h-[30%] z-0",
+          "w-[115%] absolute bottom-8 -left-[5%] h-[30%] z-0",
           bgClass
         )}
       ></span>

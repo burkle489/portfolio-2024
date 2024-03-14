@@ -105,7 +105,7 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
             </div>
           </div>
         </div>
-        <div className="slide shrink-0 flex bg-light py-20 relative">
+        <div className="slide shrink-0 flex bg-[rgba(236,141,84)] py-20 relative">
           <div className="absolute h-full top-0 -left-40 w-80 rounded-[200%] z-0 bg-dark"></div>
 
           <div>
