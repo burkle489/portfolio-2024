@@ -12,6 +12,7 @@ const config: Config = {
     screens: {
       xs: "480px",
       ...defaultTheme.screens,
+      md: "770px",
     },
     extend: {
       backgroundImage: {

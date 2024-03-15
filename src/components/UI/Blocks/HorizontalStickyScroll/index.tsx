@@ -21,7 +21,6 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
 
   const windowSize = useWindowSize()
 
-  const mm = gsap.matchMedia()
   useGSAP(() => {
     if (slidesRef && slidesRef.current) {
       gsap.to(slidesRef.current, {
