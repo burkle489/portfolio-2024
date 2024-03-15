@@ -5,7 +5,7 @@ import clsx from "clsx"
 import { IHeroTextAnimationProps } from "../../Atoms/HighlightedText/HighlightedText.types"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-import SplitText from "@gsap/shockingly/SplitText"
+import SplitText from "gsap/dist/SplitText"
 if (typeof document !== `undefined`) gsap.registerPlugin(SplitText)
 
 const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({

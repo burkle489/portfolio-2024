@@ -3,7 +3,7 @@
 import { useGSAP } from "@gsap/react"
 import { FC, useRef } from "react"
 import gsap from "gsap"
-import { DrawSVGPlugin } from "@gsap/shockingly/DrawSVGPlugin"
+import { DrawSVGPlugin } from "gsap/dist/DrawSVGPlugin"
 
 if (typeof document !== `undefined`) gsap.registerPlugin(DrawSVGPlugin)
 
