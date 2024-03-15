@@ -78,7 +78,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
           animationDuration={2}
         />
       </div>
-      <div className="scale-50 md:scale-100 absolute z-10 w-[70rem] top-1/2 left-[40%] xs:left-[45%] md:left-[40%] lg:left-[45%] 2xl:left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="scale-50 md:scale-100 absolute z-10 w-[70rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="relative">
           <div className="absolute z-10 w-[70rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <BgSVG2
