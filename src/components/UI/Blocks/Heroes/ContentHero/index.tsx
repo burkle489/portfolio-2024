@@ -6,6 +6,10 @@ import clsx from "clsx"
 import { FC } from "react"
 import HeroTextAnimation from "../HeroTextAnimation"
 import { IBasicHeroProps } from "./ContentHero"
+import CentralHeroShape from "@/components/UI/Atoms/HeroShapes/CentralHeroShape"
+import TopLeftHeroShape from "@/components/UI/Atoms/HeroShapes/TopRightHeroShape"
+import TopRightHeroShape from "@/components/UI/Atoms/HeroShapes/TopRightHeroShape"
+import BottomLeftHeroShape from "@/components/UI/Atoms/HeroShapes/BottomLeftHeroShape"
 
 const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
@@ -42,153 +46,9 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
               P
             </span>{" "}
           </div> */}
-      <div className="w-[60rem] absolute -right-[33rem] -top-[33rem] lg:-top-[32rem] lg:-right-[32rem]">
-        <BgSVG1
-          drawSvgStart="40% 40%"
-          animationDelay={2}
-          animationDuration={2}
-          className=""
-          strokeWidth={1}
-        />
-      </div>
-      <div className="w-[60rem] absolute -right-[35rem] -top-[35rem] lg:-top-[34rem] lg:-right-[34rem] ">
-        <BgSVG1
-          drawSvgStart="50% 50%"
-          animationDelay={2}
-          animationDuration={2}
-          className=""
-          strokeWidth={0.5}
-        />
-      </div>
-      <div className="w-[60rem] absolute lg:-top-[29rem] lg:-right-[29rem] -top-[31rem] -right-[31rem] hidden sm:block">
-        <BgSVG1
-          drawSvgStart="30% 30%"
-          animationDelay={2}
-          animationDuration={2}
-          className=""
-          strokeWidth={1.5}
-        />
-      </div>
-      <div className="w-[60rem] absolute -top-[29rem] -right-[29rem] lg:-top-[25rem] lg:-right-[25rem] hidden xl:block">
-        <BgSVG1
-          className=""
-          strokeWidth={2}
-          drawSvgStart="20% 20%"
-          animationDelay={2}
-          animationDuration={2}
-        />
-      </div>
-      <div className="scale-50 md:scale-100 absolute z-10 w-[70rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="relative">
-          <div className="absolute z-10 w-[70rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="100% 100%"
-              animationDelay={2.6}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-          <div className="absolute z-10 w-[55rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="0% 0%"
-              animationDelay={2.8}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-          <div className="absolute z-10 w-[40rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="90% 90%"
-              animationDelay={3}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-          <div className="absolute z-10 w-[25rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="10% 10%"
-              animationDelay={3.2}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-          <div className="absolute z-10 w-[15rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="80% 80%"
-              animationDelay={3.4}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-          <div className="absolute z-10 w-[8rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="20% 20%"
-              animationDelay={3.6}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-          <div className="absolute z-10 w-[4rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <BgSVG2
-              drawSvgStart="70% 70%"
-              animationDelay={3.8}
-              animationDuration={2}
-              className=""
-              strokeWidth={2}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="scale-[70%] md:scale-100 absolute -bottom-[5rem] sm:bottom-[0rem] -left-[35rem] z-10">
-        <div className="relative  w-[60rem] h-full">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45rem]">
-            <BgSVG3
-              drawSvgStart="80% 80%"
-              animationDelay={4}
-              animationDuration={2}
-              className=""
-            />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem]">
-            <BgSVG3
-              drawSvgStart="70% 70%"
-              animationDelay={4}
-              animationDuration={2}
-              className=""
-            />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[20rem]">
-            <BgSVG3
-              drawSvgStart="60% 60%"
-              animationDelay={4}
-              animationDuration={2}
-              className=""
-            />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[14rem]">
-            <BgSVG3
-              drawSvgStart="50% 50%"
-              animationDelay={4}
-              animationDuration={2}
-              className=""
-            />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] hidden lg:block">
-            <BgSVG3
-              drawSvgStart="90% 90%"
-              animationDelay={4}
-              animationDuration={2}
-              className=""
-            />
-          </div>
-        </div>
-      </div>
+      <TopRightHeroShape />
+      <CentralHeroShape />
+      <BottomLeftHeroShape />
     </section>
   )
 }

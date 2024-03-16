@@ -12,10 +12,10 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
     <section className={clsx("section bg-dark", className)}>
       <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-12">
         <div className="col-span-1 font-jost h-full relative">
-          <div className="relative md:sticky top-24">
+          <div className="relative md:sticky top-24 z-20">
             <Heading
               variant="h2"
-              className="font-bold relative !text-5xl text-light"
+              className="font-bold relative !text-5xl text-light text-border"
             >
               No matter the size of your business, compromise on quality is{" "}
               <HighlightedText
@@ -28,7 +28,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
               />{" "}
               the answer.
             </Heading>
-            <p className="text-2xl text-light">
+            <p className="text-2xl text-light text-border">
               Your business deserves a high-quality, bespoke web presence at an
               great price.
             </p>

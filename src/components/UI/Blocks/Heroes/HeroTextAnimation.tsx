@@ -75,6 +75,13 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
   }, [delayMultiplier])
   return (
     <div className="relative w-fit leading-none">
+      <span
+        className={clsx(
+          "w-[105%] absolute bottom-0 lg:-bottom-4 -left-[2.5%] h-[40%] z-0 invisible",
+          bgClass
+        )}
+        ref={bgRef}
+      ></span>
       <span className={clsx("relative", className)}>
         <span
           ref={textRef}
@@ -95,13 +102,6 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
           {children}
         </span>
       </span>
-      <span
-        className={clsx(
-          "w-[105%] absolute bottom-0 lg:-bottom-4 -left-[2.5%] h-[40%] z-0 invisible",
-          bgClass
-        )}
-        ref={bgRef}
-      ></span>
     </div>
   )
 }
