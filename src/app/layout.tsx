@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jost.variable}  ${jost.className}`}>
       <body className={inter.className}>
-        <BasicHeader />
+        {/* <BasicHeader /> */}
         {children}
         <BasicFooter />
       </body>

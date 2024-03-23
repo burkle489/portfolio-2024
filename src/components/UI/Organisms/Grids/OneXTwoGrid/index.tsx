@@ -1,6 +1,9 @@
+"use client"
+
 import clsx from "clsx"
 import { FC } from "react"
 import { IOneXTwoGridProps } from "./OneXTwoGrid.types"
+import { useWindowSize } from "usehooks-ts"
 
 const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
   componentOne,
@@ -8,6 +11,8 @@ const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
   hideSecondOnMobile = false,
   className,
 }) => {
+  const { width = 0, height = 0 } = useWindowSize()
+  console.log({ width })
   return (
     <div
       className={clsx(
@@ -16,7 +21,7 @@ const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
       )}
     >
       <div className="col-span-1 w-full h-full">{componentOne}</div>
-      {!hideSecondOnMobile && (
+      {(!hideSecondOnMobile || width > 768) && (
         <div className="col-span-1 w-full h-full">{componentTwo}</div>
       )}
     </div>

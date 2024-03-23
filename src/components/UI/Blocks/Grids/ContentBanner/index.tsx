@@ -11,6 +11,7 @@ const ContentBanner: FC<IContentBannerProps> = ({}) => {
   return (
     <section className="section bg-dark text-white ">
       <OneXTwoGrid
+        hideSecondOnMobile
         componentOne={
           <div className="w-full h-full flex flex-col justify-start items-start relative z-20">
             <Heading variant="h2" className="mb-4">
