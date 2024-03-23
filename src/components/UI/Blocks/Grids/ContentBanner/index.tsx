@@ -5,14 +5,14 @@ import Heading from "@/components/UI/Atoms/Heading"
 import Button from "@/components/UI/Atoms/Button"
 import AnimatingCircles from "./AnimatingCircles"
 import HighlightedText from "@/components/UI/Atoms/HighlightedText"
+import GreenContent from "@/components/UI/Atoms/BGShapes/GreenContent"
 
 const ContentBanner: FC<IContentBannerProps> = ({}) => {
   return (
-    <section className="section bg-dark text-white">
+    <section className="section bg-dark text-white ">
       <OneXTwoGrid
-        hideSecondOnMobile
         componentOne={
-          <div className="w-full h-full flex flex-col justify-start items-start">
+          <div className="w-full h-full flex flex-col justify-start items-start relative z-20">
             <Heading variant="h2" className="mb-4">
               Don&apos;t worry! We{" "}
               <HighlightedText
@@ -43,7 +43,9 @@ const ContentBanner: FC<IContentBannerProps> = ({}) => {
           </div>
         }
         componentTwo={
-          <div className="w-full h-full bg-dark flex flex-col justify-end items-center relative"></div>
+          <div className="w-full h-full  flex flex-col justify-end items-center relative">
+            <GreenContent />
+          </div>
         }
       />
       <div className="w-full h-20 bg-gradient-to-t from-light opacity-5 to-dark absolute bottom-0 left-0 z-20"></div>

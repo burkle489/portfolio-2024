@@ -12,6 +12,9 @@ import { IThreeShowcaseProps } from "./HorizontalStickyScroll.types"
 import HighlightedText from "../../Atoms/HighlightedText"
 
 import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks"
+import BgSVG4 from "@/components/svgs/components/BgSVG4"
+import OrangeRight from "../../Atoms/BGShapes/OrangeRight"
+import BgMidlineSVG from "@/components/svgs/components/BgMidlineSVG"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
@@ -41,14 +44,17 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
   })
 
   return (
-    <section ref={containerRef} className="bg-dark">
+    <section ref={containerRef} className="bg-dark relative">
+      <div className="absolute -left-8 -bottom-0 w-[110vw]">
+        <BgMidlineSVG className={""} />
+      </div>
       <div
         ref={slidesRef}
-        className="flex w-fit flex-nowrap will-change-transform"
+        className="flex w-fit flex-nowrap will-change-transform relative z-20"
       >
-        <div className="slide shrink-0 flex py-20 relative">
+        <div className="slide shrink-0 flex py-40 relative z-30">
           <div>
-            <div className="container h-full min-w-[240vw] xs:min-w-[200vw] sm:min-w-[160vw] md:min-w-[120vw] xl:min-w-[90vw] w-auto flex flex-col">
+            <div className="container h-full min-w-[240vw] xs:min-w-[200vw] sm:min-w-[160vw] md:min-w-[120vw] xl:min-w-[100vw] w-auto flex flex-col">
               <div className="flex w-auto h-full">
                 <div className="block lg:pl-20 min-w-[80vw] w-[80vw] md:min-w-[60vw] md:w-[60vw] xl:w-[45vw] xl:min-w-[45vw] px-4 max-h-full h-full">
                   <Heading
@@ -104,9 +110,7 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
             </div>
           </div>
         </div>
-        <div className="slide shrink-0 flex bg-[rgba(236,141,84)] py-20 relative">
-          <div className="absolute h-full top-0 -left-40 w-80 rounded-[200%] z-0 bg-dark"></div>
-
+        <div className=" rounded-l-3xl slide shrink-0 flex  py-20 z-20 relative">
           <div>
             <div className="container min-w-[310vw] xs:min-w-[235vw] md:min-w-[160vw] xl:min-w-[100vw] w-auto flex flex-col items-end ml-40">
               <div className="flex w-min">
@@ -159,7 +163,7 @@ export default HorizontalStickyScroll
 const Card: FC<{ heading: string; body: string }> = ({ heading, body }) => {
   return (
     <div className="min-w-[80vw] w-[80vw] xs:min-w-[60vw] xs:w-[60vw] sm:min-w-[40vw] sm:w-[40vw] md:w-[30vw] md:min-w-[30vw] xl:w-[22.5vw] xl:min-w-[auto] xl:!max-w-[300px] px-4 relative z-20">
-      <div className="bg-white rounded-xl h-48 w-full col-span-2 p-3 relative overflow-hidden z-20 ">
+      <div className="bg-white rounded-xl h-48 w-full col-span-2 p-3 relative overflow-hidden z-20 drop-shadow-2xl">
         <div className="relative z-20">
           <p className="text-2xl font-bold relative z-20 mt-4 mb-1">
             {heading}

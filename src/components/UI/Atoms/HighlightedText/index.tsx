@@ -24,7 +24,7 @@ const HighlightedText: FC<IHighlightedTextProps> = ({
       </span>
       <span
         className={clsx(
-          "w-[115%] absolute bottom-8 -left-[5%] h-[30%] z-0",
+          "w-[115%] absolute bottom-8 -left-[5%] h-[30%] z-0 drop-shadow-2xl border-dark ",
           bgClass
         )}
       ></span>

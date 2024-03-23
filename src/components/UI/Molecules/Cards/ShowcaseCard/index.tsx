@@ -21,7 +21,7 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
         "p-4 h-full flex flex-col gap-4 group transition-all duration-300 cursor-pointer"
       )}
     >
-      <div className="relative w-full overflow-hidden rounded-2xl h-72 shadow">
+      <div className="relative w-full overflow-hidden rounded-2xl h-72 shadow-2xl">
         <Image
           src={image}
           alt="example screenshot"
@@ -31,7 +31,10 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
         />
       </div>
       <div className="w-full mx-2">
-        <Heading variant="h3" className="font-bold !text-3xl">
+        <Heading
+          variant="h3"
+          className="font-bold !text-3xl text-light text-border"
+        >
           {heading}
         </Heading>
         {tags && (
@@ -53,7 +56,7 @@ const ShowcaseCard: FC<IShowcaseCardProps> = ({
             ))}
           </div>
         )}
-        <p className="line-clamp-3">{body}</p>
+        <p className="line-clamp-3 text-light text-border-thin">{body}</p>
       </div>
     </div>
   )

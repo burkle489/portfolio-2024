@@ -18,7 +18,6 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
 }) => {
   const textRef = useRef(null)
   const bgRef = useRef(null)
-  const [finished, setFinished] = useState(false)
   useGSAP(() => {
     if (textRef.current && bgRef.current) {
       const parentSplit = new SplitText(textRef.current, {
@@ -29,6 +28,7 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
         type: "chars",
         charsClass: "invisible",
       })
+      gsap.set(textRef.current, { autoAlpha: 1 })
       gsap.fromTo(
         bgRef.current,
         { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)", autoAlpha: 0 },
@@ -42,7 +42,7 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
       )
       gsap.fromTo(
         childSplit.chars,
-        { yPercent: 100, autoAlpha: 1 },
+        { yPercent: 100, autoAlpha: 0, duration: 0 },
         {
           duration: 0.7,
           ease: "power3.inOut",
@@ -57,7 +57,6 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
           onComplete: () => {
             childSplit.revert()
             parentSplit.revert()
-            setFinished(true)
           },
         }
       )
@@ -70,7 +69,6 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
           delay: 2 * delayMultiplier,
         }
       )
-      gsap.to(textRef.current, { autoAlpha: 1 })
     }
   }, [delayMultiplier])
   return (
@@ -82,25 +80,21 @@ const HeroTextAnimation: FC<IHeroTextAnimationProps> = ({
         )}
         ref={bgRef}
       ></span>
-      <span className={clsx("relative", className)}>
-        <span
-          ref={textRef}
-          className={clsx(
-            "relative z-10 text-border overflow-hidden ",
+      <span
+        ref={textRef}
+        className={clsx(
+          "relative z-10 text-border overflow-hidden ",
 
-            {
-              visible: finished,
-              "text-border": textColor === "light",
-              "text-border-light": textColor === "dark",
-              "text-border-thin":
-                textColor === "light" && textBorder === "thin",
-              "text-border-light-thin":
-                textColor === "dark" && textBorder === "thin",
-            }
-          )}
-        >
-          {children}
-        </span>
+          {
+            "text-border": textColor === "light",
+            "text-border-light": textColor === "dark",
+            "text-border-thin": textColor === "light" && textBorder === "thin",
+            "text-border-light-thin":
+              textColor === "dark" && textBorder === "thin",
+          }
+        )}
+      >
+        {children}
       </span>
     </div>
   )

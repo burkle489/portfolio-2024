@@ -10,12 +10,12 @@ import HighlightedText from "@/components/UI/Atoms/HighlightedText"
 const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
   return (
     <section className={clsx("section bg-dark", className)}>
-      <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-12">
+      <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-20">
         <div className="col-span-1 font-jost h-full relative">
           <div className="relative md:sticky top-24 z-20">
             <Heading
               variant="h2"
-              className="font-bold relative !text-5xl text-light text-border"
+              className="font-bold relative !text-6xl text-light text-border"
             >
               No matter the size of your business, compromise on quality is{" "}
               <HighlightedText
@@ -28,7 +28,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
               />{" "}
               the answer.
             </Heading>
-            <p className="text-2xl text-light text-border">
+            <p className="text-3xl text-light text-border font-semibold">
               Your business deserves a high-quality, bespoke web presence at an
               great price.
             </p>
@@ -43,7 +43,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             <div className="w-full h-full z-20 relative">
               <Heading
                 variant="h3"
-                className="text-light !text-3xl font-bold tracking-wide"
+                className="text-light !text-4xl font-bold tracking-wide"
               >
                 <HighlightedText
                   {...{
@@ -55,7 +55,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                   }}
                 />{" "}
               </Heading>
-              <p className="text-light text-xl">
+              <p className="text-light text-2xl">
                 We believe in small businesses {"("}especially as we are one
                 ourselves!{")"}
               </p>
@@ -66,7 +66,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             <div className="w-full h-full relative z-20">
               <Heading
                 variant="h3"
-                className="text-light !text-3xl font-bold tracking-wide"
+                className="text-light !text-4xl font-bold tracking-wide"
               >
                 <HighlightedText
                   {...{
@@ -78,7 +78,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                   }}
                 />{" "}
               </Heading>
-              <p className="text-light text-xl">
+              <p className="text-light text-2xl">
                 There is no compromise on quality here. We use the most
                 up-to-date and SEO-friendly modern web technologies.
               </p>
@@ -89,7 +89,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             <div className="w-full h-full z-20 relative">
               <Heading
                 variant="h3"
-                className="text-light !text-3xl font-bold tracking-wide"
+                className="text-light !text-4xl font-bold tracking-wide"
               >
                 <HighlightedText
                   {...{
@@ -101,7 +101,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                   }}
                 />{" "}
               </Heading>
-              <p className="text-light text-xl">
+              <p className="text-light text-2xl">
                 We work with top-quality designers to deliver a brand that you,
                 and your customers, will love.
               </p>
