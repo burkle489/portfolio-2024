@@ -19,30 +19,34 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
         className
       )}
     >
-      <h1 className="text-border z-20 font-jost text-light text-left !text-[3rem] xs:!text-[4.5rem] md:!text-[7rem] lg:!text-[9rem] xl:!text-[11rem] absolute top-[25%] md:top-[5%] left-4 sm:left-12 md:left-20 xl:left-32 uppercase !font-extrabold whitespace-nowrap">
-        {/* <HeroTextAnimation bgClass="dark-complex-radial-gradient">
-          Give your
-        </HeroTextAnimation>
-        <HeroTextAnimation
-          bgClass="dark-complex-radial-gradient"
-          delayMultiplier={1.5}
-        >
-          business
-        </HeroTextAnimation> */}
-        Give your business
+      {/* <h1 className="text-border z-20 font-jost text-light text-left  text-[14vw] absolute top-[25%] md:top-[5%] left-4 sm:left-12 md:left-20 xl:left-32 uppercase !font-extrabold whitespace-nowrap">
+        Give your
       </h1>
-      <Heading
-        variant="h1"
-        className="text-border z-20 font-jost !font-extrabold text-light text-right !text-[3rem] xs:!text-[4.5rem] md:!text-[7rem] lg:!text-[9rem] xl:!text-[11rem] absolute bottom-[25%] md:bottom-[8%] right-4 sm:right-12 md:right-20 xl:right-32"
-      >
-        {/* <HeroTextAnimation
+      <h1 className="text-border z-20 font-jost text-light text-left  text-[14vw] absolute top-[45%] md:top-[20%] left-4 sm:left-12 md:left-20 xl:left-32 uppercase !font-extrabold whitespace-nowrap">
+        
+        business
+      </h1> */}
+      <div className="w-11/12 h-fit">
+        <div className="relative w-full flex flex-col justify-center">
+          <div className="w-full h-full relative">
+            <Heading
+              variant="h2"
+              className="text-light !text-[4vw] text-border uppercase text-right whitespace-nowrap absolute right-8 lg:right-32 lg:top-[calc(100%+80px)]"
+            >
+              give your business
+            </Heading>
+          </div>
+          <h1 className=" italic text-border z-20 !text-[20cqw] font-jost !font-semibold text-light text-center ">
+            {/* <HeroTextAnimation
           bgClass="dark-complex-radial-gradient"
           delayMultiplier={2}
-        >
+          >
           PRESENCE
         </HeroTextAnimation> */}
-        Presence
-      </Heading>
+            Presence
+          </h1>
+        </div>
+      </div>
       {/* <div>
             <span className="font-bold text-[25rem] md:text-[40rem] lg:text-[50rem] dark-complex-radial-gradient bg-clip-text text-transparent">
               P

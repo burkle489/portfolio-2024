@@ -12,9 +12,9 @@ export default function Home() {
     <main className="main-container pointer-events-none">
       {/* <StatementHero /> */}
       <ContentHero />
-      <StickyTextWithCards />
+      {/* <StickyTextWithCards /> */}
       {/* <HorizontalStickyScroll /> */}
-      <ContentBanner />
+      {/* <ContentBanner /> */}
       {/* <MarqueeSection /> */}
     </main>
   )
