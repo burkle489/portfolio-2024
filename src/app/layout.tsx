@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${jost.variable}  ${jost.className}`}>
       <body className={inter.className}>
         <Providers>
-          <aside className="fixed top-0 left-0 w-full h-full z-10">
+          <aside className="fixed top-0 left-0 w-[100vw] h-[100vh] z-10">
             <TCanvas />
           </aside>
           {/* <BasicHeader /> */}
