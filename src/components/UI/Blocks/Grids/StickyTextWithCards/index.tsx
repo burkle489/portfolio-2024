@@ -9,7 +9,7 @@ import HighlightedText from "@/components/UI/Atoms/HighlightedText"
 
 const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
   return (
-    <section className={clsx("section bg-dark", className)}>
+    <section className={clsx("section", className)}>
       <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-20">
         <div className="col-span-1 font-jost h-full relative">
           <div className="relative md:sticky top-24 z-20">
@@ -39,7 +39,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
           </div>
         </div>
         <div className="col-span-1 grid grid-cols-1 gap-6">
-          <div className="col-span-1 p-1 pb-6 bg-dark overflow-hidden  relative group hover:scale-105 transition-all duration-300">
+          <div className="col-span-1 p-1 pb-6  overflow-hidden  relative group hover:scale-105 transition-all duration-300">
             <div className="w-full h-full z-20 relative">
               <Heading
                 variant="h3"
@@ -62,7 +62,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             </div>
             {/* <div className="h-2 group-hover:h-4 transition-all duration-300 absolute bottom-0 left-0 w-full dark-complex-radial-gradient"></div> */}
           </div>
-          <div className="col-span-1 p-1 pb-6 bg-dark overflow-hidden  relative group hover:scale-105 transition-all duration-300">
+          <div className="col-span-1 p-1 pb-6 overflow-hidden  relative group hover:scale-105 transition-all duration-300">
             <div className="w-full h-full relative z-20">
               <Heading
                 variant="h3"
@@ -85,7 +85,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
             </div>
             {/* <div className="h-2 group-hover:h-4 transition-all duration-300 absolute bottom-0 left-0 w-full dark-complex-radial-gradient"></div> */}
           </div>
-          <div className="col-span-1 p-1 pb-6 bg-dark overflow-hidden relative group hover:scale-105 transition-all duration-300">
+          <div className="col-span-1 p-1 pb-6 overflow-hidden relative group hover:scale-105 transition-all duration-300">
             <div className="w-full h-full z-20 relative">
               <Heading
                 variant="h3"

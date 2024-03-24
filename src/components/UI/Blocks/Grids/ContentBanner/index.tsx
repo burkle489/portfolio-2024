@@ -9,12 +9,12 @@ import GreenContent from "@/components/UI/Atoms/BGShapes/GreenContent"
 
 const ContentBanner: FC<IContentBannerProps> = ({}) => {
   return (
-    <section className="section bg-dark text-white ">
-      <OneXTwoGrid
+    <section className="section  text-white ">
+      {/* <OneXTwoGrid
         hideSecondOnMobile
         componentOne={
           <div className="w-full h-full flex flex-col justify-start items-start relative z-20">
-            <Heading variant="h2" className="mb-4">
+            <Heading variant="h2" className="mb-4 pointer-events-none">
               Don&apos;t worry! We{" "}
               <HighlightedText
                 {...{
@@ -37,18 +37,16 @@ const ContentBanner: FC<IContentBannerProps> = ({}) => {
               />{" "}
               too.
             </Heading>
-            <Heading variant="h3" className="!mb-10">
+            <Heading variant="h3" className="!mb-10  pointer-events-none">
               Let&apos;s build your web presence today.
             </Heading>
             <Button text="Get in Touch" />
           </div>
         }
         componentTwo={
-          <div className="w-full h-full  flex flex-col justify-end items-center relative">
-            <GreenContent />
-          </div>
+          <div className="w-full h-full  flex flex-col justify-end items-center relative"></div>
         }
-      />
+      /> */}
       <div className="w-full h-20 bg-gradient-to-t from-light opacity-5 to-dark absolute bottom-0 left-0 z-20"></div>
     </section>
   )

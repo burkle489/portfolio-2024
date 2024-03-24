@@ -12,7 +12,6 @@ const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
   className,
 }) => {
   const { width = 0, height = 0 } = useWindowSize()
-  console.log({ width })
   return (
     <div
       className={clsx(

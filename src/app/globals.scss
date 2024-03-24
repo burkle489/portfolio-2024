@@ -19,15 +19,10 @@
 html,
 body {
   @apply overflow-x-clip;
+  background-color: rgb(0.03921 * 255, 0.01568 * 255, 0.14117 * 255);
 }
 
 body {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
   @apply font-jost;
   @apply text-dark;
 }

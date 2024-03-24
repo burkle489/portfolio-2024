@@ -9,11 +9,11 @@ if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   return (
-    <main className="main-container">
+    <main className="main-container pointer-events-none">
       {/* <StatementHero /> */}
       <ContentHero />
       <StickyTextWithCards />
-      <HorizontalStickyScroll />
+      {/* <HorizontalStickyScroll /> */}
       <ContentBanner />
       {/* <MarqueeSection /> */}
     </main>

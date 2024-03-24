@@ -3,6 +3,8 @@ import { Inter, Jost } from "next/font/google"
 import "./globals.scss"
 import BasicHeader from "@/components/UI/Global/Headers/BasicHeader"
 import BasicFooter from "@/components/UI/Global/Footers/BasicFooter"
+import { TCanvas } from "@/components/three/TCanvas"
+import Providers from "@/components/Provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,9 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jost.variable}  ${jost.className}`}>
       <body className={inter.className}>
-        {/* <BasicHeader /> */}
-        {children}
-        <BasicFooter />
+        <Providers>
+          <aside className="fixed top-0 left-0 w-full h-full z-10">
+            <TCanvas />
+          </aside>
+          {/* <BasicHeader /> */}
+          {children}
+          <BasicFooter />
+        </Providers>
       </body>
     </html>
   )
