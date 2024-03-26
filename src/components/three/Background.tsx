@@ -6,14 +6,17 @@ import { Plane } from "@react-three/drei"
 import { useFrame, useThree } from "@react-three/fiber"
 import { cnoise21 } from "../../modules/glsl/noise"
 import { update } from "@tweenjs/tween.js"
+import useWindowSize from "@/hooks/useWindowSize"
 
 export const Background: FC = () => {
   const planeRef = useRef(null)
 
   const {
     mouse,
-    viewport: { width, height },
+    // viewport: { width, height },
   } = useThree()
+  const { width, height } = useWindowSize()
+
   const shader = {
     uniforms: {
       u_time: { value: 0 },
