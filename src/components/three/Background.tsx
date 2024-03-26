@@ -9,11 +9,11 @@ import { update } from "@tweenjs/tween.js"
 
 export const Background: FC = () => {
   const planeRef = useRef(null)
+
   const {
     mouse,
-    size: { width, height },
+    viewport: { width, height },
   } = useThree()
-  console.log({ width, height })
   const shader = {
     uniforms: {
       u_time: { value: 0 },

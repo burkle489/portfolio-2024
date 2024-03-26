@@ -16,7 +16,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
       return (
         <h1
           className={clsx(
-            `text-3xl sm:text-4xl md:text-5xl mb-4 font-bold`,
+            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold`,
             className
           )}
           ref={textRef}
@@ -28,7 +28,7 @@ const Heading: FC<IHeadingProps> = ({ variant, className, children }) => {
       return (
         <h2
           className={clsx(
-            `text-3xl sm:text-4xl md:text-5xl mb-3 font-bold`,
+            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold`,
             className
           )}
           ref={textRef}

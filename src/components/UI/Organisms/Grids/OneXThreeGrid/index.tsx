@@ -2,25 +2,26 @@
 
 import clsx from "clsx"
 import { FC } from "react"
-import { IOneXTwoGridProps } from "./OneXTwoGrid.types"
-import { useWindowSize } from "usehooks-ts"
+import { IOneXThreeGridProps } from "./OneXThreeGrid.types"
 
-const OneXTwoGrid: FC<IOneXTwoGridProps> = ({
+const OneXThreeGrid: FC<IOneXThreeGridProps> = ({
   componentOne,
   componentTwo,
+  componentThree,
   className,
 }) => {
   return (
     <div
       className={clsx(
         className,
-        "inner-section grid grid-cols-1 md:grid-cols-2 gap-20"
+        "inner-section grid grid-cols-1 md:grid-cols-3 gap-20"
       )}
     >
       <div className="col-span-1 w-full h-full">{componentOne}</div>
       <div className="col-span-1 w-full h-full">{componentTwo}</div>
+      <div className="col-span-1 w-full h-full">{componentThree}</div>
     </div>
   )
 }
 
-export default OneXTwoGrid
+export default OneXThreeGrid
