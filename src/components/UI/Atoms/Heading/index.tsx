@@ -67,6 +67,11 @@ const Heading: FC<IHeadingProps> = ({
         ease: "power4.out",
         duration: 0.6,
         delay: animationDelay + 1.4,
+        scrollTrigger: {
+          // markers: true,
+          trigger: textRef.current,
+          start: "bottom bottom",
+        },
       })
     }
   })
