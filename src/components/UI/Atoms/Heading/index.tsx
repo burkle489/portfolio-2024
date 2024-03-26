@@ -54,7 +54,7 @@ const Heading: FC<IHeadingProps> = ({
           delay: animationDelay,
           autoAlpha: 1,
           scrollTrigger: {
-            markers: true,
+            // markers: true,
             trigger: childSplit.lines,
             start: "bottom bottom",
           },
