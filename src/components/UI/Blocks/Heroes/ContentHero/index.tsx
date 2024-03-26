@@ -15,22 +15,66 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
         <div className="relative w-full flex flex-col justify-center">
           <div className="w-full h-full relative flex flex-col justify-start items-start">
             <Heading
+              variant="h1"
+              className="uppercase text-border-thick z-20 !text-8xl font-overpass !font-semibold text-light text-start "
+              animationInDirection="left"
+              animationDelay={1.2}
+            >
+              <div className="font-vollkorn italic">EMPOWER</div>
+              <div className=" flex items-end gap-4">
+                <div className="uppercase">your business</div>
+                {/* <div className="text-5xl lowercase font-vollkorn flex flex-col items-center justify-center font-normal italic">
+                  <div>with</div>
+                  <div>the</div>
+                </div> */}
+                <div className="mb-4 text-5xl lowercase  font-normal italic">
+                  with the
+                </div>
+              </div>
+
+              <div className="italic !text-[15rem] text-border-thick font-extrabold mt-16 mb-0">
+                PRESENCE
+              </div>
+              <div className="lowercase text-right font-vollkorn italic">
+                it deserves
+              </div>
+            </Heading>
+            {/* <Heading
               variant="h2"
               className="text-light !text-[4vw] text-border uppercase !text-left whitespace-nowrap"
               animationInDirection="left"
               animationDelay={1}
             >
-              give your business
+              EMPOWER <br /> your business
             </Heading>
+            <Heading
+              variant="h2"
+              className="text-light !text-[4vw] text-border uppercase !text-left whitespace-nowrap ml-40 mt-20"
+              animationInDirection="left"
+              animationDelay={1}
+            >
+              with the
+            </Heading>
+            <Heading
+              variant="h1"
+              className="uppercase italic text-border z-20 !text-[15cqw] font-overpass !font-semibold text-light text-center "
+              animationInDirection="left"
+              animationDelay={1.2}
+            >
+              Presence
+            </Heading>
+            <Heading
+              variant="h2"
+              className="text-light !text-[4vw] text-border uppercase !text-right whitespace-nowrap"
+              animationInDirection="left"
+              animationDelay={1}
+            >
+              it
+              <span className="italic lowercase font-vollkorn inline">
+                deserves
+              </span>
+            </Heading> */}
           </div>
-          <Heading
-            variant="h1"
-            className="uppercase italic text-border z-20 !text-[15cqw] font-jost !font-semibold text-light text-center "
-            animationInDirection="left"
-            animationDelay={1.2}
-          >
-            Presence
-          </Heading>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ body {
 }
 
 body {
-  @apply font-jost;
+  @apply font-overpass;
   @apply text-dark;
 }
 
@@ -31,6 +31,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.text-border-very-thick {
+  text-shadow: -6px 6px 6px #1c1c1c;
+}
+.text-border-thick {
+  text-shadow: -4px 4px 4px #1c1c1c;
 }
 .text-border {
   text-shadow: -2px 2px 2px #1c1c1c;

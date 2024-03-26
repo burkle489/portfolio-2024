@@ -19,7 +19,7 @@ export default function Home() {
         <div className="inner-section">
           <Heading variant="h2" className="text-border text-center">
             No matter the size of your business, compromise on quality is{" "}
-            <span className="italic font-semibold">never </span> the answer
+            <span className="italic font-vollkorn">never </span> the answer
           </Heading>
           <p></p>
         </div>

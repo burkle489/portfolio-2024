@@ -27,7 +27,7 @@ const StatementHero: FC<IBasicHeroProps> = ({ className }) => {
           </span>{" "}
           <Heading
             variant="h1"
-            className="font-jost font-semibold text-light text-left max-w-md !text-[25rem] leading-[1] w-full -bottom-20 absolute -left-12"
+            className="font-overpass font-semibold text-light text-left max-w-md !text-[25rem] leading-[1] w-full -bottom-20 absolute -left-12"
           >
             <span className="font-extrabold  dark-complex-radial-gradient bg-clip-text text-transparent">
               Presence

@@ -11,7 +11,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
   return (
     <section className={clsx("section", className)}>
       <div className="inner-section w-full  grid grid-cols-1 md:grid-cols-2 relative gap-20">
-        <div className="col-span-1 font-jost h-full relative">
+        <div className="col-span-1 font-overpass h-full relative">
           <div className="relative md:sticky top-24 z-20">
             <Heading
               variant="h2"
@@ -23,7 +23,8 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                   text: "never",
                   textColor: "light",
                   textBorder: "thin",
-                  bgClass: "dark-complex-radial-gradient !bottom-3 !w-[115%]",
+                  bgClass:
+                    "dark-complex-radial-gradient !bottom-3 !w-[115%] font-vollkorn",
                 }}
               />{" "}
               the answer.

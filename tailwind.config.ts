@@ -21,7 +21,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        jost: ["var(--font-jost)"],
+        overpass: ["var(--font-overpass)"],
+        vollkorn: ["var(--font-vollkorn)"],
       },
       colors: {
         primary: "", // Primary Buttons etc.
