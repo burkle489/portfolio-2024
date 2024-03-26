@@ -18,6 +18,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
               variant="h2"
               className="text-light !text-[4vw] text-border uppercase !text-left whitespace-nowrap"
               animationInDirection="left"
+              animationDelay={1}
             >
               give your business
             </Heading>

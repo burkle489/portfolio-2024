@@ -53,6 +53,7 @@ const Heading: FC<IHeadingProps> = ({
           x: 0,
           delay: animationDelay,
           autoAlpha: 1,
+          stagger: 0.1,
           scrollTrigger: {
             // markers: true,
             trigger: childSplit.lines,
@@ -75,7 +76,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h1
           className={clsx(
-            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold tracking-normal  scale-90`,
+            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold tracking-normal scale-90 invisible`,
             className
           )}
           ref={textRef}
@@ -86,8 +87,9 @@ const Heading: FC<IHeadingProps> = ({
     case "h2":
       return (
         <h2
+          // style={{transition: `translateX(${})`}}
           className={clsx(
-            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold tracking-normal  scale-90`,
+            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold tracking-normal  scale-90 invisible`,
             className
           )}
           ref={textRef}
