@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, useRef } from "react"
+import { FC, useMemo, useRef } from "react"
 import * as THREE from "three"
 import { Plane } from "@react-three/drei"
 import { useFrame, useThree } from "@react-three/fiber"
@@ -16,15 +16,17 @@ export const Background: FC = () => {
     // viewport: { width, height },
   } = useThree()
   const { width, height } = useWindowSize()
-
-  const shader = {
-    uniforms: {
-      u_time: { value: 0 },
-      u_mouse: { value: new THREE.Vector2() },
-    },
-    vertexShader,
-    fragmentShader,
-  }
+  const shader = useMemo(
+    () => ({
+      uniforms: {
+        u_time: { value: 0 },
+        u_mouse: { value: new THREE.Vector2() },
+      },
+      vertexShader,
+      fragmentShader,
+    }),
+    []
+  )
 
   const target = new THREE.Vector2()
   useFrame(({}) => {
