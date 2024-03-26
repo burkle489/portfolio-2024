@@ -32,6 +32,7 @@ export const TCanvas: FC = () => {
       <Canvas
         className=""
         ref={canvasRef}
+        resize={{ scroll: false }}
         dpr={
           typeof window !== "undefined" ? window.devicePixelRatio : undefined
         }
