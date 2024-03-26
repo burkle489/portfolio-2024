@@ -25,10 +25,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${jost.variable}  ${jost.className}`}>
+    <html lang="en" className={`${jost.variable}  ${jost.className} relative`}>
       <body className={inter.className}>
         <Providers>
-          <aside className="fixed top-0 left-0 w-[100vw] h-[100vh] z-10">
+          <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />
           </aside>
           {/* <BasicHeader /> */}
