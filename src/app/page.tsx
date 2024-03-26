@@ -4,14 +4,16 @@ import StickyTextWithCards from "@/components/UI/Blocks/Grids/StickyTextWithCard
 import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
 import HorizontalStickyScroll from "@/components/UI/Blocks/HorizontalStickyScroll"
 import MarqueeSection from "@/components/UI/Blocks/MarqueeSection"
+import { TCanvas } from "@/components/three/TCanvas"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   return (
-    <main className="main-container pointer-events-none">
+    <main className="main-container relative">
       {/* <StatementHero /> */}
+
       <ContentHero />
       <ContentBanner align="center">
         <div className="inner-section">

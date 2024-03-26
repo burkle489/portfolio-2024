@@ -28,10 +28,10 @@ export default function RootLayout({
     <html lang="en" className={`${jost.variable}  ${jost.className} relative`}>
       <body className={inter.className}>
         <Providers>
+          {/* <BasicHeader /> */}
           <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />
           </aside>
-          {/* <BasicHeader /> */}
           {children}
           <BasicFooter />
         </Providers>

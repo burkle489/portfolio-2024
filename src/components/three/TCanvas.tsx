@@ -36,7 +36,7 @@ export const TCanvas: FC = () => {
         dpr={
           typeof window !== "undefined" ? window.devicePixelRatio : undefined
         }
-        onCreated={() => {
+        onCreated={(state) => {
           dispatch(setGradientReady(true))
           gsap.fromTo(
             canvasRef.current,

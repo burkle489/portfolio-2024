@@ -12,10 +12,8 @@ export const Background: FC = () => {
   const planeRef = useRef(null)
 
   const {
-    mouse,
-    // viewport: { width, height },
+    viewport: { width, height },
   } = useThree()
-  const { width, height } = useWindowSize()
   const shader = useMemo(
     () => ({
       uniforms: {
@@ -29,9 +27,9 @@ export const Background: FC = () => {
   )
 
   const target = new THREE.Vector2()
-  useFrame(({}) => {
+  useFrame(({ pointer }) => {
     shader.uniforms.u_time.value += 0.005
-    target.set((mouse.x * 0.5 + 1) * 0.5, (mouse.y * 0.5 + 1) * 0.5)
+    target.set((pointer.x * 0.5 + 1) * 0.5, (pointer.y * 0.5 + 1) * 0.5)
     shader.uniforms.u_mouse.value.lerp(target, 0.01)
   })
 
@@ -47,7 +45,7 @@ varying vec2 v_uv;
 
 void main() {
   v_uv = uv;
-  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 0.6 );
+  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 0.9 );
 }
 `
 
