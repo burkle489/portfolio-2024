@@ -16,7 +16,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
           <div className="w-full h-full relative flex flex-col justify-start items-start">
             <Heading
               variant="h1"
-              className="leading-[0.9] uppercase text-border-thin z-20 !text-8xl font-overpass !font-semibold text-light text-start "
+              className="leading-[0.9] whitespace-nowrap uppercase text-border-thin z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-overpass !font-semibold text-light text-start "
               animationInDirection="left"
               animationDelay={1.2}
               scrubTrigger="basic-hero"
@@ -24,59 +24,21 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
               <div className="font-bodoni-moda italic leading-[0.9]">
                 EMPOWER
               </div>
-              <div className=" flex items-end gap-4">
-                <div className="uppercase leading-[0.9]">your business</div>
-                {/* <div className="text-5xl lowercase font-bodoni-moda flex flex-col items-center justify-center font-normal italic">
-                  <div>with</div>
-                  <div>the</div>
-                </div> */}
-                <div className="mb-4 text-5xl lowercase  font-normal italic leading-[0.9]">
+              <div className=" flex items-end sm:gap-4">
+                <div className="uppercase leading-[0.9] w-fit whitespace-nowrap">
+                  your business
+                </div>
+                <div className="mb-1 md:mb-2 2xl:mb-3 text-sm sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl lowercase font-normal italic leading-[0.9] whitespace-nowrap">
                   with the
                 </div>
               </div>
-
-              <div className="italic !text-[15rem] text-border-thick font-extrabold mt-0 mb-0 leading-[0.9]">
+              <div className="italic !text-[3.5rem] xs:!text-[5rem] sm:!text-[7rem] md:!text-[8rem] lg:!text-[11rem] xl:!text-[13rem] 2xl:!text-[15rem] text-border-thick font-extrabold mt-0 mb-0 leading-[0.9]">
                 PRESENCE
               </div>
-              <div className="lowercase text-right  leading-[0.9]">
+              <div className="mr-2 sm:mr-0 lowercase text-right leading-[0.9] whitespace-nowrap">
                 it deserves
               </div>
             </Heading>
-            {/* <Heading
-              variant="h2"
-              className="text-light !text-[4vw] text-border uppercase !text-left whitespace-nowrap"
-              animationInDirection="left"
-              animationDelay={1}
-            >
-              EMPOWER <br /> your business
-            </Heading>
-            <Heading
-              variant="h2"
-              className="text-light !text-[4vw] text-border uppercase !text-left whitespace-nowrap ml-40 mt-20"
-              animationInDirection="left"
-              animationDelay={1}
-            >
-              with the
-            </Heading>
-            <Heading
-              variant="h1"
-              className="uppercase italic text-border z-20 !text-[15cqw] font-overpass !font-semibold text-light text-center "
-              animationInDirection="left"
-              animationDelay={1.2}
-            >
-              Presence
-            </Heading>
-            <Heading
-              variant="h2"
-              className="text-light !text-[4vw] text-border uppercase !text-right whitespace-nowrap"
-              animationInDirection="left"
-              animationDelay={1}
-            >
-              it
-              <span className="italic lowercase font-bodoni-moda inline">
-                deserves
-              </span>
-            </Heading> */}
           </div>
         </div>
       </div>
