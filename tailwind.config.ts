@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         overpass: ["var(--font-overpass)"],
-        vollkorn: ["var(--font-vollkorn)"],
+        "bodoni-moda": ["var(--font-bodoni-moda)"],
       },
       colors: {
         primary: "", // Primary Buttons etc.

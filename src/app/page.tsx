@@ -18,8 +18,11 @@ export default function Home() {
       <ContentBanner align="center">
         <div className="inner-section">
           <Heading variant="h2" className="text-border text-center">
-            No matter the size of your business, compromise on quality is{" "}
-            <span className="italic font-vollkorn">never </span> the answer
+            No matter what stage you are at, compromise on quality is
+            <span className="italic font-bodoni-moda inline-block">
+              never{" "}
+            </span>{" "}
+            the answer
           </Heading>
           <p></p>
         </div>

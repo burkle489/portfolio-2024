@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
-import { Overpass, Vollkorn } from "next/font/google"
+import { Overpass, Bodoni_Moda } from "next/font/google"
 import "./globals.scss"
 import BasicHeader from "@/components/UI/Global/Headers/BasicHeader"
 import BasicFooter from "@/components/UI/Global/Footers/BasicFooter"
 import { TCanvas } from "@/components/three/TCanvas"
 import Providers from "@/components/Provider"
+import CursorFollower from "@/components/UI/Atoms/CursorFollower"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,12 +18,13 @@ const overpass = Overpass({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-overpass",
 })
-const vollkorn = Vollkorn({
+const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-vollkorn",
+  variable: "--font-bodoni-moda",
 })
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,10 +33,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${overpass.variable}  ${overpass.className} ${vollkorn.variable}  ${vollkorn.className} relative`}
+      className={`${overpass.variable}  ${overpass.className} ${bodoniModa.variable}  ${bodoniModa.className} relative`}
     >
       <body className={overpass.className}>
         <Providers>
+          <CursorFollower />
           <BasicHeader />
           <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />

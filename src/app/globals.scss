@@ -20,6 +20,7 @@ html,
 body {
   @apply overflow-x-clip;
   background-color: rgb(0.03921 * 255, 0.01568 * 255, 0.14117 * 255);
+  font-kerning: none;
 }
 
 body {
@@ -33,22 +34,22 @@ body {
   }
 }
 .text-border-very-thick {
-  text-shadow: -6px 6px 6px #1c1c1c;
+  text-shadow: -6px 6px 6px rgba(28, 28, 28, 0.3);
 }
 .text-border-thick {
-  text-shadow: -4px 4px 4px #1c1c1c;
+  text-shadow: -4px 4px 4px rgba(28, 28, 28, 0.3);
 }
 .text-border {
-  text-shadow: -2px 2px 2px #1c1c1c;
-}
-.text-border-light {
-  text-shadow: -2px 2px 2px rgb(248 247 255);
+  text-shadow: -2px 2px 2px rgba(28, 28, 28, 0.3);
 }
 .text-border-thin {
-  text-shadow: -1px 1px 1px #1c1c1c;
+  text-shadow: -1px 1px 1px rgba(28, 28, 28, 0.3);
+}
+.text-border-light {
+  text-shadow: -2px 2px 2px rgba(248, 247, 255, 0.3);
 }
 .text-border-light-thin {
-  text-shadow: -1px 1px 1px rgb(248 247 255);
+  text-shadow: -1px 1px 1px rgba(248, 247, 255, 0.3);
 }
 
 .section {

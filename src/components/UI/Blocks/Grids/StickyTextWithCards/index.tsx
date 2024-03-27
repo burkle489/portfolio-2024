@@ -24,7 +24,7 @@ const StickyTextWithCards: FC<IStickyTextWithCardsProps> = ({ className }) => {
                   textColor: "light",
                   textBorder: "thin",
                   bgClass:
-                    "dark-complex-radial-gradient !bottom-3 !w-[115%] font-vollkorn",
+                    "dark-complex-radial-gradient !bottom-3 !w-[115%] font-bodoni-moda",
                 }}
               />{" "}
               the answer.

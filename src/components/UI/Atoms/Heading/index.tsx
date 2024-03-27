@@ -14,6 +14,7 @@ interface IHeadingProps {
   className?: string
   animationInDirection?: "left" | "right"
   animationDelay?: number
+  scrubTrigger?: string
 }
 
 const Heading: FC<IHeadingProps> = ({
@@ -22,6 +23,7 @@ const Heading: FC<IHeadingProps> = ({
   children,
   animationInDirection = "right",
   animationDelay = 0,
+  scrubTrigger,
 }) => {
   const textRef = useRef(null)
   const animTimeline = useRef(gsap.timeline({ paused: true }))
@@ -53,7 +55,7 @@ const Heading: FC<IHeadingProps> = ({
           x: 0,
           delay: animationDelay,
           autoAlpha: 1,
-          stagger: 0.1,
+          stagger: 0.3,
           scrollTrigger: {
             // markers: true,
             trigger: childSplit.lines,
@@ -66,11 +68,28 @@ const Heading: FC<IHeadingProps> = ({
         scale: 1,
         ease: "power4.out",
         duration: 0.6,
-        delay: animationDelay + 1.4,
+        delay: animationDelay + 1 + childSplit.lines.length * 0.25,
         scrollTrigger: {
           // markers: true,
           trigger: textRef.current,
           start: "bottom bottom",
+        },
+        onComplete: () => {
+          childSplit.revert()
+          parentSplit.revert()
+          gsap.fromTo(
+            textRef.current,
+            { yPercent: 0 },
+            {
+              yPercent: -30,
+              scrollTrigger: {
+                scrub: true,
+                markers: true,
+                trigger: scrubTrigger ? scrubTrigger : textRef.current,
+                start: "bottom bottom",
+              },
+            }
+          )
         },
       })
     }
@@ -81,7 +100,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h1
           className={clsx(
-            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold tracking-normal scale-90 invisible`,
+            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold tracking-normal `,
             className
           )}
           ref={textRef}
@@ -94,7 +113,7 @@ const Heading: FC<IHeadingProps> = ({
         <h2
           // style={{transition: `translateX(${})`}}
           className={clsx(
-            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold tracking-normal  scale-90 invisible`,
+            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold tracking-normal   `,
             className
           )}
           ref={textRef}
@@ -106,7 +125,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h3
           className={clsx(
-            `text-xl sm:text-2xl md:text-3xl mb-2  font-bold tracking-normal scale-90`,
+            `text-xl sm:text-2xl md:text-3xl mb-2  font-bold tracking-normal`,
             className
           )}
           ref={textRef}
