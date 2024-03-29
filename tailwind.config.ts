@@ -29,6 +29,7 @@ const config: Config = {
         secondary: "",
         tertiary: "",
         dark: "#1c1c1c",
+        "dark-blue": "rgb(10,4,36)",
         light: "rgb(248 247 255)",
         "island-blue": "#4E23F7",
         coral: "#DF4E60",

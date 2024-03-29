@@ -6,7 +6,7 @@ import BurgerMenu from "../../BurgerMenu"
 const BasicHeader: FC<IBasicHeaderProps> = ({ burgerOnly = false }) => {
   return (
     <nav
-      className="flex justify-center items-center h-20 bg-transparent w-full z-50 fixed top-0 left-0 text-3xl"
+      className="flex justify-center items-center h-20 bg-transparent w-full z-[9999999] fixed top-0 left-0 text-3xl"
       style={{ backdropFilter: "blur(6px)" }}
     >
       <div className="px-4 md:px-12 h-full w-full">
