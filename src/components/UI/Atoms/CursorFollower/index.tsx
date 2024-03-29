@@ -6,7 +6,7 @@ export default function CursorFollower() {
   const cursorRef = useRef(null)
   const isTouchDevice =
     typeof window !== "undefined" && "ontouchstart" in window
-  console.log({ isTouchDevice })
+
   useEffect(() => {
     const cursor = cursorRef.current
 
@@ -16,7 +16,6 @@ export default function CursorFollower() {
 
     window.addEventListener("mousemove", (e) => {
       const { target, x, y } = e
-      console.log({ x, y })
 
       const isTargetLinkOrBtn =
         //@ts-ignore

@@ -84,7 +84,6 @@ const Heading: FC<IHeadingProps> = ({
               yPercent: -100,
               scrollTrigger: {
                 scrub: true,
-                markers: true,
                 trigger: textRef.current,
                 start: "-40% top",
               },

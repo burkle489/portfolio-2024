@@ -4,6 +4,7 @@ import StickyTextWithCards from "@/components/UI/Blocks/Grids/StickyTextWithCard
 import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
 import HorizontalStickyScroll from "@/components/UI/Blocks/HorizontalStickyScroll"
 import MarqueeSection from "@/components/UI/Blocks/MarqueeSection"
+import ServicesShowcase from "@/components/UI/Blocks/ServicesShowcase"
 import { TCanvas } from "@/components/three/TCanvas"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
@@ -15,6 +16,7 @@ export default function Home() {
       {/* <StatementHero /> */}
 
       <ContentHero />
+      <ServicesShowcase />
       <ContentBanner align="center">
         <div className="inner-section">
           <Heading variant="h2" className="text-border text-center">

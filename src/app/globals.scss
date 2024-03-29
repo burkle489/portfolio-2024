@@ -15,10 +15,13 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.pin-spacer {
+  z-index: 20 !important;
+}
 
 html,
 body {
-  @apply overflow-x-clip;
+  // @apply overflow-x-clip;
   background-color: rgb(0.03921 * 255, 0.01568 * 255, 0.14117 * 255);
   font-kerning: none;
 }

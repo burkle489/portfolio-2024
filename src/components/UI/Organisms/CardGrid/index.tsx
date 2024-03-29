@@ -31,7 +31,6 @@ const CardGrid: FC<ICardGridProps> = ({
         {data.length >= cardsShown && (
           <Button
             onClick={() => {
-              console.log("clicked")
               setCardsShown((prevState) => prevState + 3)
             }}
             text="Show more"
