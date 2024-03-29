@@ -4,9 +4,10 @@ import { useRef, useEffect } from "react"
 import gsap from "gsap"
 export default function CursorFollower() {
   const cursorRef = useRef(null)
-
+  const isTouchDevice =
+    typeof window !== "undefined" && "ontouchstart" in window
+  console.log({ isTouchDevice })
   useEffect(() => {
-    const isTouchDevice = "ontouchstart" in window
     const cursor = cursorRef.current
 
     if (isTouchDevice || !cursor) {
@@ -18,6 +19,7 @@ export default function CursorFollower() {
       console.log({ x, y })
 
       const isTargetLinkOrBtn =
+        //@ts-ignore
         target?.closest("a") || target?.closest("button")
 
       gsap.to(cursor, {
@@ -37,11 +39,16 @@ export default function CursorFollower() {
       })
     })
   }, [])
-  return (
-    <div
-      className="w-8 h-8  rounded-full bg-transparent z-[999999] fixed top-0 left-0 pointer-events-none user-select-none"
-      style={{ backdropFilter: "blur(6px)" }}
-      ref={cursorRef}
-    ></div>
-  )
+
+  if (!isTouchDevice) {
+    return (
+      <div
+        className="w-8 h-8  rounded-full bg-transparent z-[999999] fixed top-0 left-0 pointer-events-none user-select-none"
+        style={{ backdropFilter: "blur(6px)" }}
+        ref={cursorRef}
+      ></div>
+    )
+  } else {
+    return null
+  }
 }

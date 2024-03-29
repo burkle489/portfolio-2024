@@ -7,13 +7,13 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
     <section
       className={clsx(
-        "basic-hero z-10 w-full flex flex-col justify-center h-[calc(100vh-5rem)] section relative !pt-40 pointer-events-none",
+        "basic-hero z-10 w-full flex flex-col justify-center h-[calc(100vh-5rem)] section relative !pt-40 ",
         className
       )}
     >
       <div className="w-11/12 h-fit mx-auto">
         <div className="relative w-full flex flex-col justify-center">
-          <div className="w-full h-full relative flex flex-col justify-start items-start">
+          <div className="w-full h-full relative flex flex-col justify-center md:justify-start items-center md:items-start">
             <Heading
               variant="h1"
               className="leading-[0.9] whitespace-nowrap uppercase text-border-thin z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-overpass !font-semibold text-light text-start "
