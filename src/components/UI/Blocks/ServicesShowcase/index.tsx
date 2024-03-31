@@ -403,8 +403,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
               "Newsletter",
               "Optional Blog",
             ]}
-            image1="/images/mvp-test-example.png"
-            image2="/images/full-bespoke-example.png"
+            image1="/images/stencilled-site-example.png"
+            image2="/images/mvp-test-example.png"
           />
         </div>
       </div>
@@ -487,30 +487,6 @@ const ShowcaseSlideInner: FC<{
       innerContainerRef.current
     ) {
       gsap.to(headingRef.current, {
-        y: -12,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(descriptionRef.current, {
-        y: -18,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(imageRef.current, {
-        y: -28,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(image2Ref.current, {
         y: -36,
         scrollTrigger: {
           trigger: innerContainerRef.current,
@@ -518,8 +494,32 @@ const ShowcaseSlideInner: FC<{
           start: "top center",
         },
       })
+      gsap.to(descriptionRef.current, {
+        y: -42,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+      gsap.to(imageRef.current, {
+        y: -52,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+      gsap.to(image2Ref.current, {
+        y: -60,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
       gsap.to(tagsRef.current, {
-        y: -10,
+        y: -22,
         scrollTrigger: {
           trigger: innerContainerRef.current,
           scrub: true,
@@ -530,8 +530,11 @@ const ShowcaseSlideInner: FC<{
   })
 
   return (
-    <div ref={innerContainerRef} className="w-full h-full flex flex-col gap-20">
-      <div className="flex justify-between items-start gap-6">
+    <div
+      ref={innerContainerRef}
+      className="w-full h-full flex flex-col gap-20 relative"
+    >
+      <div className="flex justify-between items-start gap-6 relative -bottom-8">
         <div className="w-1/2 flex flex-col justify-between h-full">
           <p
             ref={headingRef}
@@ -547,10 +550,10 @@ const ShowcaseSlideInner: FC<{
         </div>
         <div
           ref={imageRef}
-          className="shadow-2xl aspect-[16/10] w-1/2 relative border-2 border-dark-blue"
+          className="shadow-2xl aspect-[16/10] w-1/2 relative border-[3px] border-dark-blue"
         >
           <Image
-            src={"/images/mvp-test-example.png"}
+            src={image1}
             alt="mvp test showcase img"
             fill
             objectFit="cover"
@@ -560,14 +563,16 @@ const ShowcaseSlideInner: FC<{
       <div className="flex justify-between items-start gap-4">
         <div
           ref={image2Ref}
-          className="shadow-2xl aspect-[16/10] w-3/5 relative border-2 border-dark-blue"
+          className="shadow-2xl aspect-[16/10] w-3/5 relative -bottom-20 border-[3px] border-dark-blue"
         >
-          <Image
-            src={"/images/mvp-test-example.png"}
-            alt="mvp test showcase img"
-            fill
-            objectFit="cover"
-          />
+          {image2 && (
+            <Image
+              src={image2}
+              alt="mvp test showcase img"
+              fill
+              objectFit="cover"
+            />
+          )}
         </div>
         <div ref={tagsRef} className="w-2/5 flex flex-wrap gap-2">
           {tags.map((tag, i) => (
