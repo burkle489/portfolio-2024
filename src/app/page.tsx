@@ -12,7 +12,7 @@ if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   return (
-    <main className="main-container relative">
+    <main className="main-container relative pointer-events-none">
       {/* <StatementHero /> */}
 
       <ContentHero />

@@ -7,7 +7,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
     <section
       className={clsx(
-        "basic-hero z-10 w-full flex flex-col justify-center h-[calc(100vh-5rem)] section relative !pt-40 ",
+        "basic-hero z-10 w-full flex flex-col justify-center h-[calc(100vh-5rem)] section relative !pt-20 !pb-0",
         className
       )}
     >

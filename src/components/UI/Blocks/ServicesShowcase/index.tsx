@@ -4,6 +4,7 @@ import { IServicesShowcaseProps } from "./ServicesShowcase"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { VscTriangleRight } from "react-icons/vsc"
+import Image from "next/image"
 
 const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
   const sectionRef = useRef(null)
@@ -17,6 +18,53 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
   const slide4Container = useRef(null)
   const tickerTriangle = useRef(null)
   const tickerContainer = useRef(null)
+
+  //slide out animations
+  useGSAP(() => {
+    gsap.fromTo(
+      slide1.current,
+      { filter: "blur(0px)", backgroundColor: "#fff" },
+      {
+        filter: "blur(30px)",
+        opacity: 0.5,
+        scrollTrigger: {
+          trigger: slide2Container.current,
+          start: "top center",
+          toggleActions: "restart none none reverse",
+        },
+      }
+    )
+    gsap.fromTo(
+      slide2.current,
+      { filter: "blur(0px)", backgroundColor: "#fff" },
+
+      {
+        filter: "blur(30px)",
+        opacity: 0.5,
+        scrollTrigger: {
+          trigger: slide3Container.current,
+          start: "top center",
+          toggleActions: "restart none none reverse",
+        },
+      }
+    )
+    gsap.fromTo(
+      slide3.current,
+      { filter: "blur(0px)", backgroundColor: "#fff" },
+
+      {
+        filter: "blur(30px)",
+        opacity: 0.5,
+        scrollTrigger: {
+          trigger: slide4Container.current,
+          start: "top center",
+          toggleActions: "restart none none reverse",
+        },
+      }
+    )
+  })
+
+  //slides animations
   useGSAP(() => {
     gsap.fromTo(
       slide1.current,
@@ -25,7 +73,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         autoAlpha: 0,
         top: "50%",
         left: "50%",
-        // translateX: "100vw",
+        translateX: "-45%",
         translateY: "100vh",
       },
       {
@@ -33,8 +81,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         position: "fixed",
         top: "50%",
         left: "50%",
-        translateX: "-35%",
-        translateY: "-50%",
+        translateX: "-45%",
+        translateY: "-60%",
         onComplete: () => {
           gsap.fromTo(
             slide1.current,
@@ -43,12 +91,13 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
               position: "fixed",
               top: "50%",
               left: "50%",
-              translateX: "-35%",
-              translateY: "-50%",
+              translateX: "-45%",
+              translateY: "-60%",
             },
             {
-              translateX: "-200%",
-              translateY: "-50%",
+              left: "150%",
+              translateX: "-45%",
+              translateY: "-60%",
               scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "bottom bottom",
@@ -71,7 +120,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         autoAlpha: 0,
         top: "50%",
         left: "50%",
-        // translateX: "100vw",
+        translateX: "-45%",
         translateY: "100vh",
       },
       {
@@ -79,8 +128,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         position: "fixed",
         top: "50%",
         left: "50%",
-        translateX: "-32.5%",
-        translateY: "-47.5%",
+        translateX: "-45%",
+        translateY: "-60%",
         onComplete: () => {
           gsap.fromTo(
             slide2.current,
@@ -89,12 +138,14 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
               position: "fixed",
               top: "50%",
               left: "50%",
-              translateX: "-32.5%",
-              translateY: "-47.5%",
+              translateX: "-45%",
+              translateY: "-60%",
             },
             {
-              translateX: "-200%",
-              translateY: "-50%",
+              left: "150%",
+
+              translateX: "-45%",
+              translateY: "-60%",
               scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "bottom bottom",
@@ -117,7 +168,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         autoAlpha: 0,
         top: "50%",
         left: "50%",
-        // translateX: "100vw",
+        translateX: "-45%",
         translateY: "100vh",
       },
       {
@@ -125,8 +176,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         position: "fixed",
         top: "50%",
         left: "50%",
-        translateX: "-30%",
-        translateY: "-45%",
+        translateX: "-45%",
+        translateY: "-60%",
         onComplete: () => {
           gsap.fromTo(
             slide3.current,
@@ -135,12 +186,13 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
               position: "fixed",
               top: "50%",
               left: "50%",
-              translateX: "-30%",
-              translateY: "-45%",
+              translateX: "-45%",
+              translateY: "-60%",
             },
             {
-              translateX: "-200%",
-              translateY: "-50%",
+              left: "150%",
+              translateX: "-45%",
+              translateY: "-60%",
               scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "bottom bottom",
@@ -163,7 +215,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         autoAlpha: 0,
         top: "50%",
         left: "50%",
-        // translateX: "100vw",
+        translateX: "-45%",
         translateY: "100vh",
       },
       {
@@ -171,8 +223,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         position: "fixed",
         top: "50%",
         left: "50%",
-        translateX: "-27.5%",
-        translateY: "-42.5%",
+        translateX: "-45%",
+        translateY: "-60%",
         onComplete: () => {
           gsap.fromTo(
             slide4.current,
@@ -181,12 +233,13 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
               position: "fixed",
               top: "50%",
               left: "50%",
-              translateX: "-27.5%",
-              translateY: "-42.5%",
+              translateX: "-45%",
+              translateY: "-60%",
             },
             {
-              translateX: "-200%",
-              translateY: "-50%",
+              left: "150%",
+              translateX: "-45%",
+              translateY: "-60%",
               scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "bottom bottom",
@@ -206,7 +259,10 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
 
   //ticker animations
   useGSAP(() => {
-    gsap.set(tickerContainer.current, { autoAlpha: 0, yPercent: "-10%" })
+    gsap.set(tickerContainer.current, {
+      autoAlpha: 0,
+      yPercent: "-10%",
+    })
     gsap.fromTo(
       tickerContainer.current,
       { autoAlpha: 0, yPercent: "-10%" },
@@ -287,7 +343,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
     gsap.set(tickerTriangle.current, { autoAlpha: 0, top: "-20%" })
   })
   return (
-    <section ref={sectionRef} className="section relative w-[100%] z-20">
+    <section ref={sectionRef} className="section relative w-[100%] z-20 !pt-0">
       <div
         ref={tickerContainer}
         className="sticky top-1/4 left-[20%] w-20 z-30"
@@ -306,63 +362,224 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
       </div>
       <div
         ref={slide1Container}
-        className="slide-container w-full border border-red-500 h-[50vh] z-20"
+        className="slide-container w-full h-[60vh] z-20"
       >
         <div
           ref={slide1}
-          className="bg-white w-[60vw] h-[50vh] z-20 shadow-2xl border-2 border-dark-blue"
+          className=" rotate-3 bg-white w-[40vw] h-[50vh] z-20 shadow-2xl  px-8 p-12 bg-opacity-90"
         >
-          <div className="w-full h-full">
-            <h1>Lorem Ipsum Heading</h1>
-            <p>Lorem Ipsum Paragraph</p>
-          </div>
+          <ShowcaseSlideInner
+            heading="MVP Testing"
+            description="Test your business idea or get a landing page at a cost that makes
+            sense"
+            tags={[
+              "Newsletter",
+              "Email Capture",
+              "SPA",
+              "Technical SEO",
+              "Brand Consultancy",
+            ]}
+            image1="/images/mvp-test-example.png"
+            image2="/images/full-bespoke-example.png"
+          />
         </div>
       </div>
       <div
         ref={slide2Container}
-        className="slide-container w-full border border-red-500 h-[50vh] z-20"
+        className="slide-container w-full h-[60vh] z-20"
       >
         <div
           ref={slide2}
-          className="bg-white w-[60vw] h-[50vh]  z-20 shadow-2xl border-2 border-dark-blue"
+          className="-rotate-1 bg-white w-[40vw] h-[50vh] z-20 shadow-2xl  px-8 p-12"
         >
-          <div className="w-full h-full">
-            <h1>Lorem Ipsum Heading</h1>
-            <p>Lorem Ipsum Paragraph</p>
-          </div>
+          <ShowcaseSlideInner
+            heading="Bespoke Blueprint"
+            description="Pre-built blocks with custom branding, allowing for a cost-effective, bespoke experience"
+            tags={[
+              "Branding",
+              "UI/UX Design",
+              "Technical SEO",
+              "Pre-built Components",
+              "Newsletter",
+              "Optional Blog",
+            ]}
+            image1="/images/mvp-test-example.png"
+            image2="/images/full-bespoke-example.png"
+          />
         </div>
       </div>
       <div
         ref={slide3Container}
-        className="slide-container w-full border border-red-500 h-[50vh] z-20"
+        className="slide-container w-full h-[60vh] z-20"
       >
         <div
           ref={slide3}
-          className="bg-white w-[60vw] h-[50vh]  z-20 shadow-2xl border-2 border-dark-blue"
+          className="-rotate-2 bg-white w-[40vw] h-[50vh] z-20 shadow-2xl  px-8 p-12"
         >
-          <div className="w-full h-full">
-            <h1>Lorem Ipsum Heading</h1>
-            <p>Lorem Ipsum Paragraph</p>
-          </div>
+          <ShowcaseSlideInner
+            heading="Bespoke"
+            description="Get a complete bespoke website with an end-to-end design and build process."
+            tags={[
+              "Branding",
+              "UI/UX Design",
+              "Technical SEO",
+              "E2E Design and Build",
+              "Newsletter",
+              "Optional Blog",
+            ]}
+            image1="/images/mvp-test-example.png"
+            image2="/images/full-bespoke-example.png"
+          />
         </div>
       </div>
       <div
         ref={slide4Container}
-        className="slide-container w-full border border-red-500 h-[50vh] z-20"
+        className="slide-container w-full h-[60vh] z-20"
       >
         <div
           ref={slide4}
-          className="bg-white w-[60vw] h-[50vh]  z-20 shadow-2xl border-2 border-dark-blue"
+          className=" rotate-1 bg-white w-[40vw] h-[50vh]  z-20 shadow-2xl  px-8 p-12"
         >
-          <div className="w-full h-full">
-            <h1>Lorem Ipsum Heading</h1>
-            <p>Lorem Ipsum Paragraph</p>
-          </div>
+          <ShowcaseSlideInner
+            heading="Custom"
+            description="Get anything your heart desires."
+            tags={[
+              "E2E Design & Build",
+              "Technical SEO",
+              "Blog",
+              "Auth Integration",
+              "Ecommerce",
+              "SaaS MVP Build",
+            ]}
+            image1="/images/mvp-test-example.png"
+            image2="/images/full-bespoke-example.png"
+          />
         </div>
       </div>
-      <div className="slide-container w-full border border-red-500 h-[50vh] z-20"></div>
+      <div className="slide-container w-full h-[60vh] z-20"></div>
     </section>
   )
 }
 
 export default ServicesShowcase
+
+const ShowcaseSlideInner: FC<{
+  heading: string
+  description: string
+  tags: string[]
+  image1: string
+  image2?: string
+}> = ({ heading, description, tags, image1, image2 }) => {
+  const headingRef = useRef(null)
+  const descriptionRef = useRef(null)
+  const imageRef = useRef(null)
+  const image2Ref = useRef(null)
+  const tagsRef = useRef(null)
+  const innerContainerRef = useRef(null)
+
+  useGSAP(() => {
+    if (
+      headingRef.current &&
+      descriptionRef.current &&
+      imageRef.current &&
+      image2Ref.current &&
+      tagsRef.current &&
+      innerContainerRef.current
+    ) {
+      gsap.to(headingRef.current, {
+        y: -12,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+      gsap.to(descriptionRef.current, {
+        y: -18,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+      gsap.to(imageRef.current, {
+        y: -28,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+      gsap.to(image2Ref.current, {
+        y: -36,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+      gsap.to(tagsRef.current, {
+        y: -10,
+        scrollTrigger: {
+          trigger: innerContainerRef.current,
+          scrub: true,
+          start: "top center",
+        },
+      })
+    }
+  })
+
+  return (
+    <div ref={innerContainerRef} className="w-full h-full flex flex-col gap-20">
+      <div className="flex justify-between items-start gap-6">
+        <div className="w-1/2 flex flex-col justify-between h-full">
+          <p
+            ref={headingRef}
+            className="whitespace-nowrap mb-12 text-3xl font-bodoni-moda uppercase italic font-semibold -rotate-3 relative -left-4"
+          >
+            {"("}
+            {heading}
+            {")"}
+          </p>
+          <p ref={descriptionRef} className="text-2xl italic text-right">
+            {description}
+          </p>
+        </div>
+        <div
+          ref={imageRef}
+          className="shadow-2xl aspect-[16/10] w-1/2 relative border-2 border-dark-blue"
+        >
+          <Image
+            src={"/images/mvp-test-example.png"}
+            alt="mvp test showcase img"
+            fill
+            objectFit="cover"
+          />
+        </div>
+      </div>
+      <div className="flex justify-between items-start gap-4">
+        <div
+          ref={image2Ref}
+          className="shadow-2xl aspect-[16/10] w-3/5 relative border-2 border-dark-blue"
+        >
+          <Image
+            src={"/images/mvp-test-example.png"}
+            alt="mvp test showcase img"
+            fill
+            objectFit="cover"
+          />
+        </div>
+        <div ref={tagsRef} className="w-2/5 flex flex-wrap gap-2">
+          {tags.map((tag, i) => (
+            <div
+              key={i}
+              className="border-[2px] border-dark-blue text-dark-blue rounded-full text-lg px-2 py-1 whitespace-nowrap flex justify-center items-center font-semibold"
+            >
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
