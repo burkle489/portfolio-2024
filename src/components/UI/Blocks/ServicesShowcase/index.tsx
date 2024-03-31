@@ -486,46 +486,66 @@ const ShowcaseSlideInner: FC<{
       tagsRef.current &&
       innerContainerRef.current
     ) {
-      gsap.to(headingRef.current, {
-        y: -36,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(descriptionRef.current, {
-        y: -42,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(imageRef.current, {
-        y: -52,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(image2Ref.current, {
-        y: -60,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
-      gsap.to(tagsRef.current, {
-        y: -22,
-        scrollTrigger: {
-          trigger: innerContainerRef.current,
-          scrub: true,
-          start: "top center",
-        },
-      })
+      gsap.fromTo(
+        headingRef.current,
+        { y: 0 },
+        {
+          y: -36,
+          scrollTrigger: {
+            trigger: innerContainerRef.current,
+            scrub: true,
+            start: "top center",
+          },
+        }
+      )
+      gsap.fromTo(
+        descriptionRef.current,
+        { y: 0 },
+        {
+          y: -42,
+          scrollTrigger: {
+            trigger: innerContainerRef.current,
+            scrub: true,
+            start: "top center",
+          },
+        }
+      )
+      gsap.fromTo(
+        imageRef.current,
+        { y: 0 },
+        {
+          y: -52,
+          scrollTrigger: {
+            trigger: innerContainerRef.current,
+            scrub: true,
+            start: "top center",
+          },
+        }
+      )
+      gsap.fromTo(
+        image2Ref.current,
+        { y: 0 },
+        {
+          y: -84,
+          scrollTrigger: {
+            trigger: innerContainerRef.current,
+            scrub: true,
+            start: "top center",
+          },
+        }
+      )
+      gsap.fromTo(
+        tagsRef.current,
+        { y: 0 },
+        {
+          y: -22,
+          scrollTrigger: {
+            trigger: innerContainerRef.current,
+            scrub: true,
+            start: "top center",
+          },
+        }
+      )
     }
   })
 
