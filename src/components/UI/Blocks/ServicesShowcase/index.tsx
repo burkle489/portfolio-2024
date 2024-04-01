@@ -283,7 +283,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
           yPercent: 0,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top top",
+            start: "top 20%",
             toggleActions: "restart none none reverse",
           },
           onComplete: () => {
@@ -417,11 +417,12 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
     },
     { scope: sectionRef }
   )
+
   return (
-    <section ref={sectionRef} className="section relative w-[100%] z-20 !pt-0">
+    <section ref={sectionRef} className="section relative w-[100%] z-20 !py-0">
       <div
         ref={tickerContainer}
-        className="sticky top-1/4 left-[20%] w-20 z-30"
+        className="sticky top-1/4 left-[10%] 2xl:left-[20%] w-20 z-0"
       >
         <div ref={tickerTriangle} className="absolute -top-2 right-full z-10">
           <VscTriangleRight color="white" />
@@ -434,13 +435,12 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
             <div key={i} className="w-2 h-[1px] bg-light"></div>
           ))}
         </div>
-        <div className="absolute top-0 -right-full w-96 h-96 pointer-events-auto">
+        <div className="absolute top-0 -left-full lg:-right-[150%] xl:-right-full w-48 h-48 lg:w-96 lg:h-96 pointer-events-auto">
           <svg
             viewBox="0 0 100 100"
             width="100%"
             height="100%"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ backdropFilter: "blur(5px)" }}
           >
             <defs>
               <linearGradient id="shape1-gradient" x1="0" x2="1" y1="1" y2="0">
@@ -460,107 +460,112 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
           </svg>
         </div>
       </div>
-      <div
-        ref={slide1Container}
-        className="slide-container w-full h-[60vh] z-20"
-      >
+      <div className="relative -top-96">
         <div
-          ref={slide1}
-          className=" rotate-3 bg-white w-[40vw] h-[50vh] z-20 shadow-2xl  px-8 p-12 bg-opacity-90"
+          ref={slide1Container}
+          className="slide-1-container w-full h-[50vh] z-20 "
         >
-          <ShowcaseSlideInner
-            heading="MVP Testing"
-            description="Test your business idea or get a landing page at a cost that makes
+          <div
+            ref={slide1}
+            className=" rotate-3 bg-white w-[60vw] lg:h-[50vh] z-20 shadow-2xl  p-4 lg:px-8 lg:p-12 bg-opacity-90 border-4 border-dark-blue max-w-[800px]"
+          >
+            <ShowcaseSlideInner
+              heading="MVP Testing"
+              description="Test your business idea or get a landing page at a cost that makes
             sense"
-            tags={[
-              "Newsletter",
-              "Email Capture",
-              "SPA",
-              "Technical SEO",
-              "Brand Consultancy",
-            ]}
-            image1="/images/mvp-test-example.png"
-            image2="/images/full-bespoke-example.png"
-            triggerRef={slide1Container}
-          />
+              tags={[
+                "Newsletter",
+                "Email Capture",
+                "SPA",
+                "Technical SEO",
+                "Brand Consultancy",
+              ]}
+              image1="/images/mvp-test-example.png"
+              image2="/images/full-bespoke-example.png"
+              triggerClass=".slide-1-container"
+            />
+          </div>
         </div>
-      </div>
-      <div
-        ref={slide2Container}
-        className="slide-container w-full h-[60vh] z-20"
-      >
         <div
-          ref={slide2}
-          className="-rotate-1 bg-white w-[40vw] h-[50vh] z-20 shadow-2xl  px-8 p-12"
+          ref={slide2Container}
+          className="slide-2-container w-full h-[50vh] z-20"
         >
-          <ShowcaseSlideInner
-            heading="Bespoke Blueprint"
-            description="Pre-built blocks with custom branding, allowing for a cost-effective, bespoke experience"
-            tags={[
-              "Branding",
-              "UI/UX Design",
-              "Technical SEO",
-              "Pre-built Components",
-              "Newsletter",
-              "Optional Blog",
-            ]}
-            image1="/images/stencilled-site-example.png"
-            image2="/images/mvp-test-example.png"
-            triggerRef={slide2Container}
-          />
+          <div
+            ref={slide2}
+            className="-rotate-1 bg-white w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl    p-4 lg:px-8 lg:p-12 border-4 border-dark-blue"
+          >
+            <ShowcaseSlideInner
+              heading="Bespoke Blueprint"
+              description="Pre-built blocks with custom branding, allowing for a cost-effective, bespoke experience"
+              tags={[
+                "Branding",
+                "UI/UX Design",
+                "Technical SEO",
+                "Pre-built Components",
+                "Newsletter",
+                "Optional Blog",
+              ]}
+              image1="/images/stencilled-site-example.png"
+              image2="/images/mvp-test-example.png"
+              triggerClass=".slide-2-container"
+            />
+          </div>
         </div>
-      </div>
-      <div
-        ref={slide3Container}
-        className="slide-container w-full h-[60vh] z-20"
-      >
         <div
-          ref={slide3}
-          className="-rotate-2 bg-white w-[40vw] h-[50vh] z-20 shadow-2xl  px-8 p-12"
+          ref={slide3Container}
+          className="slide-3-container w-full h-[50vh] z-20"
         >
-          <ShowcaseSlideInner
-            heading="Bespoke"
-            description="Get a complete bespoke website with an end-to-end design and build process."
-            tags={[
-              "Branding",
-              "UI/UX Design",
-              "Technical SEO",
-              "E2E Design and Build",
-              "Newsletter",
-              "Optional Blog",
-            ]}
-            image1="/images/mvp-test-example.png"
-            image2="/images/full-bespoke-example.png"
-            triggerRef={slide3Container}
-          />
+          <div
+            ref={slide3}
+            className="-rotate-2 bg-white w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 border-4 border-dark-blue"
+          >
+            <ShowcaseSlideInner
+              heading="Custom Bespoke"
+              description="Get whatever your heart desires with an end-to-end design and build process."
+              tags={[
+                "Branding",
+                "UI/UX Design",
+                "Technical SEO",
+                "E2E Design and Build",
+                "Newsletter",
+                "Optional Blog",
+              ]}
+              image1="/images/mvp-test-example.png"
+              image2="/images/full-bespoke-example.png"
+              triggerClass=".slide-3-container"
+            />
+          </div>
         </div>
-      </div>
-      <div
-        ref={slide4Container}
-        className="slide-container w-full h-[60vh] z-20"
-      >
+        {/* <div
+          ref={slide4Container}
+          className="slide-4-container w-full lg:h-[50vh] z-20"
+        >
+          <div
+            ref={slide4}
+            className=" rotate-1 bg-white w-[40vw] lg:h-[50vh]  z-20 shadow-2xl  px-8 p-12 border-4 border-dark-blue"
+          >
+            <ShowcaseSlideInner
+              heading="Custom"
+              description="Get anything your heart desires."
+              tags={[
+                "E2E Design & Build",
+                "Technical SEO",
+                "Blog",
+                "Authentication",
+                "Ecommerce",
+                "SaaS MVP Build",
+              ]}
+              image1="/images/mvp-test-example.png"
+              image2="/images/full-bespoke-example.png"
+              triggerClass=".slide-4-container"
+            />
+          </div>
+        </div> */}
         <div
-          ref={slide4}
-          className=" rotate-1 bg-white w-[40vw] h-[50vh]  z-20 shadow-2xl  px-8 p-12"
-        >
-          <ShowcaseSlideInner
-            heading="Custom"
-            description="Get anything your heart desires."
-            tags={[
-              "E2E Design & Build",
-              "Technical SEO",
-              "Blog",
-              "Auth Integration",
-              "Ecommerce",
-              "SaaS MVP Build",
-            ]}
-            image1="/images/mvp-test-example.png"
-            image2="/images/full-bespoke-example.png"
-            triggerRef={slide4Container}
-          />
-        </div>
+          ref={slide4Container}
+          className="slide-container w-full lg:h-[50vh] z-20"
+        ></div>
       </div>
-      <div className="slide-container w-full h-[60vh] z-20"></div>
     </section>
   )
 }
@@ -573,8 +578,8 @@ const ShowcaseSlideInner: FC<{
   tags: string[]
   image1: string
   image2?: string
-  triggerRef?: any
-}> = ({ heading, description, tags, image1, image2, triggerRef }) => {
+  triggerClass: string
+}> = ({ heading, description, tags, image1, image2, triggerClass }) => {
   const headingRef = useRef(null)
   const descriptionRef = useRef(null)
   const imageRef = useRef(null)
@@ -582,102 +587,105 @@ const ShowcaseSlideInner: FC<{
   const tagsRef = useRef(null)
   const innerContainerRef = useRef(null)
 
-  useGSAP(
-    () => {
-      if (triggerRef && triggerRef.current) {
-        gsap.fromTo(
-          headingRef.current,
-          { y: 0 },
-          {
-            y: -36,
-            scrollTrigger: {
-              trigger: triggerRef.current,
-              scrub: true,
-              start: "top center",
-              invalidateOnRefresh: true,
-            },
-          }
-        )
-        gsap.fromTo(
-          descriptionRef.current,
-          { y: 0 },
-          {
-            y: -42,
-            scrollTrigger: {
-              trigger: triggerRef.current,
-              scrub: true,
-              start: "top center",
-              invalidateOnRefresh: true,
-            },
-          }
-        )
-        gsap.fromTo(
-          imageRef.current,
-          { y: 0 },
-          {
-            y: -52,
-            scrollTrigger: {
-              trigger: triggerRef.current,
-              scrub: true,
-              start: "top center",
-              invalidateOnRefresh: true,
-            },
-          }
-        )
-        gsap.fromTo(
-          image2Ref.current,
-          { y: 0 },
-          {
-            y: -84,
-            scrollTrigger: {
-              markers: true,
-              trigger: triggerRef.current,
-              scrub: true,
-              start: "top center",
-              invalidateOnRefresh: true,
-            },
-          }
-        )
-        gsap.fromTo(
-          tagsRef.current,
-          { y: 0 },
-          {
-            y: -22,
-            scrollTrigger: {
-              trigger: triggerRef.current,
-              scrub: true,
-              start: "top center",
-              invalidateOnRefresh: true,
-            },
-          }
-        )
-      }
-    },
-    { dependencies: [] }
-  )
+  // useGSAP(
+  //   () => {
+  //     if (triggerClass) {
+  //       gsap.fromTo(
+  //         headingRef.current,
+  //         { y: 0 },
+  //         {
+  //           y: -36,
+  //           scrollTrigger: {
+  //             trigger: triggerClass,
+  //             scrub: true,
+  //             start: "top center",
+  //             invalidateOnRefresh: true,
+  //           },
+  //         }
+  //       )
+  //       gsap.fromTo(
+  //         descriptionRef.current,
+  //         { y: 0 },
+  //         {
+  //           y: -42,
+  //           scrollTrigger: {
+  //             trigger: triggerClass,
+  //             scrub: true,
+  //             start: "top center",
+  //             invalidateOnRefresh: true,
+  //           },
+  //         }
+  //       )
+  //       gsap.fromTo(
+  //         imageRef.current,
+  //         { y: 0 },
+  //         {
+  //           y: -52,
+  //           scrollTrigger: {
+  //             trigger: triggerClass,
+  //             scrub: true,
+  //             start: "top center",
+  //             invalidateOnRefresh: true,
+  //           },
+  //         }
+  //       )
+  //       gsap.fromTo(
+  //         image2Ref.current,
+  //         { y: 0 },
+  //         {
+  //           y: -84,
+  //           scrollTrigger: {
+  //             markers: true,
+  //             trigger: triggerClass,
+  //             scrub: true,
+  //             start: "top center",
+  //             invalidateOnRefresh: true,
+  //           },
+  //         }
+  //       )
+  //       gsap.fromTo(
+  //         tagsRef.current,
+  //         { y: 0 },
+  //         {
+  //           y: -22,
+  //           scrollTrigger: {
+  //             trigger: triggerClass,
+  //             scrub: true,
+  //             start: "top center",
+  //             invalidateOnRefresh: true,
+  //           },
+  //         }
+  //       )
+  //     }
+  //   },
+  //   { scope: innerContainerRef, dependencies: [triggerClass] }
+  // )
 
   return (
     <div
       ref={innerContainerRef}
-      className="w-full h-full flex flex-col gap-20 relative"
+      className="w-full h-full flex flex-col gap-4 lg:gap-20 relative justify-around"
     >
-      <div className="flex justify-between items-start gap-6 relative -bottom-8">
-        <div className="w-1/2 flex flex-col justify-start h-full">
+      <div className="flex flex-col lg:flex-row justify-start items-start gap-6 relative ">
+        <div className="w-full lg:w-1/2 flex flex-col justify-start lg:h-full">
           <p
             ref={headingRef}
-            className="whitespace-nowrap mb-12 text-3xl font-bodoni-moda uppercase italic font-semibold -rotate-3 relative -left-4"
+            className=" mb-4 lg:mb-12 text-2xl lg:text-4xl uppercase font-bold -rotate-3 relative -left-0"
           >
             {"("}
             {heading}
             {")"}
           </p>
-          <p ref={descriptionRef} className="text-2xl italic text-right">
+          <p
+            ref={descriptionRef}
+            className="text-lg lg:text-2xl  text-right italic"
+          >
             {description}
           </p>
         </div>
         <div
           ref={imageRef}
-          className="shadow-2xl aspect-[16/10] w-1/2 relative border-[3px] border-dark-blue"
+          className="shadow-2xl aspect-[16/10] w-full lg:w-1/2 relative border-[3px] border-dark-blue"
         >
           <Image
             src={image1}
@@ -690,7 +698,7 @@ const ShowcaseSlideInner: FC<{
       <div className="flex justify-between items-start gap-4">
         <div
           ref={image2Ref}
-          className="shadow-2xl aspect-[16/10] w-3/5 relative -bottom-20 border-[3px] border-dark-blue"
+          className="hidden lg:block shadow-2xl aspect-[16/10] w-[45%] xl:w-[55%] relative  border-[3px] border-dark-blue"
         >
           {image2 && (
             <Image
@@ -701,11 +709,14 @@ const ShowcaseSlideInner: FC<{
             />
           )}
         </div>
-        <div ref={tagsRef} className="w-2/5 flex flex-wrap gap-2">
+        <div
+          ref={tagsRef}
+          className="w-full lg:w-[55%] xl:w-[45%] flex flex-wrap gap-2"
+        >
           {tags.map((tag, i) => (
             <div
               key={i}
-              className="border-[2px] border-dark-blue text-dark-blue rounded-full text-lg px-2 py-1 whitespace-nowrap flex justify-center items-center font-semibold"
+              className="font-bodoni-moda tracking-wide font-semibold border-[2px] border-dark-blue text-dark-blue rounded-full text-sm lg:text-lg p-1 lg:px-2 lg:py-1 whitespace-nowrap flex justify-center items-center "
             >
               {tag}
             </div>

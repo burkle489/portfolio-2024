@@ -13,7 +13,7 @@ if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
   if (typeof window !== "undefined") window.scrollTo(0, 0)
   return (
-    <main className="main-container relative pointer-events-none">
+    <main className="main-container relative">
       {/* <StatementHero /> */}
 
       <ContentHero />
@@ -21,8 +21,9 @@ export default function Home() {
       <ContentBanner align="center">
         <div className="inner-section">
           <Heading variant="h2" className="text-border text-center">
-            No matter what stage you are at, compromise on quality is
+            No matter what stage you are at, compromise on quality is{" "}
             <span className="italic font-bodoni-moda inline-block">
+              {" "}
               never{" "}
             </span>{" "}
             the answer
