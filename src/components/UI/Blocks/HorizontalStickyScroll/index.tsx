@@ -42,9 +42,7 @@ const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
 
   return (
     <section ref={containerRef} className="bg-dark relative">
-      <div className="absolute -left-8 -bottom-0 w-[110vw]">
-        <BgMidlineSVG className={""} />
-      </div>
+      <div className="absolute -left-8 -bottom-0 w-[110vw]"></div>
       <div
         ref={slidesRef}
         className="flex w-fit flex-nowrap will-change-transform relative z-20"
