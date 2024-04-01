@@ -1,12 +1,6 @@
+import clsx from "clsx"
 import { FC } from "react"
 import { IContentBannerProps } from "./ContentBanner.types"
-import OneXTwoGrid from "@/components/UI/Organisms/Grids/OneXTwoGrid"
-import Heading from "@/components/UI/Atoms/Heading"
-import Button from "@/components/UI/Atoms/Button"
-import AnimatingCircles from "./AnimatingCircles"
-import HighlightedText from "@/components/UI/Atoms/HighlightedText"
-import GreenContent from "@/components/UI/Atoms/BGShapes/GreenContent"
-import clsx from "clsx"
 
 const ContentBanner: FC<IContentBannerProps> = ({
   align = "center",
