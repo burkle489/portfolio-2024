@@ -528,6 +528,7 @@ const ShowcaseSlideInner: FC<{
         {
           y: -84,
           scrollTrigger: {
+            markers: true,
             trigger: innerContainerRef.current,
             scrub: true,
             start: "top center",
@@ -555,7 +556,7 @@ const ShowcaseSlideInner: FC<{
       className="w-full h-full flex flex-col gap-20 relative"
     >
       <div className="flex justify-between items-start gap-6 relative -bottom-8">
-        <div className="w-1/2 flex flex-col justify-between h-full">
+        <div className="w-1/2 flex flex-col justify-start h-full">
           <p
             ref={headingRef}
             className="whitespace-nowrap mb-12 text-3xl font-bodoni-moda uppercase italic font-semibold -rotate-3 relative -left-4"
