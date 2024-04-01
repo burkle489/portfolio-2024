@@ -12,9 +12,6 @@ import { IThreeShowcaseProps } from "./HorizontalStickyScroll.types"
 import HighlightedText from "../../Atoms/HighlightedText"
 
 import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks"
-import BgSVG4 from "@/components/svgs/components/BgSVG4"
-import OrangeRight from "../../Atoms/BGShapes/OrangeRight"
-import BgMidlineSVG from "@/components/svgs/components/BgMidlineSVG"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 const HorizontalStickyScroll: FC<IThreeShowcaseProps> = ({}) => {
