@@ -1,11 +1,7 @@
+import Heading from "@/components/UI/Atoms/Heading"
+import clsx from "clsx"
 import { FC } from "react"
 import { IBasicHeroProps } from "./StatementHero"
-import clsx from "clsx"
-import Image from "next/image"
-import Heading from "@/components/UI/Atoms/Heading"
-import Button from "@/components/UI/Atoms/Button"
-import PLogoMask from "@/components/svgs/components/p-logo-mask"
-import HeroBubbles from "@/components/UI/Atoms/HeroBubbles"
 
 const StatementHero: FC<IBasicHeroProps> = ({ className }) => {
   return (

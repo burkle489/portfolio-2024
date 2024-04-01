@@ -1,7 +1,6 @@
 import { FC } from "react"
-import { IBasicHeaderProps } from "./BasicHeader.types"
-import PLogoMask from "@/components/svgs/components/p-logo-mask"
 import BurgerMenu from "../../BurgerMenu"
+import { IBasicHeaderProps } from "./BasicHeader.types"
 
 const BasicHeader: FC<IBasicHeaderProps> = ({ burgerOnly = false }) => {
   return (

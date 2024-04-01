@@ -1,7 +1,5 @@
 import { FC } from "react"
 import { IBasicFooterProps } from "./BasicFooter.types"
-import PLogoMask from "@/components/svgs/components/p-logo-mask"
-import HighlightedText from "@/components/UI/Atoms/HighlightedText"
 
 const BasicFooter: FC<IBasicFooterProps> = ({}) => {
   return (
