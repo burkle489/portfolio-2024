@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { VscTriangleRight } from "react-icons/vsc"
 import Image from "next/image"
+import ScrollTrigger from "gsap/dist/ScrollTrigger"
+if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
   const sectionRef = useRef(null)
