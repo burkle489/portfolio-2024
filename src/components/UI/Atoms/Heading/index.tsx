@@ -60,6 +60,7 @@ const Heading: FC<IHeadingProps> = ({
             // markers: true,
             trigger: childSplit.lines,
             start: "bottom bottom",
+            invalidateOnRefresh: true,
           },
           onComplete: () => {},
         }
