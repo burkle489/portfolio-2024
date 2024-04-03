@@ -7,6 +7,7 @@ import { VscTriangleRight } from "react-icons/vsc"
 import Image from "next/image"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 import MorphSVGPlugin from "gsap/dist/MorphSVGPlugin"
+import Button from "../../Atoms/Button"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 if (typeof document !== `undefined`) gsap.registerPlugin(MorphSVGPlugin)
 
@@ -29,9 +30,9 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
     () => {
       gsap.fromTo(
         slide1.current,
-        { filter: "blur(0px)", backgroundColor: "#fff" },
+        { filter: "blur(0px)" },
         {
-          filter: "blur(30px)",
+          filter: "blur(100px)",
           opacity: 0.5,
           scrollTrigger: {
             trigger: slide2Container.current,
@@ -42,10 +43,10 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
       )
       gsap.fromTo(
         slide2.current,
-        { filter: "blur(0px)", backgroundColor: "#fff" },
+        { filter: "blur(0px)" },
 
         {
-          filter: "blur(30px)",
+          filter: "blur(100px)",
           opacity: 0.5,
           scrollTrigger: {
             trigger: slide3Container.current,
@@ -54,20 +55,20 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
           },
         }
       )
-      gsap.fromTo(
-        slide3.current,
-        { filter: "blur(0px)", backgroundColor: "#fff" },
+      // gsap.fromTo(
+      //   slide3.current,
+      //   { filter: "blur(0px)" },
 
-        {
-          filter: "blur(30px)",
-          opacity: 0.5,
-          scrollTrigger: {
-            trigger: slide4Container.current,
-            start: "top center",
-            toggleActions: "restart none none reverse",
-          },
-        }
-      )
+      //   {
+      //     filter: "blur(100px)",
+      //     opacity: 0.5,
+      //     scrollTrigger: {
+      //       trigger: slide4Container.current,
+      //       start: "top center",
+      //       toggleActions: "restart none none reverse",
+      //     },
+      //   }
+      // )
     },
     { scope: sectionRef }
   )
@@ -217,53 +218,6 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
           },
         }
       )
-      gsap.fromTo(
-        slide4.current,
-        {
-          position: "fixed",
-          autoAlpha: 0,
-          top: "50%",
-          left: "50%",
-          translateX: "-45%",
-          translateY: "100vh",
-        },
-        {
-          autoAlpha: 1,
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          translateX: "-45%",
-          translateY: "-60%",
-          onComplete: () => {
-            gsap.fromTo(
-              slide4.current,
-              {
-                autoAlpha: 1,
-                position: "fixed",
-                top: "50%",
-                left: "50%",
-                translateX: "-45%",
-                translateY: "-60%",
-              },
-              {
-                left: "150%",
-                translateX: "-45%",
-                translateY: "-60%",
-                scrollTrigger: {
-                  trigger: sectionRef.current,
-                  start: "bottom bottom",
-                  toggleActions: "restart none none reverse",
-                },
-              }
-            )
-          },
-          scrollTrigger: {
-            trigger: slide4Container.current,
-            start: "top center",
-            toggleActions: "restart none none reverse",
-          },
-        }
-      )
     },
     { scope: sectionRef }
   )
@@ -320,7 +274,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         tickerTriangle.current,
         { autoAlpha: 1, top: "-2%" },
         {
-          top: "33%",
+          top: "48%",
           scrollTrigger: {
             trigger: slide2Container.current,
             start: "top center",
@@ -328,25 +282,14 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
           },
         }
       )
+
       gsap.fromTo(
         tickerTriangle.current,
-        { autoAlpha: 1, top: "33%" },
-        {
-          top: "66%",
-          scrollTrigger: {
-            trigger: slide3Container.current,
-            start: "top center",
-            toggleActions: "restart none none reverse",
-          },
-        }
-      )
-      gsap.fromTo(
-        tickerTriangle.current,
-        { autoAlpha: 1, top: "66%" },
+        { autoAlpha: 1, top: "48%" },
         {
           top: "98%",
           scrollTrigger: {
-            trigger: slide4Container.current,
+            trigger: slide3Container.current,
             start: "top center",
             toggleActions: "restart none none reverse",
           },
@@ -390,25 +333,25 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
               toggleActions: "restart none none reverse",
             },
             morphSVG:
-              "M14.6,-19.7C21.4,-15.1,31.1,-14.2,32.3,-10.5C33.5,-6.8,26.1,-0.4,22,5.6C17.9,11.6,17.2,17.2,14.1,24C11,30.9,5.5,39,0.3,38.5C-4.8,38.1,-9.7,29,-17.6,23.7C-25.4,18.4,-36.4,16.9,-37.5,12.4C-38.5,8,-29.7,0.6,-25,-6.3C-20.2,-13.2,-19.5,-19.5,-16,-25.2C-12.5,-30.9,-6.3,-35.8,-1.2,-34.2C3.9,-32.6,7.8,-24.3,14.6,-19.7Z",
-          }
-        )
-        gsap.fromTo(
-          pathRef.current,
-          {
-            morphSVG:
-              "M14.6,-19.7C21.4,-15.1,31.1,-14.2,32.3,-10.5C33.5,-6.8,26.1,-0.4,22,5.6C17.9,11.6,17.2,17.2,14.1,24C11,30.9,5.5,39,0.3,38.5C-4.8,38.1,-9.7,29,-17.6,23.7C-25.4,18.4,-36.4,16.9,-37.5,12.4C-38.5,8,-29.7,0.6,-25,-6.3C-20.2,-13.2,-19.5,-19.5,-16,-25.2C-12.5,-30.9,-6.3,-35.8,-1.2,-34.2C3.9,-32.6,7.8,-24.3,14.6,-19.7Z",
-          },
-          {
-            scrollTrigger: {
-              trigger: slide4Container.current,
-              start: "top center",
-              toggleActions: "restart none none reverse",
-            },
-            morphSVG:
               "M14.5,-27.7C18.1,-22.9,20.1,-17.8,24.4,-13.2C28.7,-8.5,35.3,-4.3,36.2,0.5C37,5.3,32.2,10.5,29.3,17.5C26.3,24.5,25.3,33.3,20.7,37.1C16.2,40.8,8.1,39.7,1.7,36.7C-4.7,33.7,-9.3,29,-14.6,25.6C-20,22.3,-25.9,20.4,-28.1,16.3C-30.2,12.3,-28.6,6.1,-29.6,-0.6C-30.7,-7.3,-34.4,-14.7,-32.6,-19.3C-30.8,-23.9,-23.4,-25.8,-17,-29.1C-10.7,-32.3,-5.3,-37,0,-37.1C5.4,-37.1,10.8,-32.5,14.5,-27.7Z",
           }
         )
+        // gsap.fromTo(
+        //   pathRef.current,
+        //   {
+        //     morphSVG:
+        //       "M14.6,-19.7C21.4,-15.1,31.1,-14.2,32.3,-10.5C33.5,-6.8,26.1,-0.4,22,5.6C17.9,11.6,17.2,17.2,14.1,24C11,30.9,5.5,39,0.3,38.5C-4.8,38.1,-9.7,29,-17.6,23.7C-25.4,18.4,-36.4,16.9,-37.5,12.4C-38.5,8,-29.7,0.6,-25,-6.3C-20.2,-13.2,-19.5,-19.5,-16,-25.2C-12.5,-30.9,-6.3,-35.8,-1.2,-34.2C3.9,-32.6,7.8,-24.3,14.6,-19.7Z",
+        //   },
+        //   {
+        //     scrollTrigger: {
+        //       trigger: slide4Container.current,
+        //       start: "top center",
+        //       toggleActions: "restart none none reverse",
+        //     },
+        //     morphSVG:
+        //       "M14.5,-27.7C18.1,-22.9,20.1,-17.8,24.4,-13.2C28.7,-8.5,35.3,-4.3,36.2,0.5C37,5.3,32.2,10.5,29.3,17.5C26.3,24.5,25.3,33.3,20.7,37.1C16.2,40.8,8.1,39.7,1.7,36.7C-4.7,33.7,-9.3,29,-14.6,25.6C-20,22.3,-25.9,20.4,-28.1,16.3C-30.2,12.3,-28.6,6.1,-29.6,-0.6C-30.7,-7.3,-34.4,-14.7,-32.6,-19.3C-30.8,-23.9,-23.4,-25.8,-17,-29.1C-10.7,-32.3,-5.3,-37,0,-37.1C5.4,-37.1,10.8,-32.5,14.5,-27.7Z",
+        //   }
+        // )
         gsap.set(pathRef.current, {
           morphSVG:
             "M26.2,-14.6C32.3,-4.5,34.5,8.4,29.5,18.9C24.5,29.4,12.3,37.5,0.7,37.1C-10.9,36.7,-21.8,27.8,-26.4,17.5C-31,7.3,-29.4,-4.4,-23.9,-14.1C-18.5,-23.8,-9.2,-31.6,0.4,-31.8C10,-32,20,-24.7,26.2,-14.6Z",
@@ -425,14 +368,17 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         className="sticky top-1/4 left-[10%] 2xl:left-[20%] w-20 z-0"
       >
         <div ref={tickerTriangle} className="absolute -top-2 right-full z-10">
-          <VscTriangleRight color="white" />
+          <VscTriangleRight color="rgba(248,247,255,0.6)" />
         </div>
         <div className="w-full h-full flex flex-col gap-2 relative z-10">
           {[
             1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
             1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
           ].map((_, i) => (
-            <div key={i} className="w-2 h-[1px] bg-light"></div>
+            <div
+              key={i}
+              className="w-2 h-[2px] bg-[rgba(248,247,255,0.6)]"
+            ></div>
           ))}
         </div>
         <div className="absolute top-0 -left-full lg:-right-[150%] xl:-right-full w-48 h-48 lg:w-96 lg:h-96 pointer-events-auto">
@@ -467,7 +413,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide1}
-            className=" rotate-3 bg-white w-[60vw] lg:h-[50vh] z-20 shadow-2xl  p-4 lg:px-8 lg:p-12 bg-opacity-90 border-4 border-dark-blue max-w-[800px]"
+            className=" rotate-3 bg-dark-blue bg-opacity-40 w-[60vw] lg:h-[50vh] z-20 shadow-2xl  p-4 lg:px-8 lg:p-12  border-4 border-[rgba(248,247,255,0.2)] max-w-[800px]"
           >
             <ShowcaseSlideInner
               heading="MVP Testing"
@@ -492,7 +438,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide2}
-            className="-rotate-1 bg-white w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl    p-4 lg:px-8 lg:p-12 border-4 border-dark-blue"
+            className="-rotate-1 bg-dark-blue bg-opacity-40  w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 border-4 border-[rgba(248,247,255,0.2)]"
           >
             <ShowcaseSlideInner
               heading="Bespoke Blueprint"
@@ -517,7 +463,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide3}
-            className="-rotate-2 bg-white w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 border-4 border-dark-blue"
+            className="-rotate-2 border-[rgba(248,247,255,0.2)] bg-dark-blue bg-opacity-40 w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 border-4 border-light"
           >
             <ShowcaseSlideInner
               heading="Custom Bespoke"
@@ -542,7 +488,7 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide4}
-            className=" rotate-1 bg-white w-[40vw] lg:h-[50vh]  z-20 shadow-2xl  px-8 p-12 border-4 border-dark-blue"
+            className=" rotate-1 bg-white w-[40vw] lg:h-[50vh]  z-20 shadow-2xl  px-8 p-12 border-4 border-light"
           >
             <ShowcaseSlideInner
               heading="Custom"
@@ -561,10 +507,10 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
             />
           </div>
         </div> */}
-        <div
+        {/* <div
           ref={slide4Container}
           className="slide-container w-full lg:h-[50vh] z-20"
-        ></div>
+        ></div> */}
       </div>
     </section>
   )
@@ -664,7 +610,7 @@ const ShowcaseSlideInner: FC<{
   return (
     <div
       ref={innerContainerRef}
-      className="w-full h-full flex flex-col gap-4 lg:gap-20 relative justify-around"
+      className="w-full h-full flex flex-col gap-4 lg:gap-20 relative justify-around text-light"
     >
       <div className="flex flex-col lg:flex-row justify-start items-start gap-6 relative ">
         <div className="w-full lg:w-1/2 flex flex-col justify-start lg:h-full">
@@ -685,7 +631,7 @@ const ShowcaseSlideInner: FC<{
         </div>
         <div
           ref={imageRef}
-          className="shadow-2xl aspect-[16/10] w-full lg:w-1/2 relative border-[3px] border-dark-blue"
+          className="shadow-2xl aspect-[16/10] w-full lg:w-1/2 relative "
         >
           <Image
             src={image1}
@@ -698,7 +644,7 @@ const ShowcaseSlideInner: FC<{
       <div className="flex justify-between items-start gap-4">
         <div
           ref={image2Ref}
-          className="hidden lg:block shadow-2xl aspect-[16/10] w-[45%] xl:w-[55%] relative  border-[3px] border-dark-blue"
+          className="hidden lg:block shadow-2xl aspect-[16/10] w-[45%] xl:w-[55%] relative "
         >
           {image2 && (
             <Image
@@ -716,12 +662,15 @@ const ShowcaseSlideInner: FC<{
           {tags.map((tag, i) => (
             <div
               key={i}
-              className="font-bodoni-moda tracking-wide font-semibold border-[2px] border-dark-blue text-dark-blue rounded-full text-sm lg:text-lg p-1 lg:px-2 lg:py-1 whitespace-nowrap flex justify-center items-center "
+              className=" tracking-wide font-semibold border-[1px] border-light rounded-full text-sm lg:text-lg px-2 py-0.5 lg:px-3 whitespace-nowrap flex justify-center items-center "
             >
               {tag}
             </div>
           ))}
         </div>
+      </div>
+      <div className="absolute top-[105%] right-0 w-fit">
+        <Button text={"Get More Info"} className="w-full h-full shadow-2xl" />
       </div>
     </div>
   )
