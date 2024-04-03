@@ -2,6 +2,7 @@ import Heading from "@/components/UI/Atoms/Heading"
 import clsx from "clsx"
 import { FC } from "react"
 import { IBasicHeroProps } from "./ContentHero"
+import { useAppSelector } from "@/store/hooks"
 
 const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
@@ -21,10 +22,10 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
               animationDelay={1.2}
               scrubTrigger="basic-hero"
             >
-              <div className="font-bodoni-moda italic leading-[0.9]">
+              <div className="font-bodoni-moda italic leading-[0.9] visible">
                 EMPOWER
               </div>
-              <div className=" flex items-end sm:gap-4">
+              <div className=" flex items-end sm:gap-4 visible">
                 <div className="uppercase leading-[0.9] w-fit whitespace-nowrap">
                   your business
                 </div>
@@ -32,10 +33,10 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
                   with the
                 </div>
               </div>
-              <div className="italic !text-[3.5rem] xs:!text-[5rem] sm:!text-[7rem] md:!text-[8rem] lg:!text-[11rem] xl:!text-[13rem] 2xl:!text-[15rem] text-border-thick font-extrabold mt-0 mb-0 leading-[0.9]">
+              <div className="visible italic !text-[3.5rem] xs:!text-[5rem] sm:!text-[7rem] md:!text-[8rem] lg:!text-[11rem] xl:!text-[13rem] 2xl:!text-[15rem] text-border-thick font-extrabold mt-0 mb-0 leading-[0.9]">
                 PRESENCE
               </div>
-              <div className="mr-2 sm:mr-0 lowercase text-right leading-[0.9] whitespace-nowrap">
+              <div className="visible mr-2 sm:mr-0 lowercase text-right leading-[0.9] whitespace-nowrap">
                 it deserves
               </div>
             </Heading>

@@ -413,7 +413,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide1}
-            className=" rotate-3 bg-dark-blue bg-opacity-40 w-[60vw] lg:h-[50vh] z-20 shadow-2xl  p-4 lg:px-8 lg:p-12  border-4 border-[rgba(248,247,255,0.2)] max-w-[800px]"
+            style={{ backdropFilter: "blur(100px)" }}
+            className=" rotate-3 bg-dark-blue bg-opacity-40 w-[60vw] lg:h-[50vh] z-20 shadow-2xl  p-4 lg:px-8 lg:p-12   max-w-[800px]"
           >
             <ShowcaseSlideInner
               heading="MVP Testing"
@@ -438,7 +439,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide2}
-            className="-rotate-1 bg-dark-blue bg-opacity-40  w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 border-4 border-[rgba(248,247,255,0.2)]"
+            style={{ backdropFilter: "blur(100px)" }}
+            className="-rotate-1 bg-dark-blue bg-opacity-40  w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 "
           >
             <ShowcaseSlideInner
               heading="Bespoke Blueprint"
@@ -463,7 +465,8 @@ const ServicesShowcase: FC<IServicesShowcaseProps> = ({}) => {
         >
           <div
             ref={slide3}
-            className="-rotate-2 border-[rgba(248,247,255,0.2)] bg-dark-blue bg-opacity-40 w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 border-4 border-light"
+            style={{ backdropFilter: "blur(100px)" }}
+            className="-rotate-2  bg-dark-blue bg-opacity-40 w-[60vw] max-w-[800px] lg:h-[50vh] z-20 shadow-2xl p-4 lg:px-8 lg:p-12 "
           >
             <ShowcaseSlideInner
               heading="Custom Bespoke"
@@ -616,7 +619,7 @@ const ShowcaseSlideInner: FC<{
         <div className="w-full lg:w-1/2 flex flex-col justify-start lg:h-full">
           <p
             ref={headingRef}
-            className=" mb-4 lg:mb-12 text-2xl lg:text-4xl uppercase font-bold -rotate-3 relative -left-0"
+            className="mb-4 lg:mb-12 text-2xl lg:text-4xl uppercase font-bold -rotate-3 relative -left-0 top-1"
           >
             {"("}
             {heading}
