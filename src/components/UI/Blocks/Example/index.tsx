@@ -127,7 +127,8 @@ const Example: FC<IExampleProps> = ({}) => {
               />
             </div>
             <Paragraph className="text-light absolute right-20 -bottom-10 !mb-0 font-semibold !font-bodoni-moda italic !text-2xl  text-center">
-              look familiar?
+              Look familiar? Our website is made from the same blueprints yours
+              will be made from.
             </Paragraph>
           </div>
         </div>
