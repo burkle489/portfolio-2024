@@ -50,7 +50,7 @@ const Example: FC<IExampleProps> = ({}) => {
         stagger: 0.5,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top bottom",
+          start: "top 70%",
           end: "center 55%",
           // pin: true,
           scrub: true,
