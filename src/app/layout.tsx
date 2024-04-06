@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Overpass, Bodoni_Moda, Zilla_Slab } from "next/font/google"
+import { Overpass, Bodoni_Moda, Zilla_Slab, Oswald } from "next/font/google"
 import "./globals.scss"
 import BasicHeader from "@/components/UI/Global/Headers/BasicHeader"
 import BasicFooter from "@/components/UI/Global/Footers/BasicFooter"
@@ -18,6 +18,12 @@ const overpass = Overpass({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-overpass",
 })
+const oswald = Oswald({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--font-oswald",
+})
 const bodoniModa = Zilla_Slab({
   subsets: ["latin"],
   display: "swap",
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${overpass.variable}  ${overpass.className} ${bodoniModa.variable}  ${bodoniModa.className} relative`}
+      className={`${oswald.variable}  ${oswald.className} ${overpass.variable}  ${overpass.className} ${bodoniModa.variable}  ${bodoniModa.className} relative`}
     >
       <body className={overpass.className}>
         <Providers>

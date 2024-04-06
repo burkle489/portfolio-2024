@@ -8,7 +8,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
   return (
     <section
       className={clsx(
-        "basic-hero z-10 w-full flex flex-col justify-center h-[calc(95vh-5rem)] section relative !pt-20 !pb-0",
+        "basic-hero z-10 w-full flex flex-col justify-center h-[calc(100vh)] section relative !pt-20 !pb-0",
         className
       )}
     >
@@ -26,62 +26,7 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
               >
                 ENABLE / BUILD / GROW
               </Heading>
-              {/* <Heading
-                variant="h1"
-                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
-                animationInDirection="left"
-                animationDelay={1.2}
-                scrubTrigger="basic-hero"
-              >
-                ENABLE
-              </Heading>
-              <Heading
-                variant="h1"
-                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-thin text-light text-start "
-                animationInDirection="left"
-                animationDelay={1.2}
-                scrubTrigger="basic-hero"
-              >
-                /
-              </Heading>
-
-              <Heading
-                variant="h1"
-                className=" leading-[0.9] whitespace-nowrap uppercase text-border z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
-                animationInDirection="left"
-                animationDelay={1.2}
-                scrubTrigger="basic-hero"
-              >
-                BUILD
-              </Heading>
-              <Heading
-                variant="h1"
-                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-thin text-light text-start "
-                animationInDirection="left"
-                animationDelay={1.2}
-                scrubTrigger="basic-hero"
-              >
-                /
-              </Heading>
-              <Heading
-                variant="h1"
-                className=" leading-[0.9] whitespace-nowrap uppercase text-border z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
-                animationInDirection="left"
-                animationDelay={1.2}
-                scrubTrigger="basic-hero"
-              >
-                GROW
-              </Heading> */}
             </div>
-            {/* <Heading
-              variant="h1"
-              className="leading-[0.9] whitespace-nowrap uppercase text-border-thin z-20 !text-6xl xs:!text-7xl sm:!text-8xl md:!text-8xl lg:!text-9xl 2xl:!text-9xl font-overpass !font-semibold text-light text-start "
-              animationInDirection="left"
-              animationDelay={1.2}
-              scrubTrigger="basic-hero"
-            >
-              PRESENCE
-            </Heading> */}
             <Heading
               animationInDirection="left"
               variant="h1"

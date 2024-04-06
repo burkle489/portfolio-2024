@@ -67,6 +67,9 @@ body {
 .inner-section-wide {
   @apply max-w-screen-2xl w-11/12 mx-auto;
 }
+.inner-section-very-wide {
+  @apply max-w-screen-3xl w-11/12 mx-auto;
+}
 
 .fixed {
   position: fixed;

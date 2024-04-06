@@ -5,6 +5,7 @@ import Image from "next/image"
 import placeholder from "@/images/1920x1080-placeholder.png"
 import CardGrid from "../../../Organisms/CardGrid"
 import Heading from "../../../Atoms/Heading"
+import Paragraph from "@/components/UI/Atoms/Paragraph"
 
 const GridBlock: FC<IGridBlockProps> = ({ className }) => {
   return (
@@ -17,15 +18,15 @@ const GridBlock: FC<IGridBlockProps> = ({ className }) => {
         <div className="flex flex-col justify-center items-center">
           <Heading
             variant="h2"
-            triggerStart="center 60%"
-            className="text-light uppercase font-bodoni-moda font-normal !mb-6 !text-7xl"
+            triggerStart="bottom bottom"
+            className="text-light uppercase font-normal !mb-6 !text-7xl"
           >
             Build your presence
           </Heading>
-          <p className="text-light text-3xl mb-12 text-center max-w-screen-xl">
+          <Paragraph className="!text-3xl !mb-12 text-center max-w-screen-xl font-bodoni-moda">
             Unlock your business with a modern, fast and SEO friendly website at
             a great price.
-          </p>
+          </Paragraph>
         </div>
         <CardGrid
           data={[

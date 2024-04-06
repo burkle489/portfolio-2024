@@ -17,6 +17,7 @@ interface IHeadingProps {
   scrubTrigger?: string
   wordStagger?: number
   triggerStart?: string
+  hasAnimation?: boolean
 }
 
 const Heading: FC<IHeadingProps> = ({
@@ -27,6 +28,7 @@ const Heading: FC<IHeadingProps> = ({
   scrubTrigger,
   wordStagger = 0.15,
   triggerStart = "bottom bottom",
+  hasAnimation = true,
 }) => {
   const textRef = useRef(null)
   const animTimeline = useRef(gsap.timeline({ paused: true }))
@@ -98,7 +100,7 @@ const Heading: FC<IHeadingProps> = ({
   //   }
   // })
   useGSAP(() => {
-    if (textRef.current) {
+    if (textRef.current && hasAnimation) {
       const parentSplit = new SplitText(textRef.current, {
         type: "lines",
         linesClass: "overflow-y-clip",
@@ -138,7 +140,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h1
           className={clsx(
-            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold tracking-normal invisible`,
+            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold font-oswald tracking-wide invisible`,
             className
           )}
           ref={textRef}
@@ -151,7 +153,7 @@ const Heading: FC<IHeadingProps> = ({
         <h2
           // style={{transition: `translateX(${})`}}
           className={clsx(
-            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold tracking-normal `,
+            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold font-oswald tracking-wide `,
             className
           )}
           ref={textRef}
@@ -163,7 +165,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h3
           className={clsx(
-            `text-xl sm:text-2xl md:text-3xl mb-2  font-bold tracking-normal `,
+            `text-xl sm:text-2xl md:text-3xl mb-2  font-bold font-oswald tracking-wide `,
             className
           )}
           ref={textRef}
@@ -175,7 +177,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h4
           className={clsx(
-            `text-xl md:text-2xl mb-2  font-bold tracking-normal`,
+            `text-xl md:text-2xl mb-2  font-bold tracking-normal font-oswald`,
             className
           )}
           ref={textRef}
@@ -187,7 +189,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h5
           className={clsx(
-            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal`,
+            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal font-oswald`,
             className
           )}
           ref={textRef}

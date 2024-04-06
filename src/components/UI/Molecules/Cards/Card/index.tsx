@@ -28,12 +28,15 @@ const Card: ForwardRefExoticComponent<
             <Heading
               variant="h2"
               triggerStart="center 60%"
-              className="text-light italic font-bodoni-moda font-normal !mb-6 !text-5xl"
+              className="text-light italic !font-bodoni-moda font-normal !mb-6 !text-5xl"
+              hasAnimation={false}
             >
               {heading}
             </Heading>
 
-            <p className="text-light text-4xl mb-8 font-bold">{answer}</p>
+            <p className="text-light text-4xl mb-8 font-semibold tracking-wide font-oswald">
+              {answer}
+            </p>
             <p className="text-light text-2xl">{explanation}</p>
           </div>
           <div>

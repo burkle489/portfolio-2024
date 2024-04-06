@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     screens: {
       xs: "480px",
+      "3xl": "1800px",
       ...defaultTheme.screens,
-      md: "770px",
     },
     extend: {
       backgroundImage: {
@@ -23,6 +23,7 @@ const config: Config = {
       fontFamily: {
         overpass: ["var(--font-overpass)"],
         "bodoni-moda": ["var(--font-bodoni-moda)"],
+        oswald: ["var(--font-oswald)"],
       },
       colors: {
         primary: "", // Primary Buttons etc.
