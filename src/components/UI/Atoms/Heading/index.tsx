@@ -101,7 +101,7 @@ const Heading: FC<IHeadingProps> = ({
     if (textRef.current) {
       const parentSplit = new SplitText(textRef.current, {
         type: "lines",
-        linesClass: "",
+        linesClass: "overflow-y-clip",
       })
       const childSplit = new SplitText(textRef.current, {
         type: "words",
@@ -110,12 +110,11 @@ const Heading: FC<IHeadingProps> = ({
       gsap.set(textRef.current, { autoAlpha: 1 })
       gsap.fromTo(
         childSplit.words,
-        { yPercent: 200, autoAlpha: 0, rotate: 0, filter: "blur(100px)" },
+        { yPercent: 100, autoAlpha: 1, rotate: 0 },
         {
           duration: 1,
           ease: "power3.out",
           yPercent: 0,
-          filter: "blur(0px)",
           stagger: wordStagger,
           autoAlpha: 1,
           rotate: 0,

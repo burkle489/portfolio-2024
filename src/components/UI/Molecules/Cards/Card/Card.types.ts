@@ -1,5 +1,8 @@
 export interface ICardProps {
   className?: string
   heading: string
-  description: string
+  answer: string
+  explanation: string
+  tag?: string
+  disclaimer?: string
 }
