@@ -12,7 +12,7 @@ export default function Home() {
     <main className="main-container relative ">
       <ContentHero />
       <GridBlock />
-      <BaseGridBlock />
+      {/* <BaseGridBlock /> */}
       <Example />
     </main>
   )
