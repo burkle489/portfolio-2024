@@ -1,20 +1,73 @@
-import { FC } from "react"
+"use client"
+
+import { FC, useRef } from "react"
 import { IExampleProps } from "./Example.types"
 import clsx from "clsx"
 import Image from "next/image"
 import Heading from "../../Atoms/Heading"
 import Paragraph from "../../Atoms/Paragraph"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 
 const Example: FC<IExampleProps> = ({}) => {
+  const sectionRef = useRef(null)
+  const arrowSvgRef = useRef(null)
+  useGSAP(() => {
+    gsap.fromTo(
+      arrowSvgRef.current,
+      {
+        autoAlpha: 0,
+        y: 700,
+        filter: "blur(100px)",
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        filter: "blur(0px)",
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "center 55%",
+          // pin: true,
+          scrub: true,
+        },
+      }
+    )
+  })
+  useGSAP(() => {
+    gsap.fromTo(
+      ".animated-example-image",
+      {
+        autoAlpha: 0,
+        y: 700,
+        filter: "blur(100px)",
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        filter: "blur(0px)",
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "center 55%",
+          // pin: true,
+          scrub: true,
+        },
+      }
+    )
+  })
   return (
     <section
       className={clsx(
         "z-10 relative flex flex-col justify-center section  items-center"
       )}
+      ref={sectionRef}
     >
       <div className={clsx("flex inner-section-very-wide flex-col gap-20")}>
         <div className="w-full flex items-center justify-between gap-12">
-          <div className="w-[45%] flex-1 bg-dark-blue bg-opacity-40 aspect-video flex justify-center items-center">
+          <div className="animated-example-image w-[45%] flex-1 bg-dark-blue bg-opacity-40 aspect-video flex justify-center items-center">
             <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] relative">
               <Image
                 alt="base section"
@@ -45,7 +98,7 @@ const Example: FC<IExampleProps> = ({}) => {
             <Paragraph className="text-light relative -bottom-20 !mb-0 font-semibold !font-bodoni-moda italic !text-2xl w-[200px] text-center">
               with a small sprinkle of our magic
             </Paragraph>
-            <div className="rotate-180 relative -top-8">
+            <div className="animated-example-image rotate-180 relative -top-8">
               <svg
                 fill="currentColor"
                 height="100%"
@@ -64,7 +117,7 @@ const Example: FC<IExampleProps> = ({}) => {
               </svg>
             </div>
           </div>
-          <div className="w-[60%] bg-dark-blue bg-opacity-40 aspect-video flex justify-center items-center ml-auto">
+          <div className="animated-example-image w-[60%] bg-dark-blue bg-opacity-40 aspect-video flex justify-center items-center ml-auto">
             <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] relative">
               <Image
                 alt="base section"
