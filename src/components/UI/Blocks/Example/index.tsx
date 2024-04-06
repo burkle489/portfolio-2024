@@ -71,7 +71,7 @@ const Example: FC<IExampleProps> = ({}) => {
             <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] relative">
               <Image
                 alt="base section"
-                src="/images/mvp-test-example.png"
+                src="/images/blueprint-example.png"
                 fill
                 objectFit="cover"
               />
@@ -117,15 +117,18 @@ const Example: FC<IExampleProps> = ({}) => {
               </svg>
             </div>
           </div>
-          <div className="animated-example-image w-[60%] bg-dark-blue bg-opacity-40 aspect-video flex justify-center items-center ml-auto">
+          <div className="relative animated-example-image w-[60%] bg-dark-blue bg-opacity-40 aspect-video flex justify-center items-center ml-auto">
             <div className="w-[calc(100%-40px)] h-[calc(100%-40px)] relative">
               <Image
                 alt="base section"
-                src="/images/stencilled-site-example.png"
+                src="/images/styled-blueprint-example.png"
                 fill
                 objectFit="cover"
               />
             </div>
+            <Paragraph className="text-light absolute right-20 -bottom-10 !mb-0 font-semibold !font-bodoni-moda italic !text-2xl  text-center">
+              look familiar?
+            </Paragraph>
           </div>
         </div>
       </div>

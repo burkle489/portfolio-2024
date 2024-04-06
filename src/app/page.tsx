@@ -1,4 +1,5 @@
 import Example from "@/components/UI/Blocks/Example"
+import BaseGridBlock from "@/components/UI/Blocks/Grids/BaseGridBlock"
 import GridBlock from "@/components/UI/Blocks/Grids/GridBlock"
 import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
 import gsap from "gsap"
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="main-container relative ">
       <ContentHero />
       <GridBlock />
+      <BaseGridBlock />
       <Example />
     </main>
   )
