@@ -1,5 +1,6 @@
 import Heading from "@/components/UI/Atoms/Heading"
 import ContentBanner from "@/components/UI/Blocks/Grids/ContentBanner"
+import GridBlock from "@/components/UI/Blocks/Grids/GridBlock"
 import StickyTextWithCards from "@/components/UI/Blocks/Grids/StickyTextWithCards"
 import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
 import HorizontalStickyScroll from "@/components/UI/Blocks/HorizontalStickyScroll"
@@ -13,11 +14,12 @@ if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
   if (typeof window !== "undefined") window.scrollTo(0, 0)
   return (
-    <main className="main-container relative pointer-events-none">
+    <main className="main-container relative ">
       {/* <StatementHero /> */}
 
       <ContentHero />
-      <ServicesShowcase />
+      {/* <ServicesShowcase /> */}
+      <GridBlock />
       <ContentBanner align="center">
         <div className="inner-section">
           <Heading variant="h2" className="text-border text-center">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Overpass, Bodoni_Moda } from "next/font/google"
+import { Overpass, Bodoni_Moda, Zilla_Slab } from "next/font/google"
 import "./globals.scss"
 import BasicHeader from "@/components/UI/Global/Headers/BasicHeader"
 import BasicFooter from "@/components/UI/Global/Footers/BasicFooter"
@@ -18,10 +18,10 @@ const overpass = Overpass({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-overpass",
 })
-const bodoniModa = Bodoni_Moda({
+const bodoniModa = Zilla_Slab({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-bodoni-moda",
 })
 

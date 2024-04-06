@@ -14,31 +14,82 @@ const BasicHero: FC<IBasicHeroProps> = ({ className }) => {
     >
       <div className="w-11/12 h-fit mx-auto">
         <div className="relative w-full flex flex-col justify-center">
-          <div className="w-full h-full relative flex flex-col justify-center md:justify-start items-center md:items-start">
-            <Heading
+          <div className="w-full h-full relative flex flex-col justify-center items-center">
+            <div className="flex gap-8 ml-16">
+              <Heading
+                variant="h1"
+                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
+                animationInDirection="left"
+                animationDelay={0}
+                scrubTrigger="basic-hero"
+                wordStagger={0.2}
+              >
+                ENABLE / BUILD / GROW
+              </Heading>
+              {/* <Heading
+                variant="h1"
+                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
+                animationInDirection="left"
+                animationDelay={1.2}
+                scrubTrigger="basic-hero"
+              >
+                ENABLE
+              </Heading>
+              <Heading
+                variant="h1"
+                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-thin text-light text-start "
+                animationInDirection="left"
+                animationDelay={1.2}
+                scrubTrigger="basic-hero"
+              >
+                /
+              </Heading>
+
+              <Heading
+                variant="h1"
+                className=" leading-[0.9] whitespace-nowrap uppercase text-border z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
+                animationInDirection="left"
+                animationDelay={1.2}
+                scrubTrigger="basic-hero"
+              >
+                BUILD
+              </Heading>
+              <Heading
+                variant="h1"
+                className=" text-border leading-[0.9] whitespace-nowrap uppercase  z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-thin text-light text-start "
+                animationInDirection="left"
+                animationDelay={1.2}
+                scrubTrigger="basic-hero"
+              >
+                /
+              </Heading>
+              <Heading
+                variant="h1"
+                className=" leading-[0.9] whitespace-nowrap uppercase text-border z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-bodoni-moda !font-normal text-light text-start "
+                animationInDirection="left"
+                animationDelay={1.2}
+                scrubTrigger="basic-hero"
+              >
+                GROW
+              </Heading> */}
+            </div>
+            {/* <Heading
               variant="h1"
-              className="leading-[0.9] whitespace-nowrap uppercase text-border-thin z-20 !text-3xl xs:!text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl 2xl:!text-8xl font-overpass !font-semibold text-light text-start "
+              className="leading-[0.9] whitespace-nowrap uppercase text-border-thin z-20 !text-6xl xs:!text-7xl sm:!text-8xl md:!text-8xl lg:!text-9xl 2xl:!text-9xl font-overpass !font-semibold text-light text-start "
               animationInDirection="left"
               animationDelay={1.2}
               scrubTrigger="basic-hero"
             >
-              <div className="font-bodoni-moda italic leading-[0.9] visible">
-                EMPOWER
-              </div>
-              <div className=" flex items-end sm:gap-4 visible">
-                <div className="uppercase leading-[0.9] w-fit whitespace-nowrap">
-                  your business
-                </div>
-                <div className="mb-1 md:mb-2 2xl:mb-3 text-sm sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl lowercase font-normal italic leading-[0.9] whitespace-nowrap">
-                  with the
-                </div>
-              </div>
-              <div className="visible italic !text-[3.5rem] xs:!text-[5rem] sm:!text-[7rem] md:!text-[8rem] lg:!text-[11rem] xl:!text-[13rem] 2xl:!text-[15rem] text-border-thick font-extrabold mt-0 mb-0 leading-[0.9]">
-                PRESENCE
-              </div>
-              <div className="visible mr-2 sm:mr-0 lowercase text-right leading-[0.9] whitespace-nowrap">
-                it deserves
-              </div>
+              PRESENCE
+            </Heading> */}
+            <Heading
+              animationInDirection="left"
+              variant="h1"
+              animationDelay={1.5}
+              scrubTrigger="basic-hero"
+              className=" text-light visible italic !text-[3.5rem] xs:!text-[5rem] sm:!text-[7rem] md:!text-[8rem] lg:!text-[11rem] xl:!text-[13rem] 2xl:!text-[15rem] text-border-thick font-extrabold mt-0 mb-0 leading-[0.9]"
+            >
+              PRESENCE
             </Heading>
           </div>
         </div>

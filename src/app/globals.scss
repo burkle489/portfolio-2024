@@ -58,8 +58,14 @@ body {
 .section {
   @apply py-20 md:py-40 w-full relative;
 }
+.no-padding-section {
+  @apply w-full relative;
+}
 .inner-section {
   @apply max-w-screen-xl w-11/12 mx-auto;
+}
+.inner-section-wide {
+  @apply max-w-screen-2xl w-11/12 mx-auto;
 }
 
 .fixed {

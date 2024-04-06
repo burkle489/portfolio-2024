@@ -10,14 +10,47 @@ const GridBlock: FC<IGridBlockProps> = ({ className }) => {
   return (
     <section
       className={clsx(
-        "p-24 bg-blue-300 flex flex-col justify-center gap-6 w-screen items-center"
+        "z-10 relative flex flex-col justify-center section !pt-0 items-center"
       )}
     >
-      <div>
-        <Heading variant="h2">Card Grid</Heading>
-      </div>
-      <div className={clsx("flex gap-12 max-w-screen-xl")}>
-        <CardGrid data={[1, 2, 3, 4, 5, 6, 7, 8]} />
+      <div className={clsx("flex inner-section-wide flex-col")}>
+        <div className="flex flex-col justify-center items-center">
+          <Heading
+            variant="h2"
+            triggerStart="center 60%"
+            className="text-light uppercase font-bodoni-moda font-normal !mb-6 !text-7xl"
+          >
+            Build your presence
+          </Heading>
+          <p className="text-light text-3xl mb-12 text-center max-w-screen-xl">
+            Unlock your business with a modern, fast and SEO friendly website at
+            a great price.
+          </p>
+        </div>
+        <CardGrid
+          data={[
+            {
+              heading: "What do we do?",
+              answer: "Whatever is necessary",
+              explanation:
+                "Branding, content, design, execution yada yada yada",
+            },
+            {
+              heading: "How do we do it?",
+              answer: "It's about the personality",
+              explanation:
+                "Our focus is on bringing your brand to life. Most websites share the same bones, so we built a product that allows for swift character creation.",
+            },
+            {
+              heading: "How much is it?",
+              answer: "No limbs required.",
+              explanation:
+                "We run a subscription-based model to allow for businesses of all shapes and sizes.",
+              tag: "£150/month",
+              disclaimer: "other payment structures available",
+            },
+          ]}
+        />
       </div>
     </section>
   )
