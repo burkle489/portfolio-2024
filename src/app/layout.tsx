@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { Overpass, Bodoni_Moda, Zilla_Slab, Oswald } from "next/font/google"
 import "./globals.scss"
-import BasicHeader from "@/components/UI/Global/Headers/BasicHeader"
-import BasicFooter from "@/components/UI/Global/Footers/BasicFooter"
+import Header from "@/components/UI/Global/Header"
+import Footer from "@/components/UI/Global/Footer"
 import { TCanvas } from "@/components/three/TCanvas"
 import Providers from "@/components/Provider"
 import CursorFollower from "@/components/UI/Atoms/CursorFollower"
@@ -44,12 +44,12 @@ export default function RootLayout({
       <body className={overpass.className}>
         <Providers>
           <CursorFollower />
-          <BasicHeader />
+          <Header />
           <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />
           </aside>
           {children}
-          <BasicFooter />
+          <Footer />
         </Providers>
       </body>
     </html>

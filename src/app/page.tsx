@@ -1,7 +1,6 @@
-import Example from "@/components/UI/Blocks/Example"
-import BaseGridBlock from "@/components/UI/Blocks/Grids/BaseGridBlock"
-import GridBlock from "@/components/UI/Blocks/Grids/GridBlock"
-import ContentHero from "@/components/UI/Blocks/Heroes/ContentHero"
+import ContentHero from "@/components/UI/Blades/ContentHero"
+import RecentProjects from "@/components/UI/Blades/RecentProjects"
+import TechStack from "@/components/UI/Blades/TechStack"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
@@ -11,9 +10,10 @@ export default function Home() {
   return (
     <main className="main-container relative ">
       <ContentHero />
-      <GridBlock />
+      <TechStack />
+      <RecentProjects />
       {/* <BaseGridBlock /> */}
-      <Example />
+      {/* <Example /> */}
     </main>
   )
 }

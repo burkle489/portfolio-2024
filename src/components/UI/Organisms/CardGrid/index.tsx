@@ -2,8 +2,8 @@
 
 import { FC, useRef, useState } from "react"
 import { ICardGridProps } from "./CardGrid.types"
-import Card from "../../Molecules/Cards/Card"
-import { ICardProps } from "../../Molecules/Cards/Card/Card.types"
+import Card from "../../Molecules/Card"
+import { ICardProps } from "../../Molecules/Card/Card.types"
 import Button from "../../Atoms/Button"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
@@ -11,7 +11,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger"
 if (typeof document !== `undefined`) gsap.registerPlugin(ScrollTrigger)
 
 const CardGrid: FC<ICardGridProps> = ({ data }) => {
-  const cardRef = useRef(null)
   const sectionRef = useRef(null)
   useGSAP(() => {
     gsap.fromTo(
@@ -44,7 +43,6 @@ const CardGrid: FC<ICardGridProps> = ({ data }) => {
             <Card
               {...{
                 ...item,
-                ref: cardRef,
                 className: "col-span-12 md:col-span-6 lg:col-span-4",
               }}
               key={ind}

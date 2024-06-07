@@ -27,7 +27,7 @@ export default function CursorFollower() {
         duration: 0.7,
         ease: "power4",
         opacity: isTargetLinkOrBtn ? 0.6 : 1,
-        transform: `scale(${isTargetLinkOrBtn ? 3.5 : 1})`,
+        transform: `scale(${isTargetLinkOrBtn ? 2.5 : 1})`,
       })
     })
 
@@ -42,8 +42,8 @@ export default function CursorFollower() {
   if (!isTouchDevice) {
     return (
       <div
-        className="w-8 h-8  rounded-full bg-transparent z-[999999] fixed top-0 left-0 pointer-events-none user-select-none"
-        style={{ backdropFilter: "blur(6px)" }}
+        className="w-10 h-10 rounded-full bg-transparent z-[999999] fixed top-0 left-0 pointer-events-none user-select-none"
+        style={{ backdropFilter: "blur(10px)" }}
         ref={cursorRef}
       ></div>
     )

@@ -33,72 +33,6 @@ const Heading: FC<IHeadingProps> = ({
   const textRef = useRef(null)
   const animTimeline = useRef(gsap.timeline({ paused: true }))
 
-  // useGSAP(() => {
-  //   if (textRef.current) {
-  //     const parentSplit = new SplitText(textRef.current, {
-  //       // type: "lines",
-  //       linesClass: "",
-  //     })
-  //     const childSplit = new SplitText(textRef.current, {
-  //       type: "lines",
-  //       linesClass: "",
-  //     })
-  //     gsap.set(textRef.current, {
-  //       autoAlpha: 1,
-  //       scale: 0.8,
-  //     })
-
-  //     gsap.fromTo(
-  //       childSplit.lines,
-  //       {
-  //         x: animationInDirection === "right" ? "200vw" : "-200vw",
-  //         autoAlpha: 1,
-  //       },
-  //       {
-  //         duration: 2,
-  //         ease: "power4.out",
-  //         x: 0,
-  //         delay: animationDelay,
-  //         autoAlpha: 1,
-  //         stagger: 0.3,
-  //         scrollTrigger: {
-  //           // markers: true,
-  //           trigger: childSplit.lines,
-  //           start: "bottom bottom",
-  //           invalidateOnRefresh: true,
-  //         },
-  //         onComplete: () => {},
-  //       }
-  //     )
-  //     gsap.to(textRef.current, {
-  //       scale: 1,
-  //       ease: "power4.out",
-  //       duration: 0.6,
-  //       delay: animationDelay + 1 + childSplit.lines.length * 0.25,
-  //       scrollTrigger: {
-  //         // markers: true,
-  //         trigger: textRef.current,
-  //         start: "bottom bottom",
-  //       },
-  //       onComplete: () => {
-  //         childSplit.revert()
-  //         parentSplit.revert()
-  //         gsap.fromTo(
-  //           textRef.current,
-  //           { yPercent: 0 },
-  //           {
-  //             yPercent: -100,
-  //             scrollTrigger: {
-  //               scrub: true,
-  //               trigger: textRef.current,
-  //               start: "-40% top",
-  //             },
-  //           }
-  //         )
-  //       },
-  //     })
-  //   }
-  // })
   useGSAP(() => {
     if (textRef.current && hasAnimation) {
       const parentSplit = new SplitText(textRef.current, {
@@ -140,8 +74,9 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h1
           className={clsx(
-            `text-5xl sm:text-6xl md:text-7xl mb-4 font-bold font-oswald tracking-wide invisible`,
-            className
+            `text-7xl sm:text-8xl md:text-9xl mb-4 font-bold font-oswald tracking-wide`,
+            className,
+            { invisible: hasAnimation }
           )}
           ref={textRef}
         >
@@ -153,8 +88,9 @@ const Heading: FC<IHeadingProps> = ({
         <h2
           // style={{transition: `translateX(${})`}}
           className={clsx(
-            `text-4xl sm:text-5xl md:text-6xl mb-3 font-bold font-oswald tracking-wide `,
-            className
+            `text-6xl sm:text-7xl md:text8xl mb-3 font-bold font-oswald tracking-wide `,
+            className,
+            { invisible: hasAnimation }
           )}
           ref={textRef}
         >
@@ -166,7 +102,8 @@ const Heading: FC<IHeadingProps> = ({
         <h3
           className={clsx(
             `text-xl sm:text-2xl md:text-3xl mb-2  font-bold font-oswald tracking-wide `,
-            className
+            className,
+            { invisible: hasAnimation }
           )}
           ref={textRef}
         >
@@ -177,8 +114,9 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h4
           className={clsx(
-            `text-xl md:text-2xl mb-2  font-bold tracking-normal font-oswald`,
-            className
+            `text-xl md:text-2xl mb-2  font-bold tracking-normal font-oswald `,
+            className,
+            { invisible: hasAnimation }
           )}
           ref={textRef}
         >
@@ -189,8 +127,9 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h5
           className={clsx(
-            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal font-oswald`,
-            className
+            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal font-oswald `,
+            className,
+            { invisible: hasAnimation }
           )}
           ref={textRef}
         >
@@ -201,8 +140,9 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h6
           className={clsx(
-            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal`,
-            className
+            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal `,
+            className,
+            { invisible: hasAnimation }
           )}
           ref={textRef}
         >
