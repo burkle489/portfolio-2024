@@ -20,7 +20,7 @@ const RecentProjects: FC<IRecentProjectsProps> = ({ className }) => {
           >
             Recent Projects
           </Heading>
-          {/* <Paragraph className="!text-3xl !mb-12 text-center max-w-screen-xl font-bodoni-moda">
+          {/* <Paragraph className="!text-3xl !mb-12 text-center max-w-screen-xl font-playfair">
             
           </Paragraph> */}
         </div>

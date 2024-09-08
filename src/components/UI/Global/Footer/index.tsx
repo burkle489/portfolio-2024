@@ -6,7 +6,7 @@ const Footer: FC<IFooterProps> = ({}) => {
   return (
     <footer
       style={{ backdropFilter: "blur(100px)" }}
-      className="flex  bg-dark-blue bg-opacity-40 text-light relative h-[30rem] overflow-hidden z-10"
+      className="flex  bg-dark-blue bg-opacity-40 text-light relative h-[30rem]  z-10"
     >
       <div className="max-w-screen-2xl w-11/12 mx-auto py-20">
         <div className="grid grid-cols-12 h-full w-full">
@@ -16,7 +16,7 @@ const Footer: FC<IFooterProps> = ({}) => {
             </Heading>
             <p className="text-3xl mb-20">
               We can grow your presence,{" "}
-              <span className="font-bodoni-moda italic font-semibold">
+              <span className="font-playfair italic font-semibold">
                 together.
               </span>
             </p>

@@ -11,7 +11,7 @@ const Header: FC<IHeaderProps> = ({}) => {
       <div className="px-4 md:px-12 h-full w-full">
         <div className="h-full grid grid-cols grid-cols-4">
           <div className=" text-light flex h-full justify-start items-center col-span-2">
-            {/* <p className="font-bodoni-moda mb-1">build</p>
+            {/* <p className="font-playfair mb-1">build</p>
             <div className="bg-light w-[1px] h-12 mx-2 opacity-80 shadow-2xl rounded-full"></div>{" "} */}
             <p className="">tbrke</p>
           </div>

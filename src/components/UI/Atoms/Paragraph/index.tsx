@@ -32,7 +32,7 @@ const Paragraph: FC<IParagraphProps> = ({
       gsap.set(textRef.current, { autoAlpha: 1 })
       gsap.fromTo(
         childSplit.words,
-        { filter: "blur(20px)", autoAlpha: 0, scale: 0.75, rotate: 10 },
+        { filter: "blur(20px)", autoAlpha: 0, scale: 0.75 },
         {
           duration: 1,
           ease: "power3.out",
@@ -41,7 +41,6 @@ const Paragraph: FC<IParagraphProps> = ({
           yPercent: 0,
           stagger: wordStagger,
           autoAlpha: 1,
-          rotate: 0,
           delay: animationDelay,
           scrollTrigger: {
             trigger: textRef.current,

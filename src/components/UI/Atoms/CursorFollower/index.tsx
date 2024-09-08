@@ -26,8 +26,8 @@ export default function CursorFollower() {
         y: y - 16,
         duration: 0.7,
         ease: "power4",
-        opacity: isTargetLinkOrBtn ? 0.6 : 1,
-        transform: `scale(${isTargetLinkOrBtn ? 2.5 : 1})`,
+        opacity: isTargetLinkOrBtn ? 0 : 1,
+        transform: `scale(${isTargetLinkOrBtn ? 0 : 1})`,
       })
     })
 

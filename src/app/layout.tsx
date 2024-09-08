@@ -1,5 +1,11 @@
 import type { Metadata } from "next"
-import { Overpass, Bodoni_Moda, Zilla_Slab, Oswald } from "next/font/google"
+import {
+  Overpass,
+  Bodoni_Moda,
+  Zilla_Slab,
+  Oswald,
+  Playfair_Display,
+} from "next/font/google"
 import "./globals.scss"
 import Header from "@/components/UI/Global/Header"
 import Footer from "@/components/UI/Global/Footer"
@@ -24,11 +30,11 @@ const oswald = Oswald({
   weight: ["200", "300", "400", "500", "600", "700"],
   variable: "--font-oswald",
 })
-const bodoniModa = Zilla_Slab({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
-  variable: "--font-bodoni-moda",
+  variable: "--font-playfair",
 })
 
 export default function RootLayout({
@@ -39,17 +45,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${oswald.variable}  ${oswald.className} ${overpass.variable}  ${overpass.className} ${bodoniModa.variable}  ${bodoniModa.className} relative`}
+      className={`${oswald.variable}  ${oswald.className} ${overpass.variable}  ${overpass.className} ${playfair.variable}  ${playfair.className} relative`}
     >
       <body className={overpass.className}>
         <Providers>
           <CursorFollower />
-          <Header />
+          {/* <Header /> */}
           <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />
           </aside>
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>

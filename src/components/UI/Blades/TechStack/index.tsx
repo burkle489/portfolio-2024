@@ -53,6 +53,7 @@ const TechStack: FC<any> = ({ className }) => {
         <div className="flex flex-wrap gap-6 justify-center items-center">
           {tech.map((t, i) => (
             <div
+              style={{ backdropFilter: "blur(50px)" }}
               className="tracking-wider font-oswald text-4xl text-light bg-dark-blue bg-opacity-40 px-6 animated-card-2 py-3 shadow-2xl"
               key={`${t}-${i}`}
             >

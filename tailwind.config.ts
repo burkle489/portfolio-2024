@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         overpass: ["var(--font-overpass)"],
-        "bodoni-moda": ["var(--font-bodoni-moda)"],
+        playfair: ["var(--font-playfair)"],
         oswald: ["var(--font-oswald)"],
       },
       colors: {

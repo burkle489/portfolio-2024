@@ -55,8 +55,8 @@ export const TCanvas: FC = () => {
           makeDefault
           left={(frustumSize * aspect) / -2}
           right={(frustumSize * aspect) / 2}
-          top={frustumSize / 2}
-          bottom={frustumSize / -2}
+          top={frustumSize / 6}
+          bottom={frustumSize / -6}
           near={-1000}
           far={1000}
         />
