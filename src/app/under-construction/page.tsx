@@ -14,7 +14,7 @@ const UnderConstruction = () => {
         animationInDirection="left"
         scrubTrigger="basic-hero"
         wordStagger={0.2}
-        className="!text-7xl uppercase font-bold !font-playfair italic text-border text-white"
+        className=" text-center !text-3xl sm:!text-4xl lg:!text-7xl uppercase font-bold !font-playfair italic text-border text-white"
       >
         Under Construction...
       </Heading>
