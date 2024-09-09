@@ -13,6 +13,7 @@ interface IAnchorLinkProps extends IClassName {
   href: string
   isExternal?: boolean
   className?: string
+  animationDelay?: number
 }
 
 const AnchorLink: FC<IAnchorLinkProps> = ({
@@ -20,11 +21,31 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
   isExternal = false,
   children,
   className,
+  animationDelay = 0,
 }) => {
   const timeline = useRef(gsap.timeline({ paused: true }))
   const linkRef = useRef(null)
   const linkHoverRef = useRef(null)
 
+  useGSAP(() => {
+    gsap.fromTo(
+      linkRef.current,
+      {
+        filter: "blur(40px)",
+        autoAlpha: 0,
+        scale: 1,
+      },
+      {
+        filter: "blur(0px)",
+        autoAlpha: 1,
+        scale: 1,
+        delay: animationDelay,
+        onComplete: () => {
+          gsap.set(linkRef.current, { filter: "none" })
+        },
+      }
+    )
+  })
   useGSAP(() => {
     timeline.current.to(linkHoverRef.current, {
       width: "105%",
@@ -39,12 +60,15 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
       href={href}
       target="_blank"
       referrerPolicy="no-referrer"
-      className={clsx("text-light pointer-events-auto relative", className)}
+      className={clsx(
+        "text-light pointer-events-auto relative invisible",
+        className
+      )}
     >
       {children}
       <span
         ref={linkHoverRef}
-        className="w-0 h-16 absolute -left-2 bottom-4 "
+        className="w-0 h-16 absolute -left-2 bottom-4"
         style={{ backdropFilter: "blur(10px)" }}
       >
         {/* <span className="w-full h-4 bg-island-blue absolute right-1 bottom-1"></span> */}
@@ -56,7 +80,10 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
       onMouseLeave={() => timeline.current.reverse()}
       ref={linkRef}
       href={href}
-      className={clsx("text-light pointer-events-auto relative", className)}
+      className={clsx(
+        "text-light pointer-events-auto relative invisible",
+        className
+      )}
     >
       {children}
       <span

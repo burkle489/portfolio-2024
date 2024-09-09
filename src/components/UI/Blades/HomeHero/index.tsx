@@ -20,7 +20,7 @@ const HomeHero: FC<IHomeHeroProps> = ({ className }) => {
             <div className="col-span-2 flex flex-col w-full items-start justify-start ">
               <Heading
                 variant="h1"
-                className="max-w-screen-md font-bold text-border leading-[0.9] !text-8xl uppercase z-20  text-light text-start "
+                className="max-w-screen-md font-bold text-border !text-8xl uppercase z-20 !mb-0 text-light text-start !leading-snug"
                 // animationInDirection="left"
                 animationDelay={0}
                 scrubTrigger="basic-hero"
@@ -30,7 +30,7 @@ const HomeHero: FC<IHomeHeroProps> = ({ className }) => {
               </Heading>
               <Heading
                 variant="h2"
-                className="!font-playfair max-w-screen-md italic !mb-8 text-border !text-5xl z-20  !font-semibold text-light  "
+                className="!font-playfair max-w-screen-md italic !mb-8 text-border !text-5xl z-20 !font-semibold text-light "
                 animationInDirection="left"
                 animationDelay={1}
                 scrubTrigger="basic-hero"

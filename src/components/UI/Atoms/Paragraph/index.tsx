@@ -21,6 +21,7 @@ const Paragraph: FC<IParagraphProps> = ({
   const animTimeline = useRef(gsap.timeline({ paused: true }))
   useGSAP(() => {
     if (textRef.current) {
+      gsap.set(textRef.current, { autoAlpha: 1 })
       const parentSplit = new SplitText(textRef.current, {
         type: "lines",
         linesClass: "",
@@ -29,7 +30,6 @@ const Paragraph: FC<IParagraphProps> = ({
         type: "words",
         charsClass: "invisible",
       })
-      gsap.set(textRef.current, { autoAlpha: 1 })
       gsap.fromTo(
         childSplit.words,
         { filter: "blur(20px)", autoAlpha: 0, scale: 0.75 },
@@ -59,7 +59,7 @@ const Paragraph: FC<IParagraphProps> = ({
   return (
     <p
       className={clsx(
-        `text-light text-lg mb-4 md:mb-8 font-overpass`,
+        `text-light text-lg mb-4 md:mb-8 font-overpass invisible`,
         className
       )}
       ref={textRef}
