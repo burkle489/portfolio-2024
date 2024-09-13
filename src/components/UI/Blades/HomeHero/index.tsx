@@ -45,7 +45,7 @@ const HomeHero: FC<IHomeHeroProps> = ({ className }) => {
                 exceed expectations.
               </Paragraph>
             </div>
-            <div className="text-light col-span-2 flex flex-col  justify-end items-center md:items-end w-full">
+            <div className="text-light col-span-2 flex flex-col justify-end items-center md:items-end w-full">
               <HomeHeroNav />
             </div>
           </div>

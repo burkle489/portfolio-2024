@@ -14,6 +14,7 @@ interface IAnchorLinkProps extends IClassName {
   isExternal?: boolean
   className?: string
   animationDelay?: number
+  hoverClasses?: string
 }
 
 const AnchorLink: FC<IAnchorLinkProps> = ({
@@ -22,6 +23,7 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
   children,
   className,
   animationDelay = 0,
+  hoverClasses = "",
 }) => {
   const timeline = useRef(gsap.timeline({ paused: true }))
   const linkRef = useRef(null)
@@ -88,7 +90,7 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
       {children}
       <span
         ref={linkHoverRef}
-        className="w-0 h-16 absolute -left-2 bottom-0"
+        className={clsx("w-0 h-2/5 absolute -left-2 bottom-0", hoverClasses)}
         style={{ backdropFilter: "blur(10px)" }}
       >
         {/* <span className="w-full h-4 bg-island-blue absolute right-1 bottom-1"></span> */}

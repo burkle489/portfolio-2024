@@ -25,7 +25,7 @@ const BurgerMenu: FC = () => {
   return (
     <>
       <div
-        className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-2 cursor-pointer"
+        className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-2 cursor-pointer relative z-50"
         onClick={() => {
           setMenuOpen(!menuOpen)
         }}
