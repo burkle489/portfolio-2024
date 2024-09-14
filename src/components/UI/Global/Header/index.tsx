@@ -19,20 +19,20 @@ const Header: FC<IHeaderProps> = ({}) => {
           >
             <p className="">tbrke</p>
           </Link>
-          <div className="hidden md:flex col-span-3 lg:col-span-2 h-full items-center justify-between">
+          <div className="hidden md:flex col-span-3 lg:col-span-2 h-full items-center justify-center gap-20">
+            {/* <AnchorLink
+              href="/work"
+              hoverClasses="!-left-0.5"
+              className="text-light font-playfair italic uppercase text-border font-semibold"
+            >
+              Work
+            </AnchorLink> */}
             <AnchorLink
               href="/about"
               hoverClasses="!-left-0.5"
               className="text-light font-playfair italic uppercase text-border font-semibold"
             >
               About
-            </AnchorLink>
-            <AnchorLink
-              href="/work"
-              hoverClasses="!-left-0.5"
-              className="text-light font-playfair italic uppercase text-border font-semibold"
-            >
-              Work
             </AnchorLink>
             <AnchorLink
               href="/contact"

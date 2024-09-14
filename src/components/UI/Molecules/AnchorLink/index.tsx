@@ -6,9 +6,9 @@ import clsx from "clsx"
 import gsap from "gsap"
 import Link from "next/link"
 
-import { FC, ReactNode, useRef } from "react"
+import { AnchorHTMLAttributes, FC, ReactNode, useRef } from "react"
 
-interface IAnchorLinkProps extends IClassName {
+interface IAnchorLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode
   href: string
   isExternal?: boolean
@@ -24,6 +24,7 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
   className,
   animationDelay = 0,
   hoverClasses = "",
+  ...rest
 }) => {
   const timeline = useRef(gsap.timeline({ paused: true }))
   const linkRef = useRef(null)
@@ -66,15 +67,14 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
         "text-light pointer-events-auto relative invisible",
         className
       )}
+      {...rest}
     >
       {children}
       <span
         ref={linkHoverRef}
-        className="w-0 h-16 absolute -left-2 bottom-4"
+        className={clsx("w-0 h-2/5 absolute -left-2 bottom-0", hoverClasses)}
         style={{ backdropFilter: "blur(10px)" }}
-      >
-        {/* <span className="w-full h-4 bg-island-blue absolute right-1 bottom-1"></span> */}
-      </span>
+      ></span>
     </a>
   ) : (
     <Link
@@ -86,15 +86,14 @@ const AnchorLink: FC<IAnchorLinkProps> = ({
         "text-light pointer-events-auto relative invisible",
         className
       )}
+      {...rest}
     >
       {children}
       <span
         ref={linkHoverRef}
         className={clsx("w-0 h-2/5 absolute -left-2 bottom-0", hoverClasses)}
         style={{ backdropFilter: "blur(10px)" }}
-      >
-        {/* <span className="w-full h-4 bg-island-blue absolute right-1 bottom-1"></span> */}
-      </span>
+      ></span>
     </Link>
   )
 }

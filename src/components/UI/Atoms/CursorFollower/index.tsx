@@ -42,7 +42,7 @@ export default function CursorFollower() {
   if (!isTouchDevice) {
     return (
       <div
-        className="w-10 h-10 rounded-full bg-transparent z-[999999] fixed top-0 left-0 pointer-events-none user-select-none"
+        className="w-10 h-10 rounded-full bg-light bg-opacity-10 z-[999999] fixed top-0 left-0 pointer-events-none user-select-none"
         style={{ backdropFilter: "blur(10px)" }}
         ref={cursorRef}
       ></div>

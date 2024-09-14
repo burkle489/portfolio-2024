@@ -11,13 +11,13 @@ const HomeHeroNav: FC<IClassName> = ({ className }) => {
         className
       )}
     >
-      <AnchorLink
+      {/* <AnchorLink
         href={"/work"}
         className="text-6xl md:text-9xl uppercase font-bold !font-playfair italic text-border"
         animationDelay={2}
       >
         Work
-      </AnchorLink>
+      </AnchorLink> */}
       <AnchorLink
         href={"/about"}
         className="text-6xl md:text-9xl uppercase font-bold !font-playfair italic text-border"

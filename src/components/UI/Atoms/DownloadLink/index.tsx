@@ -1,26 +1,29 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import AnchorLink from "../../Molecules/AnchorLink"
 import Heading from "../Heading"
-import { useGSAP } from "@gsap/react"
 
-const MailToLink = ({ email = "tayler@tburke.dev" }) => {
+const DownloadLink = ({ path = "/resume.pdf", animationDelay = 2 }) => {
   const iconRef = useRef(null)
   const underlineRef = useRef(null)
 
   return (
     <div>
       <AnchorLink
-        href={`mailto:${email}`}
-        className="flex items-center justify-end group"
+        download
+        isExternal
+        href={path}
+        className="flex items-center justify-end group pointer-events-auto whitespace-nowrap"
         hoverClasses="!h-1/2"
+        animationDelay={animationDelay}
       >
         <Heading
           variant="h2"
-          className="!text-3xl md:!text-5xl lg:!text-7xl !mb-0 text-right font-overpass text-light font-semibold text-border !leading-[0.9] mr-2 md:mr-4"
+          hasAnimation={false}
+          className="!text-3xl md:!text-4xl lg:!text-5xl !mb-0 text-right font-overpass text-light font-semibold text-border !leading-[0.9] mr-2 md:mr-4"
         >
-          tayler@tburke.dev
+          Download CV
           <span ref={underlineRef}></span>
         </Heading>
         <span
@@ -48,4 +51,4 @@ const MailToLink = ({ email = "tayler@tburke.dev" }) => {
   )
 }
 
-export default MailToLink
+export default DownloadLink
