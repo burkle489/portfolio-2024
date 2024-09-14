@@ -19,7 +19,7 @@ const Header: FC<IHeaderProps> = ({}) => {
           >
             <p className="">tbrke</p>
           </Link>
-          <div className=" col-span-2 flex h-full items-center justify-between">
+          <div className="hidden md:flex col-span-3 lg:col-span-2 h-full items-center justify-between">
             <AnchorLink
               href="/about"
               hoverClasses="!-left-0.5"
@@ -42,7 +42,7 @@ const Header: FC<IHeaderProps> = ({}) => {
               Contact
             </AnchorLink>
           </div>
-          <div className="col-span-2 flex justify-end items-center">
+          <div className="md:hidden col-span-3 flex justify-end items-center">
             <BurgerMenu />
           </div>
         </div>

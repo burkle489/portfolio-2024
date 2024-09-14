@@ -72,7 +72,7 @@ const vec3 color2 = vec3(0.1921,0.4666,0.9412);
 const vec3 color3 = vec3(0.3686,0.7490,0.5961);
 
 void main() {
-  vec2 seed = v_uv * 1.5 * (u_mouse + 0.3 * (length(u_mouse) + 0.5));
+  vec2 seed = v_uv * 1.3 * (u_mouse + 0.3 * (length(u_mouse) + 0.9));
   float n = cnoise21(seed) + length(u_mouse) * 0.9;
 
   float ml = pow(length(u_mouse), 2.5) * 0.45;

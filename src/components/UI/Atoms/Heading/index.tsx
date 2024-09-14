@@ -74,7 +74,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h1
           className={clsx(
-            `text-7xl sm:text-8xl md:text-9xl mb-4 font-bold font-oswald tracking-wide !leading-normal`,
+            `text-7xl sm:text-8xl md:text-9xl mb-4 font-bold font-oswald tracking-wide leading-normal`,
             className,
             { invisible: hasAnimation }
           )}
@@ -88,7 +88,7 @@ const Heading: FC<IHeadingProps> = ({
         <h2
           // style={{transition: `translateX(${})`}}
           className={clsx(
-            `text-5xl sm:text-6xl md:text-7xl mb-3 font-bold font-oswald tracking-wide !leading-normal`,
+            `text-5xl sm:text-6xl md:text-7xl mb-3 font-bold font-oswald tracking-wide leading-normal`,
             className,
             { invisible: hasAnimation }
           )}
@@ -101,7 +101,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h3
           className={clsx(
-            `text-3xl sm:text-4xl md:text-5xl mb-2 font-bold font-oswald tracking-wide !leading-normal`,
+            `text-3xl sm:text-4xl md:text-5xl mb-2 font-bold font-oswald tracking-wide leading-normal`,
             className,
             { invisible: hasAnimation }
           )}
@@ -114,7 +114,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h4
           className={clsx(
-            `text-2xl sm:text-3xl md:text-4xl mb-2 font-bold tracking-normal font-oswald !leading-normal`,
+            `text-2xl sm:text-3xl md:text-4xl mb-2 font-bold tracking-normal font-oswald leading-normal`,
             className,
             { invisible: hasAnimation }
           )}
@@ -127,7 +127,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h5
           className={clsx(
-            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal font-oswald !leading-normal`,
+            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal font-oswald leading-normal`,
             className,
             { invisible: hasAnimation }
           )}
@@ -140,7 +140,7 @@ const Heading: FC<IHeadingProps> = ({
       return (
         <h6
           className={clsx(
-            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal !leading-normal`,
+            `text-lg sm:text-xl md:text-2xl mb-2 font-bold tracking-normal leading-normal`,
             className,
             { invisible: hasAnimation }
           )}
