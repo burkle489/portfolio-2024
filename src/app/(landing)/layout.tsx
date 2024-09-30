@@ -69,7 +69,7 @@ export default function RootLayout({
     >
       <body className={overpass.className}>
         <Providers>
-          <CursorFollower />
+          {/* <CursorFollower /> */}
           {/* <Header /> */}
           <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />

@@ -20,7 +20,7 @@ const HomeHero: FC<IHomeHeroProps> = ({ className }) => {
             <div className="col-span-2 flex flex-col w-full items-start justify-start">
               <Heading
                 variant="h1"
-                className="max-w-screen-md font-bold text-border !text-6xl md:!text-8xl uppercase z-20 md:!mb-0 text-light text-start !leading-[0.9] md:!leading-snug"
+                className="max-w-screen-lg font-bold text-border !text-6xl md:!text-9xl uppercase z-20 md:!mb-0 text-light text-start !leading-[0.9] md:!leading-snug"
                 // animationInDirection="left"
                 animationDelay={0}
                 scrubTrigger="basic-hero"
