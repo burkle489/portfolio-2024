@@ -1,10 +1,11 @@
+"use client"
+
 import Heading from "@/components/UI/Atoms/Heading"
 import Paragraph from "@/components/UI/Atoms/Paragraph"
 import clsx from "clsx"
 import { FC } from "react"
-import { IHomeHeroProps } from "./HomeHero"
-import Link from "next/link"
 import HomeHeroNav from "../../Organisms/HomeHeroNav"
+import { IHomeHeroProps } from "./HomeHero"
 
 const HomeHero: FC<IHomeHeroProps> = ({ className }) => {
   return (

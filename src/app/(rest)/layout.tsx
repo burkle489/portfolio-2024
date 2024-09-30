@@ -1,17 +1,11 @@
-import type { Metadata } from "next"
-import {
-  Overpass,
-  Bodoni_Moda,
-  Zilla_Slab,
-  Oswald,
-  Playfair_Display,
-} from "next/font/google"
 import "@/app/globals.scss"
-import Header from "@/components/UI/Global/Header"
-import Footer from "@/components/UI/Global/Footer"
-import { TCanvas } from "@/components/three/TCanvas"
 import Providers from "@/components/Provider"
-import CursorFollower from "@/components/UI/Atoms/CursorFollower"
+import Header from "@/components/UI/Global/Header"
+import SplashScreen from "@/components/UI/Global/SplashScreen"
+import { TCanvas } from "@/components/three/TCanvas"
+import { store } from "@/store"
+import type { Metadata } from "next"
+import { Oswald, Overpass, Playfair_Display } from "next/font/google"
 
 export const metadata: Metadata = {
   title: {
@@ -70,6 +64,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const { gradientReady } = store.getState()
   return (
     <html
       lang="en"
@@ -78,6 +73,9 @@ export default function RootLayout({
       <body className={overpass.className}>
         <Providers>
           {/* <CursorFollower /> */}
+
+          <SplashScreen {...{ initialState: gradientReady.ready }} />
+
           <Header />
           <aside className="absolute top-0 left-0 w-full h-full z-10">
             <TCanvas />

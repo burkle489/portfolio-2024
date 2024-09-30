@@ -1,7 +1,9 @@
 import "@/app/globals.scss"
 import Providers from "@/components/Provider"
 import CursorFollower from "@/components/UI/Atoms/CursorFollower"
+import SplashScreen from "@/components/UI/Global/SplashScreen"
 import { TCanvas } from "@/components/three/TCanvas"
+import { store } from "@/store"
 import type { Metadata } from "next"
 import { Oswald, Overpass, Playfair_Display } from "next/font/google"
 
@@ -62,6 +64,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const { gradientReady } = store.getState()
+
   return (
     <html
       lang="en"
@@ -69,6 +73,8 @@ export default function RootLayout({
     >
       <body className={overpass.className}>
         <Providers>
+          <SplashScreen {...{ initialState: gradientReady.ready }} />
+
           {/* <CursorFollower /> */}
           {/* <Header /> */}
           <aside className="absolute top-0 left-0 w-full h-full z-10">

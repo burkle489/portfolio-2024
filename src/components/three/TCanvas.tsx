@@ -11,6 +11,8 @@ import { enFragmentShader, enVertexShader } from "@/modules/glsl/shader"
 import gsap from "gsap"
 import { setGradientReady } from "@/store/gradientReady"
 import { useAppDispatch } from "@/store/hooks"
+import DelayedFallback from "../UI/Global/DelayedFallback"
+import { useGSAP } from "@gsap/react"
 
 export const TCanvas: FC = () => {
   const dispatch = useAppDispatch()
@@ -19,16 +21,12 @@ export const TCanvas: FC = () => {
   const aspect = (width - 15) / 600
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.set(canvasRef.current, { opacity: 0 })
   }, [])
 
   return (
-    <Suspense
-      fallback={
-        <div className="w-full h-full bg-[rgb(0.03921 * 255,0.01568 * 255,0.14117 * 255)]"></div>
-      }
-    >
+    <Suspense fallback={<DelayedFallback />}>
       <Canvas
         className=""
         ref={canvasRef}
