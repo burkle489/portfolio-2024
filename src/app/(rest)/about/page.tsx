@@ -17,7 +17,10 @@ const About = () => {
             My story <br /> so far.
           </Heading>
           <div className="flex flex-col items-start lg:items-end justify-end gap-4 h-full">
-            <DownloadLink path="/resume.pdf" animationDelay={3.5} />
+            <DownloadLink
+              path="/tayler-burke-resume.pdf"
+              animationDelay={3.5}
+            />
             <AnchorLink
               animationDelay={3.8}
               isExternal
